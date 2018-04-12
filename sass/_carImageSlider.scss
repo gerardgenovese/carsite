@@ -1,0 +1,321 @@
+.carSlides {display: none;}
+
+#carSlideShow {
+  position: relative;
+}
+body {
+  margin: 0;
+  padding: 0;
+}
+
+@keyframes moveLeft {
+  0% {left: 10px;}
+  100% {left: -65%;
+  }
+}
+
+
+@keyframes moveRight {
+  0% {left: -300px;}
+  100% {left: 30%;}
+}
+
+
+@keyframes fadeIn {
+  from {opacity: .3;}
+  to {opacity: 1;}
+}
+
+
+#one {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr, 1fr;
+}
+.onebg  {
+  width: 100%;
+  height: 80vh;
+  grid-column: 1/-1;
+  grid-row: 1/ -1;
+  grid-gap: 1.5rem;
+}
+.one {
+  grid-column: 7/ span 3;
+  grid-row: 1 / span 2;
+  z-index: 1;
+  display: flex;
+  align-self: flex-end;
+  width: 45rem;
+  position: relative;
+  animation: moveLeft 2s;
+  animation-fill-mode: forwards;
+}
+.menu-container {
+  grid-column: 6 / span 2;
+  grid-row: 1/2;
+  width: 22rem;
+  height: 24rem;
+  display: block;
+  margin: auto 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: fadeIn 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  border-radius: 1%;
+  padding: 0 .5rem;
+}
+
+/*====================two==================*/
+
+#two {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr, 1fr;
+}
+.twobg  {
+  width: 100%;
+  height: 80vh;
+  grid-column: 1/-1;
+  grid-row: 1/ -1;
+  grid-gap: 1.5rem;
+}
+.two {
+  grid-column: 1/ span 3;
+  grid-row: 1 / span 2;
+  z-index: 1;
+  display: flex;
+  align-self: flex-end;
+  width: 55rem;
+  position: relative;
+  animation: moveRight 2s;
+  animation-fill-mode: forwards;
+}
+
+.menu-container2 {
+  grid-column: 2 / span 2;
+  grid-row: 1/2;
+  width: 22rem;
+  height: 24rem;
+  display: block;
+  margin: auto 0; 
+  margin-top: 2rem;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: fadeIn 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  border-radius: 1%;
+  padding: 0 .5rem;
+}
+
+
+
+/*====================three=====================*/
+
+
+#three {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr, 1fr;
+}
+.threebg  {
+  width: 100%;
+  height: 80vh;
+  grid-column: 1/-1;
+  grid-row: 1/ -1;
+  grid-gap: 1.5rem;
+}
+.three {
+  grid-column: 7/ span 3;
+  grid-row: 1 / span 2;
+  z-index: 1;
+  display: flex;
+  align-self: flex-end;
+  width: 45rem;
+  position: relative;
+  animation: moveLeft 2s;
+  animation-fill-mode: forwards;
+}
+.menu-container3 {
+  grid-column: 6 / span 2;
+  grid-row: 1/2;
+  width: 22rem;
+  height: 24rem;
+  display: block;
+  margin: auto 0;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: fadeIn 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  border-radius: 1%;
+  padding: 0 .5rem;
+}
+
+
+/*======================four==================*/
+
+#four {
+  display: grid;
+  grid-template-columns: repeat(8, 1fr);
+  grid-template-rows: 1fr, 1fr;
+}
+.fourbg  {
+  width: 100%;
+  height: 80vh;
+  grid-column: 1/-1;
+  grid-row: 1/ -1;
+  grid-gap: 1.5rem;
+}
+.four {
+  grid-column: 1/ span 3;
+  grid-row: 1 / span 2;
+  z-index: 1;
+  display: flex;
+  align-self: flex-end;
+  width: 55rem;
+  position: relative;
+  animation: moveRight 2s;
+  animation-fill-mode: forwards;
+}
+
+.menu-container4 {
+  grid-column: 1 / span 1;
+  grid-row: 1/2;
+  width: 22rem;
+  height: 24rem;
+  display: block;
+  /* margin: auto 0; */
+  margin-top: 2rem;
+  margin-left: 20%;
+  background-color: rgba(255, 255, 255, 0.8);
+  animation: fadeIn 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 0;
+  border-radius: 1%;
+  padding: 0 .5rem;
+}
+
+
+/*------------MENU--------------*/
+
+.menu-year,
+.menu-model,
+.menu-header,
+.menu-price{
+  animation: fadeIn 1s;
+  animation-delay: 2s;
+  animation-fill-mode: forwards;
+  opacity: 1;
+  padding: 0 0 0 1rem;
+  font-family: tahoma;
+}
+.menu-year {
+  font-size: 1rem;
+  font-family: 'Trebuchet MS';
+  padding-top: .5rem;
+  line-height: 1;
+}
+.menu-model {
+  font-size: 1.5rem;
+  display: block;
+  margin: 0 auto;
+}
+.menu-header {
+  text-align: center;
+  font-size: 2.5rem;
+  line-height: 1;
+  display: flex;
+  align-self: flex-start;
+  justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+.menu-price,
+.menu-lease,
+.menu-due {
+  text-align:center;
+  text-transform: uppercase;
+  line-height: 1;
+  font-family: verdana;
+}
+
+.menu-hr {
+  overflow: visible; /* For IE */
+  border: none;
+  border-top: medium double rgb(51, 51, 51);
+  color: rgb(51, 51, 51);
+  text-align: center;
+  margin-bottom: 10%;
+}
+.menu-button {
+  display: block;
+  margin: 5% auto 0 auto;
+  padding: 1rem 2rem;
+  border-radius: 2rem;
+  background-color: rgb(252, 6, 6);
+  border: transparent;
+  color: white;
+  transition: .2s;
+}
+.menu-button:hover{
+  box-shadow: 0 5px 5px gray;
+  transform: scale(1.1);
+  background-color: rgb(167, 7, 7);
+}
+.menu-button:active{
+  box-shadow: 0 2px 2px gray;
+  transform: scale(1);
+}
+.menu-button:focus {
+  outline: 0;
+}
+
+
+
+
+
+/*=================PREV NEXT BUTTONS=============*/
+
+
+/*======================buttons==================*/
+
+.slideButton {
+  background-color: rgba(255, 255, 255, 0.8);
+  color: rgba(221, 20, 20, 0.788);
+  border: transparent;
+  height: 5rem;
+  width: 3rem;
+  font-size: 2rem;
+  transition: .2s;
+  cursor: pointer;
+  outline: 0;
+  /* opacity:0; */
+}
+.slideButton:hover{
+  background-color: rgba(221, 20, 20, 0.788);
+  color: rgb(204, 194, 194);
+}
+.slideBack {
+position: absolute;
+top: 50%;
+left: 0;
+transform: translateY(-50%);
+
+  z-index: 5;
+}
+.slideForward {
+  position: absolute;
+  top: 50%;
+  right: 0;
+  transform: translateY(-50%);
+  z-index: 5;
+}
+
+.slideButton:focus{
+  outline: 0;
+}
+
+

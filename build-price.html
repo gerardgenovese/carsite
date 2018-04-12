@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Car Site</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+
+  
+  <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+</head>
+<body class="build-price">
+
+<!-- Navigation -->
+<nav class="navbar">
+    <span class="open-slide">
+        <input type="checkbox" class="navigation__checkbox hamburger" id="navi-toggle">
+  
+        <label for="navi-toggle" class="navigation__button">
+          <span class="nav-all">
+            <span class="navigation__icon1"></span>
+            <span class="navigation__icon2"></span>
+            <span class="navigation__icon3"></span>
+          </span>
+        </label>
+    </span>
+  </nav>
+  <img class="img__logo" src="img/toyota-logo.png" alt="">
+  <div id="side-menu" class="side-nav">
+      <a href="index.html">Home</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+  </div>
+
+
+
+<div class="navCloseFunction" onclick="navCloseFunction(event)">
+
+
+<!--====Select Vehicles LINK TEXT====-->
+  <div class="car-build-dropdown">
+    <span class="open-select-vehicle">
+      <input type="checkbox" class="car-build-dropdown-checkbox" id="car-build-select-toggle">
+      <label for="car-build-select-toggle" class="car-build-select-vehicle__button">
+        <div class="car-build-dropdown-select-text">
+            <!-- Select Vehicles&#8628; -->
+            Select Vehicles<i class="fas fa-sort-down"></i>
+        </div>
+      </label> 
+    </span>
+  </div>
+
+  <!--*SELECT* VEHICLE DROPDOWN MENU-->
+  <div id="select-vehicle" class="car-build-dropdown-select-menu">
+    <a class="car-build-dropdown__carLink" href="#"><img src="img/camry/side/camry-side-red.jpg" class="car-build-dropdown__carImg" alt="" onclick="camrySelect()"; return false></a>
+    <a class="car-build-dropdown__carLink" href="#"><img src="img/corolla/side/corolla-side-blue.jpg" class="car-build-dropdown__carImg" alt="" onclick="corollaSelect()"; return false></a>
+    <a class="car-build-dropdown__carLink" href="#"><img src="img/t86/side/t86-side-red.jpg" class="car-build-dropdown__carImg" alt="" onclick="t86Select()"; return false></a>
+    <a class="car-build-dropdown__carLink" href="#"><img src="img/yaris/side/yaris-side-blue.jpg" class="car-build-dropdown__carImg" alt="" onclick="yarisSelect()"; return false></a>
+    <a class="car-build-dropdown__carLink" href="#"><img src="img/avalon/side/avalon-side-white.jpg" class="car-build-dropdown__carImg" alt="" onclick="avalonSelect()"; return false></a>
+  </div>
+
+  <!--==== Vehicle Cart Accessories Text/Button====-->
+  <div class="car-build-vehicle_cart">
+    <span class="vehicle_cart">
+      <input type="checkbox" class="car-build-vehicle_cart__checkbox" id="car-build-vehicle_cart__toggle">
+      <label for="car-build-vehicle_cart__toggle" class="car-build-vehicle_cart__button">
+        <div class="car-build-vehicle_cart-select" onclick="yourVehicleCart()">
+          Your Vehicle <i class="fas fa-car"></i>
+        </div>
+      </label>
+    </span>
+  </div>
+
+<!--Vehicle Cart DROPDOWN MENU-->
+  <div id="vehicle_cart-vehicle" class="car-build-vehicle_cart-select-menu">
+    <p class="car-build-vehicle_cart-dropdown__carColor" id="vehicle_cart-color"></p>
+    
+    <p class="car-build-vehicle_cart-dropdown__carModel" id="vehicle_cart-model"></p>
+    <div><img src="" class="car-build-vehicle_cart-dropdown__carImg" alt="" id="vehicle_cart-car"></div>
+    <p class="car-build-vehicle_cart-dropdown__carPrice" id="vehicle_cart-price"></p>
+    <p class="car-build-vehicle_cart-dropdown__engine" id="vehicle_cart-engine"></p>
+    <p class="car-build-vehicle_cart-dropdown__alloy" id="vehicle_cart-alloy"></p>
+    <p class="car-build-vehicle_cart-dropdown__mats" id="vehicle_cart-mats"></p>
+    <p class="car-build-vehicle_cart-dropdown__cargo" id="vehicle_cart-cargo"></p>
+    <p class="car-build-vehicle_cart-dropdown__total" id="vehicle_cart-total"></p>
+    <button>Check Out</button>
+  </div> 
+  
+
+
+
+
+  <div class="vehicleCartFunction" onclick="vehicleCartFunction(event)">
+
+  
+<!--CAR BUILD MAIN CAR-->
+  <!-- <section id="car-build__main-section"> -->
+    <div class="car-build__main">
+      <p class="car-build__main-car-title" id="carTitleDisplay"></p>
+      <p class="car-build__main-car-price" id="carPriceDisplay"></p><p class="car-build__main-car-starting">Starting</p>
+      <div class="image-background"></div>
+      <img src="" class="car-build__main-car-image" id="carImgDisplay" alt="">
+      <button class="car-build__main--left">left</button>
+
+      <input type="button" class="car-build__main--right" id="right-button" onclick="return false">
+
+      <!-- <button class="car-build__main--right" onclick="changeCarViewRight()">right</button> -->
+    </div>
+
+
+
+
+<!--CAR BUILD PANEL-->
+  <div class="car-build__panel">
+    <div class="car-build__panel-buttons car-panel active" onclick="changeColor()"; return false>
+        <i class="fas fa-car car-build__icon--i"></i>
+      <p class="car-build__panel-text">Colors</p>
+    </div>
+    <div class="car-build__panel-buttons" onclick="changeEngine()"; return false>
+        <i class="fas fa-cogs car-build__icon--i"></i>
+      <p class="car-build__panel-text">Engine Type</p>
+    </div>
+    <div class="car-build__panel-buttons" onclick="loanCalculator()"; return false>
+        <i class="fas fa-calculator car-build__icon--i"></i>
+      <p class="car-build__panel-text">Finance</p>
+    </div>
+    <div class="car-build__panel-buttons tag-panel" onclick="accessories()">
+        <i class="fas fa-tags car-build__icon--i"></i>
+      <p class="car-build__panel-text">Accessories</p>
+    </div>
+  </div>
+
+
+<!--CAR BUILD COLORS SECTION-->
+  <section id="car-build__colors">
+    <div class="car-build__colors">
+      <button class="btn btn-button car" id="white" onclick="changeWhite(event)"></button>
+      <button class="btn btn-button car" id="black" onclick="changeBlack(event)"></button>
+      <button class="btn btn-button car" id="gray" onclick="changeGray(event)"></button>
+      <button class="btn btn-button car" id="smoke" onclick="changeSmoke(event)"></button>
+      <button class="btn btn-button car" id="blue" onclick="changeBlue(event)"></button>
+      <button class="btn btn-button car" id="red" onclick="changeRed(event)"></button>
+    </div>
+  </section>
+
+
+
+
+<!--CAR BUILD ENGINE SECTION-->
+  <section id="car-build__engine">
+    <div class="car-build__engine">
+      <label class="car-build__engine--info"> <h3 class="car-build__engine--header">2.5 4-Cyl. Super Thruster Engine</h3>
+        <p class="car-build__engine--trans">8-Speed Automatic</p>
+        <ul class="car-build__engine--specs">
+          <li class="car-build__engine--spec">Direct Shift 8 Speed Electronically Controlled Automatic Transmission</li>
+          <li class="car-build__engine--spec">203hp @6600rp,</li>
+          <li class="car-build__engine--spec">184 lb-ft @5000 rpm</li>
+          <li class="car-build__engine--spec"> VVt-i D4S self-cleaning injectors</li>
+        </ul>
+        <div class="car-build__engine--cost">
+          Cost: $0 (Standard)
+        </div>
+          <input type="radio" checked="checked" name="engine-price" value="0" id="engine-standard" onclick="Car.enginePrice(value)">
+          <span class="car-build__engine--checkmark"></span>
+        </label>
+        
+        <label class="car-build__engine--info">
+          <h3 class="car-build__engine--header">2.5 4-Cyl. Super Thruster Engine</h3>
+          <p class="car-build__engine--trans">8-Speed Manual</p>
+          <ul class="car-build__engine--specs">
+            <li class="car-build__engine--spec">Direct Shift 8 Speed Turbo</li>
+            <li class="car-build__engine--spec">203hp @6600rp,</li>
+            <li class="car-build__engine--spec">184 lb-ft @5000 rpm</li>
+            <li class="car-build__engine--spec"> VVt-i D4S self-cleaning injectors</li>
+          </ul>
+            
+          <div class="car-build__engine--cost"> 
+            Cost: $500.00 
+          </div>
+        <input type="radio" name="engine-price" id ="engine-manual" value="500" onclick="Car.enginePrice(value)">
+        <span class="car-build__engine--checkmark"></span>
+      </label>
+    </div>
+  </section>
+
+  <!-- Your favorite browser is: <input type="text" id="result">
+  <input type="submit" value="Submit form"> -->
+
+
+
+
+
+
+
+<!--LOAN CALCULATOR-->
+<section id="car-build__calculator">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-6 mx-auto">
+        <div class="card card-body text-center mt-5">
+          <h1 class="heading display-5 pb-3">Loan Calculator</h1>
+
+          <form id="loan-form">
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text loan-amount">$</span>
+                </div>
+                <input type="number" class="form-control" id="amount" placeholder="Loan Amount">
+                <button id="get-car-total" class="btn-danger">Get Car Total</button>
+              </div>
+              
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text">%</span>
+                </div>
+                <input type="number" class="form-control" id="interest" placeholder="Interest">
+              </div>
+            </div>
+            <div class="form-group">
+              <input type="number" class="form-control" id="years" placeholder="Years to Repay">
+            </div>
+            <div class="form-group">
+              <input type="submit" value="Calculate" class="btn btn-block calculate-button">
+            </div>
+          </form>
+          <!--Loader Here-->
+          <div id="loading">
+            <img src="img/loading.gif" alt="">
+          </div>
+
+          <!--Results-->
+          <div id="results" class="pt-4">
+            <h5>Results</h5>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text montly-pay">Monthly Payment</span>
+                </div>
+                <input type="number" class="form-control" id="monthly-payment" disabled>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text total-pay">Total Payment</span>
+                </div>
+                <input type="number" class="form-control" id="total-payment" disabled>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="input-group">
+                <div class="input-group-prepend">
+                    <span class="input-group-text total-interest">Total Interest</span>
+                </div>
+                <input type="number" class="form-control" id="total-interest" disabled>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+
+
+
+
+<!--ACCESSORIES-->
+<section id="car-build__accessories">
+  <div class="car-build__accessories">
+    <div class="car-build__accs">
+      <div class="car-build__accs--items"><img src="img/accessories/wheel-lock.jpg" alt="">
+      </div>
+      <p class="car-build__accs--header">
+        Alloy Wheel Locks
+      </p>
+      <p class="car-build__accs--price">$75 <small>msrp</small>
+      </p>
+      <button class="car-build__accs--details" data-toggle="modal" data-target="#wheel-lock">
+        View Details
+      </button>
+      <div class="box1 car-build__accs--checkbox">
+        <label class="container car-build__accs--checkbox-label">
+          <input type="checkbox" id="addItem1" onclick="Car.accessoryPrice()">
+          <span class="checkmark" id="addRemove1">ADD</span>
+        </label>
+      </div>
+    </div>
+
+    <div class="car-build__accs">
+      <div class="car-build__accs--items"><img src="img/accessories/leather-mats.jpg" alt="">
+      </div>
+      <p class="car-build__accs--header">
+        Leather-Mats
+      </p>
+      <p class="car-build__accs--price">$75 <small>msrp</small>
+      </p>
+      <button class="car-build__accs--details" data-toggle="modal" data-target="#leather-mats">
+        View Details
+      </button>
+      <div class="box1 car-build__accs--checkbox">
+        <label class="container car-build__accs--checkbox-label">
+          <input type="checkbox" id="addItem2" onclick="Car.accessoryPrice()">
+          <span class="checkmark" id="addRemove2">ADD</span>
+        </label>
+      </div>
+    </div>  
+
+    <div class="car-build__accs">
+      <div class="car-build__accs--items"><img src="img/accessories/cargo-tote.jpg" alt="">
+      </div>
+      <p class="car-build__accs--header">
+        Cargo-Tote
+      </p>
+      <p class="car-build__accs--price">$75 <small>msrp</small>
+      </p>
+      <button class="car-build__accs--details" data-toggle="modal" data-target="#cargo-tote">
+        View Details
+      </button>
+      <div class="box1 car-build__accs--checkbox">
+        <label class="container car-build__accs--checkbox-label">
+          <input type="checkbox" id="addItem3" onclick="Car.accessoryPrice()">
+          <span class="checkmark" id="addRemove3">ADD</span>
+        </label>
+      </div>
+    </div>
+  </div>  
+
+
+  <!-- WHEEL LOCK MODAL -->
+  <div class="modal" id="wheel-lock">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Wheel Lock</h5>
+          <button class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus unde veniam harum magnam molestias dignissimos omnis architecto, quod, obcaecati dolorum debitis dolore porro qui, iusto quo accusantium voluptates pariatur illo.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- LEATHER MATS MODAL -->
+  <div class="modal" id="leather-mats">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Leather Mats</h5>
+          <button class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus unde veniam harum magnam molestias dignissimos omnis architecto, quod, obcaecati dolorum debitis dolore porro qui, iusto quo accusantium voluptates pariatur illo.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- CARGO-TOTE MODAL -->
+  <div class="modal" id="cargo-tote">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title">Cargo Tote</h5>
+          <button class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          Lorem ipsum dolor sit amet, consectetur adipisicing elit. Temporibus unde veniam harum magnam molestias dignissimos omnis architecto, quod, obcaecati dolorum debitis dolore porro qui, iusto quo accusantium voluptates pariatur illo.
+        </div>
+        <div class="modal-footer">
+          <button class="btn btn-secondary" data-dismiss="modal">Close</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+</section>
+
+<div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur fugiat iure cupiditate dolores quaerat excepturi nobis laborum quam eaque illo eos, amet dolore? Animi laborum consectetur nostrum assumenda nulla. Fuga deserunt alias corporis voluptatem, tempora odio aspernatur rem laudantium omnis voluptates possimus reiciendis suscipit nesciunt error. Soluta tempora itaque ad perferendis quaerat illo animi, id aliquam, fuga quibusdam repellendus. Placeat harum temporibus quam repudiandae iste! Labore officia nostrum nisi ipsa libero excepturi rem dicta iure expedita adipisci! Accusamus modi deleniti explicabo eius? Dolores quae optio assumenda blanditiis qui, ipsum enim quos, alias vero magnam officiis quisquam reiciendis. Iste, iusto. Ullam ab, fugit enim eligendi quia provident deserunt incidunt aperiam alias exercitationem soluta iure. Maxime nisi, ea nulla laudantium tenetur cum. Fugiat nostrum accusantium sunt, sequi dolor quisquam eum, unde non temporibus eveniet vel minus molestias at distinctio pariatur modi quo, ad repellat amet neque officia accusamus facilis ab. Alias, blanditiis. Ipsam molestiae, recusandae laudantium fugit libero iste, porro beatae nam non dolorum, sit ea laboriosam dolor deleniti! Voluptatum asperiores eum voluptatibus, deserunt quae velit maiores facere ipsam provident beatae vero placeat nostrum aspernatur nam ut quam, dignissimos vitae. Est, aspernatur consequatur. Ad commodi explicabo rerum obcaecati quibusdam, dicta officiis vel illo dolorum sequi quae iste ullam repellat sint aliquam voluptatum recusandae doloribus numquam earum ducimus aspernatur? Quod, odio minima. Beatae iusto in possimus animi? Est ipsam vel quidem corporis aperiam iusto officiis beatae magni vero eaque eligendi et veniam labore laboriosam reprehenderit ullam adipisci, alias dicta optio! Illo quos modi consectetur delectus animi deleniti similique fuga nobis odit neque! Ipsum magnam impedit, obcaecati nam quidem minus, aliquid fugit architecto voluptas nulla laborum sit, laboriosam iusto repudiandae nisi praesentium unde dolor voluptatum. Voluptatem vel maiores reiciendis animi porro unde aperiam obcaecati ab ex ut fuga, a possimus non saepe sequi amet officia quaerat dolor veniam cupiditate quae similique perspiciatis exercitationem! Debitis possimus ratione doloribus deleniti consequatur nobis alias odio dolor qui, quo accusamus dicta culpa cumque quos soluta, velit, vitae sunt enim omnis saepe quaerat odit distinctio placeat? Dignissimos, placeat nisi? Provident vel perspiciatis hic voluptatum illo enim sapiente nemo inventore tempora, in soluta quasi nulla quidem commodi, natus adipisci magni quo nam accusantium nisi dolorem deleniti, quod odit. Vitae totam veniam praesentium facilis illum fugiat voluptas voluptatum, ratione nostrum quo inventore suscipit quas aut commodi numquam impedit eius sunt qui quasi ducimus quod provident doloremque ipsam! Consequuntur voluptatem eveniet aliquid quas impedit magni natus expedita cumque molestias inventore, consequatur autem voluptas molestiae, nemo reiciendis alias atque neque id dolores porro ut totam, corporis dolore maxime? Ducimus eum corporis iste doloremque dignissimos fugit ea sapiente facilis, ad consequatur minima placeat id vel, et eaque sed quod molestias? Aliquid dicta, molestias accusamus eos excepturi nemo ratione, nesciunt veritatis praesentium, laboriosam facilis eius dolores corrupti ipsa eaque iusto! Dolorem maiores nulla maxime laborum, dolores eveniet fugit illo. Ipsum, nobis velit, labore soluta, facere dolor officiis itaque porro rerum neque consequuntur totam minima libero quaerat veritatis placeat tempore! Quis, aliquid explicabo? Delectus, necessitatibus esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo perspiciatis temporibus autem cupiditate dignissimos reiciendis repellendus et ex non rerum eum quam, alias possimus ab incidunt quasi mollitia ad nisi molestias quia in. Cum corrupti quia non fugit placeat, esse labore asperiores aliquid, molestiae ab rerum, quasi harum quod tempora sit ipsam praesentium officia tenetur maiores? Explicabo, molestias. Aliquam, impedit? Id, totam nesciunt perferendis a enim voluptatem itaque, magni at exercitationem tenetur sed! Magnam asperiores voluptates quas obcaecati illum facilis perspiciatis similique, dolores laborum eius tempora dolor esse voluptas ab pariatur modi delectus nesciunt porro. Illum iure provident sequi!</div>
+
+<footer class="footer">
+
+</footer>
+
+
+
+
+
+
+
+  
+
+
+
+</div> <!--vehicleCartFunction end-->
+</div> <!--navCloseFunction end-->
+
+<!-- <h2 class="w3-center">Manual Slideshow</h2>
+
+<div class="one w3-content w3-display-container">
+  <img class="img-slide" src="img/explore__vehicles/86-front.PNG">
+  <img class="img-slide" src="img/explore__vehicles/yaris-front.PNG">
+  <img class="img-slide" src="img/explore__vehicles/avalon-side.PNG">
+  <img class="img-slide" src="img/explore__vehicles/86-front.PNG">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div> -->
+
+
+
+<!-- <script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("img-slide");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script> -->
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+   <script src="js/main.js"></script>
+</body>
+</html>

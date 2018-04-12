@@ -1,0 +1,139 @@
+/*explore vehicles*/
+// .explore__heading {
+//   margin: 5rem 0;
+
+//   text-align: center;
+// }
+
+
+.explore {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-gap: .5rem;
+  grid-auto-rows: 10rem;
+
+  &__heading {
+    margin: 3rem 0 1rem 0;
+    text-align: center;
+  }
+
+  &-car {
+    position: relative;
+    cursor: pointer;
+
+    &__side {
+      display: inline-block;
+      max-width: 100%;
+    }
+
+    &__front {
+      display: none;
+      position: absolute;
+      top: 0;
+      left: 0;
+      z-index: 99;
+    }
+
+    &:hover &__front {
+      display: inline-block;
+    }
+
+    &__info {
+      display: inline-block;
+      max-width: 100%;
+      height: auto;
+      position: absolute;
+      top: 5rem;
+      left: 3rem;
+    }
+    
+    &__model {
+      display: inline-block;
+      margin-top: 1rem;
+    }
+    
+    &__price,
+    &__mileage {
+      font-size: .7rem;
+    } 
+  }
+
+
+  // &-car &-car__front {
+  //   display: none;
+  //   position: absolute;
+  //   top: 0;
+  //   left: 0;
+  //   z-index: 99;
+  // }
+  
+  
+  // &-car:hover &-car__front {
+  //   display: inline-block;
+  // }
+  
+  
+  // &-car__info {
+  //   display: inline-block;
+  //   max-width: 100%;
+  //   height: auto;
+  //   position: absolute;
+  //   top: 5rem;
+  //   left: 3rem;
+  // }
+  
+  // &-car__model {
+  //   display: inline-block;
+  //   margin-top: 1rem;
+  // }
+  // &-car__price {
+  //   font-size: .7rem;
+  // }
+  
+
+
+
+
+}
+
+// .explore-car {
+
+//   position: relative;
+
+// }
+// .explore-car__side {
+//   display: inline-block;
+//   max-width: 100%;
+
+// }
+// .explore-car .explore-car__front {
+//   display: none;
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+//   z-index: 99;
+// }
+
+
+// .explore-car:hover .explore-car__front {
+//   display: inline-block;
+// }
+
+
+// .explore-car__info {
+//   display: inline-block;
+//   max-width: 100%;
+//   height: auto;
+//   position: absolute;
+//   top: 5rem;
+//   left: 3rem;
+// }
+
+// .explore-car__model {
+//   display: inline-block;
+//   margin-top: 1rem;
+// }
+// .explore-car__price {
+//   font-size: .7rem;
+// }
+

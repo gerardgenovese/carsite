@@ -1,0 +1,28 @@
+*,
+*:before,
+*:after {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+}
+
+// html {
+//     // font-size: 62.5%;
+   
+// }
+
+body {
+    font-family: sans-serif;
+    /* padding: 0 3rem; */
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+// #main {
+//   transition: margin-left 0.5s;
+//   padding: 20px;
+//   overflow: hidden;
+//   width: 100%;
+//   position: relative;
+//   z-index: 20000;
+// }

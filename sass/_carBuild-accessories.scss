@@ -1,0 +1,140 @@
+#car-build__accessories {
+  display: none;
+}
+.car-build__accessories {
+  display: flex;
+  justify-content: space-around;
+  background-color: rgb(224, 210, 210);
+}
+.car-build__accs {
+  background-color: rgb(255, 255, 255);
+  margin: 2rem 0;
+
+  &--header {
+    font-size: 1.6rem;
+    text-align: center;
+    margin-top: 1rem;
+  }
+ 
+  &--price {
+    margin: 1rem 0 1rem 0;
+    padding-left: 2rem;
+    font-size: 1.3rem;
+  }
+
+  &--details {
+    padding-left: 2rem;
+    color: red;
+    background-color: transparent;
+    border: transparent;
+   
+    &:hover {
+      cursor: pointer;
+    }
+
+    &:focus {
+      outline: transparent;
+    }
+  }
+
+  &--checkbox {
+    width: 15rem;
+    height: 3rem;
+    position: relative;
+    margin-top: 3rem;
+
+    &-label {
+      display: block;
+      padding-left: 3.5rem;
+      margin-bottom: 1.2rem;
+      cursor: pointer;
+      font-size: 1.2rem;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+
+      /* Hide the browser's default checkbox */
+      & input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+
+        &:checked ~ .checkmark {
+          background-color: #2196F3;
+          transform: scale(1.1);
+        }
+      }
+
+      &:hover input ~ .checkmark {
+        transform: scale(1.1);
+        box-shadow: 0 2px 5px rgb(177, 173, 173);
+      }
+
+      & input:checked ~ .checkmark {
+        background-color: rgb(243, 33, 33);
+        color: rgb(231, 222, 222);
+        transform: scale(1.1);
+      }
+    }
+  }
+}
+
+.checkmark {
+  position: absolute;
+  top: 0%;
+  left: 10%;
+  height: 1.5rem;
+  width: 6rem;
+  font-size: 1rem;
+  font-family: helvetica;
+  background-color: rgb(255, 255, 255);
+  border: 2px solid rgb(26, 25, 25);
+  border-radius: 20rem;
+  padding: .5rem 3rem;
+  transition: .2s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+
+
+
+
+// .car-build__accs--checkbox {
+//   width: 15rem;
+//   height: 10rem;
+//   position: relative;
+// }
+
+// .car-build__accs--checkbox-label {
+//   display: block;
+//   padding-left: 3.5rem;
+//   margin-bottom: 1.2rem;
+//   cursor: pointer;
+//   font-size: 1.2rem;
+//   -webkit-user-select: none;
+//   -moz-user-select: none;
+//   -ms-user-select: none;
+//   user-select: none;
+// }
+
+//   /* Hide the browser's default checkbox */
+//   .car-build__accs--checkbox-label input {
+//     position: absolute;
+//     opacity: 0;
+//     cursor: pointer;
+// }
+/* Create a custom checkbox */
+
+// /* On mouse-over, add a grey background color */
+// .car-build__accs--checkbox-label:hover input ~ .checkmark {
+//     background-color: #ccc;
+//     transform: scale(1.1);
+// }
+// /* When the checkbox is checked, add a blue background */
+// .car-build__accs--checkbox-label input:checked ~ .checkmark {
+//     background-color: #2196F3;
+//     transform: scale(1.1);
+// }

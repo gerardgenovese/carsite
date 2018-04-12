@@ -1,0 +1,72 @@
+.car-build-dropdown {
+  position: relative;
+  width: 100%;
+  height: 1rem;
+  // margin: 5rem 0 1rem 0;
+}
+
+
+/*Select Vehicle text*/
+.car-build-select-vehicle__button {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translateX(-50%);
+  text-align: center;
+  cursor: pointer; 
+  height: 1rem;
+  margin-bottom: 4rem;
+}
+
+.car-build-dropdown-checkbox {
+  display: none;
+  position:absolute;
+  top: 20%;
+  left: 44%;
+}
+
+.car-build-dropdown-select-text {
+  font-weight: bold;
+  font-family: 'arial';
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  transition: .2s;
+
+  &:hover {
+    color: red;
+  }
+}
+
+
+.car-build-dropdown__carImg {
+  width: 15rem;
+}
+.car-build-dropdown__carLink {
+  height: 5rem;
+}
+
+/*Drop down menu*/
+.car-build-dropdown-select-menu {
+  height: 0;
+  width: 100%;
+  position: fixed;
+  top: 23%;
+  left: 0;
+  z-index: 101;
+  background-color: rgb(255, 255, 255);
+  overflow-x: hidden;
+  overflow-y: hidden;
+  /* padding-top: 1rem; */
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+
+  &:hover {
+    color: rgb(236, 46, 20);
+  }
+
+  & a {
+    transition: 0.3s;
+  }
+}

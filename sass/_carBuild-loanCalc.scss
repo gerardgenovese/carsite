@@ -1,0 +1,56 @@
+#car-build__calculator {
+  display: none;
+}
+
+/* give input groups padding for an even look */
+.loan-amount {
+  padding-left: .9rem !important;
+  padding-right: .9rem !important;
+}
+.total-pay {
+  padding-left: 1.47rem !important;
+  padding-right: 1.47rem !important;
+}
+.total-interest {
+  padding-left: 1.7rem !important;
+  padding-right: 1.7rem !important;
+}
+
+/* Hide loading and results info */
+#loading, 
+#results {
+  display: none;
+}
+
+.calculate-button {
+  background-color: #e9ecef;
+  color: rgb(27, 27, 27);
+
+  &:hover {
+    background-color: #2213eb;
+    color: white;
+  }
+}
+
+
+
+#get-car-total {
+  padding: .5rem;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+
+  cursor: pointer;
+
+&:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+
+}
+
+
+
+// #get-car-total:focus {
+//   outline: none !important;
+//   box-shadow: none !important;
+// }

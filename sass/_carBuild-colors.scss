@@ -1,0 +1,59 @@
+.car-build__colors {
+  display: flex;
+  justify-content: center;
+  margin-top: 5%;
+  background-color: rgba(235, 235, 243, 0.836);
+  margin: 2% 20%;
+  padding: 2% 0;
+  border: none;
+  border-radius: 1.5rem;
+}
+.car {
+  border: 1px solid transparent;
+  border-radius: 25%;
+  width: 4rem;
+  height: 4rem;
+  margin-left: 1rem;
+  margin-right: 1rem;
+  transition: .2s;
+  cursor: pointer;
+
+  &:hover {
+    transform: scale(1.07);
+  }
+  &:focus {
+    outline: none;
+    border-radius: 25%;
+    transform: scale(1.2);
+    border: 1px groove rgba(160, 160, 238, 0.664);
+  }
+}
+
+#white {
+  background-color: white;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.7);
+}
+#black {
+  background-color: black;
+  box-shadow: 0 3px 5px rgba(78, 76, 76, 0.7);
+}
+
+#gray {
+  background-color: rgb(169, 169, 169);
+
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.7);
+}
+#smoke {
+
+  background-color: rgb(128, 128, 128);
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.7);
+}
+
+#blue {
+  background-color: blue;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.7);
+}
+#red {
+  background-color: red;
+  box-shadow: 0 3px 5px rgba(0, 0, 0, 0.7);
+}

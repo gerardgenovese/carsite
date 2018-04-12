@@ -1,0 +1,111 @@
+#car-build__engine {
+  display: none;
+  background-color: rgb(238, 228, 228);
+  position: relative;
+  z-index: 0;
+}
+
+.car-build__engine {
+  display: flex;
+  justify-content: space-around;
+  padding: 2rem 0;
+  position: relative;
+  z-index: 0;
+
+
+  &--info {
+    height: 25rem;
+    width: 35rem;
+    background-color: rgb(248, 248, 250);
+    display: block;
+    position: relative;
+    padding: 1rem 2rem;
+    margin-bottom: .8rem;
+    cursor: pointer;
+    font-size: 22px;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    box-shadow: 2px 0 15px rgb(139, 136, 136);
+    border-radius: 5px;
+  }
+
+  &--trans {
+    font-size: 1.2rem;
+  }
+
+  &--specs {
+    font-size: 1rem;
+  }
+
+  &--cost {
+    text-align:center;
+    margin-top: 25%;
+  }
+
+/* Hide the default radio button */
+  & input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+  }
+/* Custom radio button */
+  &--checkmark {
+    position: absolute;
+    top: 90%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 25px;
+    width: 25px;
+    background-color: #eee;
+    border-radius: 50%;
+  }
+
+/* On mouse-over, add a light red background color */
+  &--info:hover input ~ &--checkmark {
+    background-color: rgb(201, 137, 137);
+  }
+/* When radio button is checked, add red background */
+  &--info input:checked ~ &--checkmark {
+    background-color: rgb(243, 33, 33);
+  }
+/* Create the indicator (the dot/circle - hidden when not checked) */
+  &--checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+  }
+/* Show the indicator (dot/circle) when checked */
+  &--info input:checked ~ &--checkmark:after {
+    display: block;
+  }
+/* Style the indicator (dot/circle) */
+  &--info &--checkmark:after {
+    top: .44rem;
+    left: .44rem;
+    width: 11px;
+    height: 11px;
+    border-radius: 50%;
+    background: white;
+  }
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

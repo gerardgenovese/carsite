@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Car Site</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <!--fontawesome-->
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+    <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="css/icon-font.css">
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+</head>
+<body class="index">
+    
+
+<!-- Navigation -->
+<nav class="navbar">
+  <span class="open-slide">
+      <input type="checkbox" class="navigation__checkbox hamburger" id="navi-toggle">
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="nav-all">
+          <span class="navigation__icon1"></span>
+          <span class="navigation__icon2"></span>
+          <span class="navigation__icon3"></span>
+        </span>
+      </label>
+  </span>
+</nav>
+<img class="img__logo" src="img/toyota-logo.png" alt="">
+<div id="side-menu" class="side-nav">
+    <a href="#">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</div>
+
+<!--HEADER-->
+      <!-- <header class="header-index">
+          <img class="header-index__image" src="img/header-honda.PNG" alt="">
+      </header> -->
+
+<div class="navCloseFunction" onclick="navCloseFunction(event)">
+
+<section id="carSlideShow">
+  <div class="carSlides resetNav">
+    <div id="one">    
+      <img class="one resetNav" src="img/slider/86.png">
+      <img class="onebg resetNav" src="img/slider/snow1.jpg">
+      <div class="menu-container">
+          <p class="menu-year resetNav">The 2018<span class="menu-model resetNav">Toyota 86</span></p>
+          <p class="menu-header resetNav">A Driving Experience</p>
+          <hr class="menu-hr resetNav">
+          <p class="menu-price resetNav">Starting at $26,255</p>
+          <p class="menu-lease resetNav">$420 per month for 36 months, </p>
+          <p class="menu-due resetNav">$3,000 due at signing.</p>
+          <button class="menu-button resetNav">Learn More</button>
+      </div>
+    </div> 
+  </div> 
+  <div class="carSlides resetNav">
+    <div id="two">    
+      <img class="two resetNav" src="img/slider/camrySlide.png">
+      <img class="twobg resetNav" src="img/slider/road1a.jpg">
+      <div class="menu-container2 resetNav">
+          <p class="menu-year resetNav">The 2018<span class="menu-model resetNav">Toyota Camry</span></p>
+          <p class="menu-header resetNav">A Thrilling Adventure</p>
+          <hr class="menu-hr resetNav">
+          <p class="menu-price resetNav">Starting at $23,495</p>
+          <p class="menu-lease resetNav">$400 per month for 36 months, </p>
+          <p class="menu-due resetNav">$2,500 due at signing.</p>
+          <button class="menu-button resetNav">Learn More</button>
+      </div>
+    </div>
+  </div> 
+  <div class="carSlides resetNav">
+    <div id="three">    
+      <img class="three resetNav" src="img/slider/avalon2.png">
+      <img class="threebg resetNav" src="img/slider/road2a.jpg">
+      
+      <div class="menu-container3 resetNav">
+          <p class="menu-year resetNav">The 2018<span class="menu-model resetNav">Toyota Avalon</span></p>
+          <p class="menu-header">Affordable Luxury</p>
+          <hr class="menu-hr resetNav">
+          <p class="menu-price resetNav">Starting at $33,500</p>
+          <p class="menu-lease resetNav">$500 per month for 36 months, </p>
+          <p class="menu-due resetNav">$3,500 due at signing.</p>
+          <button class="menu-button resetNav">Learn More</button>
+      </div>
+    </div>
+  </div>
+  <div class="carSlides resetNav">
+    <div id="four">    
+      <img class="four resetNav" src="img/slider/corollaSlide2.png">
+      <img class="fourbg resetNav" src="img/slider/road3a.jpg">
+      <div class="menu-container4 resetNav">
+          <p class="menu-year resetNav">The 2018<span class="menu-model resetNav">Toyota Corolla</span></p>
+          <p class="menu-header resetNav">Style for the Future</p>
+          <hr class="menu-hr resetNav">
+          <p class="menu-price resetNav">Starting at $18,600</p>
+          <p class="menu-lease resetNav">$325 per month for 36 months, </p>
+          <p class="menu-due resetNav">$2,000 due at signing.</p>
+          <button class="menu-button resetNav">Learn More</button>
+      </div>
+    </div>
+  </div> 
+  <button class="slideButton slideBack" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="slideButton slideForward" onclick="plusDivs(1)">&#10095;</button>
+</section>
+
+
+
+<!--SPEC BUTTONS-->
+  <div class="specs__options"> 
+    <div class="specs__options--icons icon-car" >
+   
+        <i class="fas fa-car icon-basic-car icon-basic"></i>
+        <p class="options-text" align="center">Build <br>& Price</p>
+    </div>
+    <div class="specs__options--icons icon-search">
+        <!-- <i class="icon-basic-calculator icon-basic"></i>  -->
+        <i class="fas fa-search icon-basic-search icon-basic"></i>
+        <p class="options-text" align="center">Search <br>& Inventory</p> 
+    </div>
+
+    <!-- <div class="specs__options--icons icon-mix">
+        <i class="icon-basic-mixer2 icon-basic"></i> 
+          <p class="options-text" align="center">Details <br>& Specs</p> 
+    </div> -->
+
+    <div class="specs__options--icons icon-geo">
+        <!-- <i class="icon-basic-geolocalize-01 icon-basic"></i>  -->
+        <i class="fas fa-map-marker icon-basic icon-marker"></i>
+          <p class="options-text" align="center">Find a <br> Dealership</p> 
+    </div>
+  </div>
+
+
+
+
+
+
+<!--explore all vehicles section-->
+  <h2 class="explore__heading">Explore all Vechicles</h2> 
+  <div class="explore">
+    <div class="explore-car">
+        <a href="build-price.html"><img class="camry explore-car__side" src="img/explore__vehicles/camry/camry-red/red-camry-side.PNG" alt="2018 camry">
+      <img class="camry explore-car__front" src="img/explore__vehicles/camry/camry-red/red-camry-front-small.PNG" alt="2018 camry front"></a>
+      <div class="explore-car__info" id="camry">
+        <div class="explore-car__model"><strong>2018 Camry</strong> </div> 
+        <div class="explore-car__price">$23,495</div>
+        <div class="explore-car__mileage">29/41 est MPG</div>
+      </div>
+    </div>  
+    <div class="explore-car">
+      <a href="build-price.html"><img class="corolla explore-car__side" src="img/explore__vehicles/corolla/2018-corolla.PNG" alt="2018 corolla">
+        <img class="corolla explore-car__front" src="img/explore__vehicles/corolla/2018-corolla-front.PNG" alt="2018 corolla front"></a>
+        <div class="explore-car__info" id="corolla">
+          <div class="explore-car__model"><strong>2018 Corolla</strong> </div> 
+          <div class="explore-car__price">$18,550 </div>
+          <div class="explore-car__mileage">28/36 est MPG</div>
+        </div>
+    </div>
+    <div class="explore-car">
+      <a href="build-price.html"><img class="t86 explore-car__side" src="img/explore__vehicles/t86-side.PNG" alt="2018 t86">
+        <img class="t86 explore-car__front" src="img/explore__vehicles/t86-front.PNG" alt="2018 86 front"></a>
+        <div class="explore-car__info" id="t86">
+          <div class="explore-car__model"><strong>2018 86</strong> </div>
+          <div class="explore-car__price">$26,255 </div>
+          <div class="explore-car__mileage">21/28 est MPG</div>
+        </div>
+    </div>
+    <div class="explore-car">
+      <a href="build-price.html"><img class="yaris explore-car__side" src="img/explore__vehicles/yaris-side.PNG" alt="2018 yaris">
+        <img class="yaris explore-car__front" src="img/explore__vehicles/yaris-front.PNG" alt="2018 yaris front"></a>
+        <div class="explore-car__info" id="yaris">
+          <div class="explore-car__model"><strong>2018 Yaris</strong> </div>
+          <div class="explore-car__price">$15,635 </div>
+          <div class="explore-car__mileage">30/36 est MPG</div>
+        </div>
+    </div>
+    <div class="explore-car">
+      <a href="build-price.html"><img class="avalon explore-car__side" src="img/explore__vehicles/avalon-side.PNG" alt="2018 avalon">
+        <img class="avalon explore-car__front" src="img/explore__vehicles/avalon-front.PNG" alt="2018 avalon front"></a>
+        <div class="explore-car__info" id="avalon">
+          <div class="explore-car__model"><strong>2018 Avalon</strong> </div> 
+          <div class="explore-car__price">$33,500 </div>
+          <div class="explore-car__mileage">21/30 est MPG</div>
+        </div>
+    </div>
+  </div>
+
+
+
+
+
+
+
+
+</div> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!-- 
+<h2 class="w3-center">Manual Slideshow</h2>
+
+<div class="one w3-content w3-display-container">
+  <img class="img-slide" src="img/explore__vehicles/86-front.PNG">
+  <img class="img-slide" src="img/explore__vehicles/yaris-front.PNG">
+  <img class="img-slide" src="img/explore__vehicles/avalon-side.PNG">
+  <img class="img-slide" src="img/explore__vehicles/86-front.PNG">
+
+  <button class="w3-button w3-black w3-display-left" onclick="plusDivs(-1)">&#10094;</button>
+  <button class="w3-button w3-black w3-display-right" onclick="plusDivs(1)">&#10095;</button>
+</div>
+
+<script>
+var slideIndex = 1;
+showDivs(slideIndex);
+
+function plusDivs(n) {
+  showDivs(slideIndex += n);
+}
+
+function showDivs(n) {
+  var i;
+  var x = document.getElementsByClassName("img-slide");
+  if (n > x.length) {slideIndex = 1}    
+  if (n < 1) {slideIndex = x.length}
+  for (i = 0; i < x.length; i++) {
+     x[i].style.display = "none";  
+  }
+  x[slideIndex-1].style.display = "block";  
+}
+</script> -->
+
+
+
+
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+   <script src="js/main.js"></script>
+</body>
+</html>
