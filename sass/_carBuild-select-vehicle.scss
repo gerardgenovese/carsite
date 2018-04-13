@@ -1,5 +1,5 @@
 .car-build-dropdown {
-  position: relative;
+  // position: relative;
   width: 100%;
   height: 1rem;
   // margin: 5rem 0 1rem 0;
@@ -16,6 +16,7 @@
   cursor: pointer; 
   height: 1rem;
   margin-bottom: 4rem;
+  z-index: 1;
 }
 
 .car-build-dropdown-checkbox {
@@ -51,9 +52,9 @@
   height: 0;
   width: 100%;
   position: fixed;
-  top: 23%;
+  top: 10%;
   left: 0;
-  z-index: 101;
+  z-index: 110;
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
   overflow-y: hidden;

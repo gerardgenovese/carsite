@@ -1148,21 +1148,24 @@ vehicleCartCountFunctionality();
  
 //OPEN MENU
 function openVehicleCart() {
-  document.getElementById('vehicle_cart-vehicle').style.height = '25rem';
+  let cart = document.getElementById('vehicle_cart-menu');
+  cart.style.height = '25rem';
+  cart.style.fontFamily = 'Kanit';
   closeSelectVehiclesMenu();
   vehicleCartCount = 0;
 };
 
 //CLOSE MENU
 function closeVehicleCart() {
-  document.getElementById('vehicle_cart-vehicle').style.height = '0';
+  let cart = document.getElementById('vehicle_cart-menu');
+  cart.style.height = '0';
   vehicleCartCount = 1;
 };
 
 //click elements within div in html for menu close
 function vehicleCartFunction(event) { 
   // alert(event.currentTarget.nodeName);
-  let vehicleCart = document.getElementById('vehicle_cart-vehicle');
+  let vehicleCart = document.getElementById('vehicle_cart-menu');
   
   if (event.currentTarget.className === 'vehicleCartFunction') {
     vehicleCart.style.height = '0';
@@ -1317,45 +1320,121 @@ function yourVehicleCart() {
 
 
 
+// window.onscroll = function() {
+//   let scroll = window.pageYOffset;
+ 
+//   if (scroll < 50){
+//     let car = document.getElementById('carImgDisplay');
+//     car.className = 'car-build__main-car-image';
+
+//     carTitleDisplay.className = 'car-build__main-car-title';
+//     carPriceDisplay.className = 'car-build__main-car-price';
+//     document.getElementById('right-button').className = 'car-build__main--right';
+
+//     document.querySelector('.vehicleCart').className = 'car-build-vehicle_cart-select';
+
+//     document.querySelector('.panel').className = 'car-build__panel';
+
+//     document.querySelector('.test').className = 'image-background';
+
+//     document.querySelector('.buildMain').className = 'car-build__main';
+
+//     document.querySelector('.car-contain2').className = 'car-contain';
+
+//   }
+//   else if (scroll >  50) {
+//     let car = document.getElementById('carImgDisplay');
+//     car.className = 'transition1';
+
+//     carTitleDisplay.className = 'titleTransition';
+//     carPriceDisplay.className = 'priceTransition';
+//     document.getElementById('right-button').className = 'carButtonRotateRightHide';
+
+//     document.querySelector('.car-build-vehicle_cart-select').className = 'vehicleCart';
+
+//     document.querySelector('.car-build__panel').className = 'panel';
+
+//     document.querySelector('.image-background').className = 'test';
+
+//     document.querySelector('.car-build__main').className = 'buildMain';
+
+//     document.querySelector('.car-contain').className = 'car-contain2';
+
+//     console.log(pageYOffset);
+
+
+//   } 
+//   return false;
+// }
+
+
+
+
+
+
+
+
 window.onscroll = function() {
   let scroll = window.pageYOffset;
- 
-  if (scroll < 50){
-    let car = document.getElementById('carImgDisplay');
-    car.className = 'car-build__main-car-image';
 
-    carTitleDisplay.className = 'car-build__main-car-title';
-    carPriceDisplay.className = 'car-build__main-car-price';
-    document.getElementById('right-button').className = 'car-build__main--right';
 
-    document.querySelector('.vehicleCart').className = 'car-build-vehicle_cart-select';
+  if (scroll > 25) {
+    //car img
+    carImgDisplay.className = 'transition1';
+    //car img container
+    document.querySelector('.car-contain').className = 'car-contain2';
+    //white background for scrolling behind fixed top
+    document.querySelector('.image-background').className = 'image-background2';
 
-    document.querySelector('.panel').className = 'car-build__panel';
-
-    document.querySelector('.test').className = 'image-background';
-
-    document.querySelector('.buildMain').className = 'car-build__main';
-
-  }
-  else if (scroll >  50 && scroll < 150) {
-    let car = document.getElementById('carImgDisplay');
-    car.className = 'transition1';
-
-    carTitleDisplay.className = 'titleTransition';
-    carPriceDisplay.className = 'priceTransition';
-    document.getElementById('right-button').className = 'carButtonRotateRightHide';
-
-    document.querySelector('.car-build-vehicle_cart-select').className = 'vehicleCart';
-
-    document.querySelector('.car-build__panel').className = 'panel';
-
-    document.querySelector('.image-background').className = 'test';
-
+    //background to push panel elements down
     document.querySelector('.car-build__main').className = 'buildMain';
 
-    console.log(pageYOffset);
+    //vehicle cart
+    document.querySelector('.car-build-vehicle_cart-select').className = 'vehicleCart';
+    document.getElementById('vehicle_cart-menu').className = 'vehicleCartMenu';
+
+    //Car Title & Price
+    carTitleDisplay.className = 'titleTransition';
+    carPriceDisplay.className = 'priceTransition';
+    //car starting text
+    document.querySelector('.car-build__main-car-starting').className = 'car-starting';
+
+    //right button for changing car angle
+    document.getElementById('right-button').className = 'carButtonRotateRightHide';
+
+    //panel
+    document.querySelector('.car-build__panel').className = 'panel';
+  }
 
 
-  } 
-  return false;
+
+  else if (scroll < 55) {
+    //car img
+    carImgDisplay.className = 'car-build__main-car-image';
+    carImgDisplay.style.position = 'relative';
+    //car img container
+    document.querySelector('.car-contain2').className = 'car-contain';
+    //white background for scrolling behind fixed top
+    document.querySelector('.image-background2').className = 'image-background';
+
+    //background to push panel elements down
+    document.querySelector('.buildMain').className = 'car-build__main';
+    
+    //vehicle cart
+    document.querySelector('.vehicleCart').className = 'car-build-vehicle_cart-select';
+    document.getElementById('vehicle_cart-menu').className = 'car-build-vehicle_cart-select-menu';
+
+
+    //Car Title & Price
+    carTitleDisplay.className = 'car-build__main-car-title';
+    carPriceDisplay.className = 'car-build__main-car-price';
+    //car starting text
+    document.querySelector('.car-starting').className = 'car-build__main-car-starting';
+
+    //right button for changing car angle
+    document.getElementById('right-button').className = 'car-build__main--right';
+
+    //panel
+    document.querySelector('.panel').className = 'car-build__panel';
+  }
 }

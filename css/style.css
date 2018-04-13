@@ -17,15 +17,16 @@ body {
 .car-build__accessories {
   display: flex;
   justify-content: space-around;
-  background-color: #e0d2d2; }
+  background-color: #f7f3f3;
+  margin-top: 3%; }
 
 .car-build__accs {
   background-color: white;
-  margin: 2rem 0; }
+  margin: .5rem 0; }
   .car-build__accs--header {
     font-size: 1.6rem;
     text-align: center;
-    margin-top: 1rem; }
+    margin-top: .5rem; }
   .car-build__accs--price {
     margin: 1rem 0 1rem 0;
     padding-left: 2rem;
@@ -43,7 +44,7 @@ body {
     width: 15rem;
     height: 3rem;
     position: relative;
-    margin-top: 3rem; }
+    margin-top: 2rem; }
     .car-build__accs--checkbox-label {
       display: block;
       padding-left: 3.5rem;
@@ -88,15 +89,19 @@ body {
   align-items: center; }
 
 /* Create a custom checkbox */
+.modal-open {
+  overflow-y: scroll;
+  overflow-x: hidden;
+  margin: 0 !important;
+  padding: 0 !important; }
+
 .car-build__colors {
   display: flex;
   justify-content: center;
-  margin-top: 5%;
   background-color: rgba(235, 235, 243, 0.836);
-  margin: 2% 20%;
   padding: 2% 0;
   border: none;
-  border-radius: 1.5rem; }
+  margin: 3% 0; }
 
 .car {
   border: 1px solid transparent;
@@ -141,9 +146,10 @@ body {
 
 #car-build__engine {
   display: none;
-  background-color: #eee4e4;
+  background-color: #f7f3f3;
   position: relative;
-  z-index: 0; }
+  z-index: 0;
+  margin-top: 3%; }
 
 .car-build__engine {
   display: flex;
@@ -159,7 +165,7 @@ body {
   /* Show the indicator (dot/circle) when checked */
   /* Style the indicator (dot/circle) */ }
   .car-build__engine--info {
-    height: 25rem;
+    height: 20rem;
     width: 35rem;
     background-color: #f8f8fa;
     display: block;
@@ -179,8 +185,7 @@ body {
   .car-build__engine--specs {
     font-size: 1rem; }
   .car-build__engine--cost {
-    text-align: center;
-    margin-top: 25%; }
+    text-align: center; }
   .car-build__engine input {
     position: absolute;
     opacity: 0;
@@ -248,40 +253,45 @@ body {
     outline: none !important;
     box-shadow: none !important; }
 
-.car-build__main {
-  width: 100%;
-  height: 60vh;
+#mainDiv {
   position: relative;
-  margin-top: 5rem;
-  background-color: white;
-  z-index: 99; }
+  height: 50%;
+  width: 100%;
+  background-color: transparent; }
+
+.car-build__main {
+  margin-top: 3rem; }
   .car-build__main-car-title {
     position: absolute;
-    top: 5%;
-    left: 15%;
+    top: 25%;
+    left: 5%;
     z-index: 1;
-    font-size: 1.5rem;
-    font-weight: bold; }
+    font-size: 3rem;
+    transition: .2s;
+    font-family: 'Kanit', sans-serif;
+    z-index: 101; }
+    .car-build__main-car-title:before {
+      content: 'toyota ';
+      text-transform: uppercase;
+      font-size: 2rem; }
   .car-build__main-car-price {
     position: absolute;
-    top: 5%;
+    top: 25%;
     right: 15%;
     z-index: 1;
     font-size: 1.5rem;
-    font-weight: bold; }
+    font-family: 'Kanit', sans-serif;
+    transition: .2s;
+    z-index: 106; }
   .car-build__main-car-starting {
     position: absolute;
-    top: 7.5%;
+    top: 26%;
     right: 11%;
-    z-index: 1;
+    z-index: 100;
     font-size: .6rem;
     text-transform: uppercase;
-    font-style: italic; }
-  .car-build__main-car-image {
-    position: absolute;
-    top: 40%;
-    left: 50%;
-    transform: translate(-50%, -50%); }
+    font-style: italic;
+    transition: .2s; }
   .car-build__main--left {
     position: absolute;
     top: 50%;
@@ -300,6 +310,7 @@ body {
   border-style: transparent;
   border-color: #f5eeee;
   padding: 0 10%;
+  z-index: 102;
   position: relative; }
   .car-build__panel-text {
     color: white;
@@ -337,45 +348,107 @@ body {
   border-width: 0 2px 0 .5px; }
 
 .transition1 {
-  position: fixed;
-  top: 7%;
-  left: 60%;
-  left: 60%;
-  width: 20%;
+  position: relative;
+  top: 5%;
+  left: 45%;
+  width: 35%;
+  transition: .5s;
+  z-index: 100; }
+
+.car-build__main-car-image {
+  position: relative;
+  top: 50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 50%;
+  height: 50%;
   transition: .2s;
   z-index: 100; }
 
-.titleTransition {
+.car-contain2 {
   position: fixed;
-  top: 7%;
-  left: 15%;
-  z-index: 1;
-  font-size: 1.5rem;
-  font-weight: bold;
+  top: 5%;
+  width: 100%;
   z-index: 100; }
 
-.priceTransition {
+.image-background2 {
+  background-color: white;
+  width: 100%;
+  height: 40%;
   position: fixed;
-  top: 7%;
-  right: 15%;
-  z-index: 1;
-  font-size: 1.5rem;
-  font-weight: bold;
-  z-index: 100; }
+  top: 0;
+  z-index: 99; }
 
-.carButtonRotateRightHide {
-  display: none; }
+.buildMain {
+  width: 100%;
+  height: 35vh;
+  position: relative;
+  margin-top: 5rem;
+  background-color: transparent;
+  z-index: 99; }
 
 .vehicleCart {
   position: fixed;
-  top: 5%;
-  left: 1%;
-  margin-top: 2rem;
+  top: 9.5%;
+  left: 11%;
   font-weight: bold;
   font-family: 'arial';
   font-size: .7rem;
   transition: .2s;
   z-index: 100; }
+
+.vehicleCartMenu {
+  height: 0;
+  width: 22%;
+  position: fixed;
+  top: 13%;
+  left: 4%;
+  z-index: 105;
+  background-color: #faf5f5;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  transition: 0.5s;
+  box-shadow: 2px 2px 10px rgba(175, 170, 170, 0.308), -2px -2px 10px rgba(175, 170, 170, 0.308); }
+
+.titleTransition {
+  position: fixed;
+  top: 5%;
+  left: 23%;
+  z-index: 1;
+  font-size: 3rem;
+  font-family: 'Kanit', sans-serif;
+  z-index: 101;
+  transition: .2s; }
+
+.titleTransition:before {
+  content: 'toyota  ';
+  text-transform: uppercase;
+  font-family: arial;
+  font-size: 2rem; }
+
+.priceTransition {
+  position: fixed;
+  top: 5%;
+  right: 15%;
+  z-index: 1;
+  font-size: 1.5rem;
+  font-family: 'Kanit', sans-serif;
+  z-index: 101;
+  transition: .2s; }
+
+.car-starting {
+  position: fixed;
+  top: 6%;
+  right: 11%;
+  z-index: 1;
+  font-size: .6rem;
+  text-transform: uppercase;
+  font-style: italic;
+  z-index: 101;
+  transition: .2s; }
+
+.carButtonRotateRightHide {
+  display: none; }
 
 .panel {
   position: fixed;
@@ -388,25 +461,9 @@ body {
   border-color: #f5eeee;
   padding: 0 10%;
   transition: .2s;
-  z-index: 100; }
-
-.test {
-  background-color: white;
-  width: 100%;
-  height: 20rem;
-  position: fixed;
-  top: 0; }
-
-.buildMain {
-  width: 100%;
-  height: 40vh;
-  position: relative;
-  margin-top: 5rem;
-  background-color: red;
-  z-index: 99; }
+  z-index: 102; }
 
 .car-build-dropdown {
-  position: relative;
   width: 100%;
   height: 1rem; }
 
@@ -419,7 +476,8 @@ body {
   text-align: center;
   cursor: pointer;
   height: 1rem;
-  margin-bottom: 4rem; }
+  margin-bottom: 4rem;
+  z-index: 1; }
 
 .car-build-dropdown-checkbox {
   display: none;
@@ -448,9 +506,9 @@ body {
   height: 0;
   width: 100%;
   position: fixed;
-  top: 23%;
+  top: 10%;
   left: 0;
-  z-index: 101;
+  z-index: 110;
   background-color: white;
   overflow-x: hidden;
   overflow-y: hidden;
@@ -467,14 +525,13 @@ body {
 /*position relative from car-build-select*/
 .car-build-vehicle_cart__button {
   position: absolute;
-  top: 5%;
-  left: 1%;
-  z-index: 100;
+  top: 25%;
+  left: 11%;
+  z-index: 105;
   text-align: center;
   cursor: pointer; }
 
 .car-build-vehicle_cart-select {
-  margin-top: 2rem;
   font-weight: bold;
   font-family: 'arial';
   font-size: .7rem;
@@ -485,17 +542,16 @@ body {
 /*Drop down menu*/
 .car-build-vehicle_cart-select-menu {
   height: 0;
-  width: 20%;
+  width: 22%;
   position: fixed;
   top: 20%;
-  left: 0;
-  z-index: 101;
-  background-color: white;
+  left: 4%;
+  z-index: 105;
   overflow-x: hidden;
   overflow-y: hidden;
-  /* padding-top: 1rem; */
   transition: 0.5s;
-  padding-left: 1rem; }
+  background-color: #faf5f5;
+  box-shadow: 2px 2px 10px rgba(175, 170, 170, 0.308), -2px -2px 10px rgba(175, 170, 170, 0.308); }
   .car-build-vehicle_cart-select-menu:hover {
     color: #ec2e14; }
   .car-build-vehicle_cart-select-menu a {
@@ -510,8 +566,42 @@ body {
   text-align: center;
   height: 1rem; }
 
+.car-build-vehicle_cart-dropdown__carModel {
+  text-align: center; }
+
 .car-build-vehicle_cart-dropdown__carImg {
-  width: 10rem; }
+  width: 10rem;
+  display: block;
+  margin: 0 auto; }
+
+.car-build-vehicle_cart-dropdown__carPrice, .car-build-vehicle_cart-dropdown__engine, .car-build-vehicle_cart-dropdown__alloy, .car-build-vehicle_cart-dropdown__mats, .car-build-vehicle_cart-dropdown__cargo, .car-build-vehicle_cart-dropdown__total {
+  margin: 0;
+  padding: .5rem 0 0 .5rem; }
+
+#cart-checkout {
+  margin: 1rem 0 0 .5rem;
+  padding: .5rem 1rem;
+  background-color: #fc0606;
+  color: white;
+  border-radius: 3rem;
+  border: none;
+  transition: .2s; }
+
+#cart-checkout:hover {
+  box-shadow: 0 5px 5px gray;
+  transform: scale(1.1);
+  background-color: #a70707; }
+
+#cart-checkout:active {
+  box-shadow: 0 2px 2px gray;
+  transform: scale(1); }
+
+#cart-checkout:focus {
+  outline: 0; }
+
+.menu-car-bg {
+  width: 100%;
+  background-color: white; }
 
 .carSlides {
   display: none; }
@@ -856,7 +946,7 @@ body {
   position: fixed;
   top: 0;
   right: 5%;
-  z-index: 25; }
+  z-index: 105; }
 
 .img__logo {
   display: block;
@@ -873,7 +963,7 @@ body {
   right: 5%;
   width: 2rem;
   height: 1.2rem;
-  z-index: 21; }
+  z-index: 105; }
 
 /* navigation hamburger lines */
 .navigation__icon1 {
@@ -883,7 +973,8 @@ body {
   width: 2rem;
   height: 2px;
   background-color: #333;
-  display: inline-block; }
+  display: inline-block;
+  z-index: 105; }
 
 .navigation__icon2 {
   position: absolute;
@@ -893,7 +984,8 @@ body {
   width: 2rem;
   height: 2px;
   background-color: #333;
-  display: inline-block; }
+  display: inline-block;
+  z-index: 105; }
 
 .navigation__icon3 {
   position: absolute;
@@ -904,7 +996,8 @@ body {
   height: 2px;
   background-color: #333;
   display: inline-block;
-  transition: .5; }
+  transition: .5;
+  z-index: 105; }
 
 .navigation__icon1:checked {
   background-color: blue; }
@@ -921,7 +1014,8 @@ body {
   overflow: hidden;
   transition: 0.5s;
   display: flex;
-  justify-content: center; }
+  justify-content: center;
+  z-index: 104; }
 
 .side-nav a {
   padding: 1rem;
@@ -931,7 +1025,8 @@ body {
   display: block;
   transition: 0.3s;
   justify-content: center;
-  align-self: center; }
+  align-self: center;
+  z-index: 104; }
 
 .side-nav a:hover {
   color: #fff; }
