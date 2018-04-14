@@ -362,7 +362,6 @@ function avalonSessionStorage() {
 
 //DISPLAY CAR VALUES AND IMG ON BUILD PAGE FROM SESSION STORAGE
 function whenLoaded() {
-
   if (document.body.classList.contains('build-price')){
     let carImg = sessionStorage.getItem('car img');
     carImgDisplay.src = carImg;
@@ -376,9 +375,9 @@ function whenLoaded() {
     let carAlt = sessionStorage.getItem('car alt');
       carImgDisplay.alt = carAlt;
   }
-
 };
 whenLoaded();
+
 //Grabs all session storage numbers and adds total price
 function totalCarPrice() {
   let carPrice = parseInt(sessionStorage.getItem('car price'));
@@ -1438,3 +1437,162 @@ window.onscroll = function() {
     document.querySelector('.panel').className = 'car-build__panel';
   }
 }
+
+
+
+
+
+//////////////CHECKOUT PAGE//////////////
+
+
+
+// function checkout() {
+
+//   if (document.body.classList.contains('checkout')) {
+//     //car color
+//     let carColor = document.querySelector('.checkout-options-color')
+//     carColor.innerHTML = sessionStorage.getItem('car alt');
+//     carColor.alt = sessionStorage.getItem('car alt');
+    
+//     //Propogate car model
+//     document.querySelector('.checkout-model').innerHTML = sessionStorage.getItem('car title');
+//     //car img
+//     let getCarImg = sessionStorage.getItem('car img');
+//     document.querySelector('.checkout-carImg').src = getCarImg.replace(/white|black|gray|smoke|blue|red/gi, carColor.alt);
+  
+//     //car cost 
+//     document.querySelector('.checkout-options-car').innerHTML = sessionStorage.getItem('car title');
+//     document.querySelector('.checkout-options-cost').innerHTML = sessionStorage.getItem('car price');
+
+
+//     //car engine
+//     let carEngine = document.querySelector('.checkout-options-engine');
+//     if (sessionStorage.getItem('engine') == '500') {
+//       carEngine.innerHTML = '2.5 4-Cyl. Super Thrust 8 Speed Manual';
+//       document.querySelector('.checkout-options-engine-cost').innerHTML = '$500.00';
+//     } else {
+//       carEngine.innerHTML = '2.5 4-Cyl. Super Thrust 8 Speed Automatic';
+//       document.querySelector('.checkout-options-engine-cost').innerHTML = '$0';
+//     }
+//     //car alloy wheel lock
+//     let carWheels = document.querySelector('.checkout-options-wheels');
+//     if (sessionStorage.getItem('alloy wheels') == '75') {
+//       carWheels.innerHTML = 'Yes';
+//       document.querySelector('.checkout-options-wheels-cost').innerHTML = '$75.00';
+//     } else {
+//       carWheels.innerHTML = 'No';
+//       document.querySelector('.checkout-options-wheels-cost').innerHTML = '$0';
+//     }
+//     //car leather mats
+//     let carMats = document.querySelector('.checkout-options-mats');
+//     if (sessionStorage.getItem('leather mats') == '75') {
+//       carMats.innerHTML = 'Yes';
+//       document.querySelector('.checkout-options-mats-cost').innerHTML = '$75.00';
+//     } else {
+//       carMats.innerHTML = 'No';
+//       document.querySelector('.checkout-options-mats-cost').innerHTML = '$0';
+//     }
+//     //car cargo-tote
+//     let carCargo = document.querySelector('.checkout-options-cargo');
+//     if (sessionStorage.getItem('cargo tote') == '75') {
+//       carCargo.innerHTML = 'Yes';
+//       document.querySelector('.checkout-options-cargo-cost').innerHTML = '$75.00';
+//     } else {
+//       carCargo.innerHTML = 'No';
+//       document.querySelector('.checkout-options-cargo-cost').innerHTML = '$0';
+//     }
+
+    
+//     //checkoutTotal
+//     let carPrice = parseInt(sessionStorage.getItem('car price'));
+//     let engine = parseInt(sessionStorage.getItem('engine'));
+//     let alloyWheels = parseInt(sessionStorage.getItem('alloy wheels'));
+//     let leatherMats = parseInt(sessionStorage.getItem('leather mats'));
+//     let cargoTote = parseInt(sessionStorage.getItem('cargo tote'));
+  
+//     document.querySelector('.checkout-options-total-cost').innerHTML = carPrice + engine + alloyWheels + leatherMats + cargoTote;
+//   } 
+
+// }
+// checkout();
+
+    
+
+
+
+
+
+
+
+
+
+function checkout() {
+
+  if (document.body.classList.contains('checkout')) {
+    //car color
+    let carColor = document.querySelector('.checkout-options-color')
+    carColor.innerHTML = sessionStorage.getItem('car alt');
+    carColor.alt = sessionStorage.getItem('car alt');
+    
+    //Propogate car model
+    document.querySelector('.checkout-model').innerHTML = sessionStorage.getItem('car title');
+    //car img
+    let getCarImg = sessionStorage.getItem('car img');
+    document.querySelector('.checkout-carImg').src = getCarImg.replace(/white|black|gray|smoke|blue|red/gi, carColor.alt);
+  
+    //car cost 
+    document.querySelector('.checkout-options-cost').innerHTML = sessionStorage.getItem('car price');
+
+
+    //car engine
+    let carEngine = document.querySelector('.checkout-options-engine');
+    if (sessionStorage.getItem('engine') == '500') {
+      carEngine.innerHTML = 'Super Thrust 8 Speed Manual';
+      document.querySelector('.checkout-options-engine-cost').innerHTML = '$500.00';
+    } else {
+      carEngine.innerHTML = 'Super Thrust 8 Speed Automatic';
+      document.querySelector('.checkout-options-engine-cost').innerHTML = '$0';
+    }
+    //car alloy wheel lock
+    let carWheels = document.querySelector('.checkout-options-wheels');
+    if (sessionStorage.getItem('alloy wheels') == '75') {
+      carWheels.innerHTML = 'Yes';
+      document.querySelector('.checkout-options-wheels-cost').innerHTML = '$75.00';
+    } else {
+      carWheels.innerHTML = 'No';
+      document.querySelector('.checkout-options-wheels-cost').innerHTML = '$0';
+    }
+    //car leather mats
+    let carMats = document.querySelector('.checkout-options-mats');
+    if (sessionStorage.getItem('leather mats') == '75') {
+      carMats.innerHTML = 'Yes';
+      document.querySelector('.checkout-options-mats-cost').innerHTML = '$75.00';
+    } else {
+      carMats.innerHTML = 'No';
+      document.querySelector('.checkout-options-mats-cost').innerHTML = '$0';
+    }
+    //car cargo-tote
+    let carCargo = document.querySelector('.checkout-options-cargo');
+    if (sessionStorage.getItem('cargo tote') == '75') {
+      carCargo.innerHTML = 'Yes';
+      document.querySelector('.checkout-options-cargo-cost').innerHTML = '$75.00';
+    } else {
+      carCargo.innerHTML = 'No';
+      document.querySelector('.checkout-options-cargo-cost').innerHTML = '$0';
+    }
+
+    
+    //checkoutTotal
+    let carPrice = parseInt(sessionStorage.getItem('car price'));
+    let engine = parseInt(sessionStorage.getItem('engine'));
+    let alloyWheels = parseInt(sessionStorage.getItem('alloy wheels'));
+    let leatherMats = parseInt(sessionStorage.getItem('leather mats'));
+    let cargoTote = parseInt(sessionStorage.getItem('cargo tote'));
+  
+    document.querySelector('.checkout-options-total-cost').innerHTML = carPrice + engine + alloyWheels + leatherMats + cargoTote;
+  } 
+
+}
+checkout();
+
+    
