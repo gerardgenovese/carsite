@@ -16,7 +16,7 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
 
 </head>
-<body class="build-price">
+<body class="build-price" onload="keepShopping()">
 
 <!-- Navigation -->
   <nav class="navbar">
@@ -34,8 +34,8 @@
   </nav>
   <img class="img__logo" src="img/toyota-logo.png" alt="">
   <div id="side-menu" class="side-nav">
-      <a href="index.html">Home</a>
-      <a href="#">About</a>
+      <a href="index.html">Explore</a>
+      <a href="build-choose.html">Build Car</a>
       <a href="#">Services</a>
       <a href="#">Contact</a>
   </div>
@@ -78,7 +78,7 @@
       <input type="checkbox" class="car-build-vehicle_cart__checkbox" id="car-build-vehicle_cart__toggle">
       <label for="car-build-vehicle_cart__toggle" class="car-build-vehicle_cart__button">
         <div class="car-build-vehicle_cart-select" onclick="yourVehicleCart()">
-          Your Vehicle <i class="fas fa-car"></i>
+          Vehicle Cart <i class="fas fa-car"></i>
         </div>
       </label>
     </span>
@@ -121,7 +121,7 @@
 
     <!-- <button class="car-build__main--left">left</button> -->
 
-    <input type="button" class="car-build__main--right" id="right-button" onclick="return false">
+    <button class="car-build__main--right" id="right-button"><i class="fas fa-arrow-circle-right"></i></button>
 
     <!-- <button class="car-build__main--right" onclick="changeCarViewRight()">right</button> -->
   </div>

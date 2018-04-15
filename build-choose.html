@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Car Site</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Gugi|Kanit" rel="stylesheet">
+  
+  <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+</head>
+<body class="build-price" onload="keepShopping()">
+
+<!-- Navigation -->
+  <nav class="navbar">
+    <span class="open-slide">
+        <input type="checkbox" class="navigation__checkbox hamburger" id="navi-toggle">
+
+        <label for="navi-toggle" class="navigation__button">
+          <span class="nav-all">
+            <span class="navigation__icon1"></span>
+            <span class="navigation__icon2"></span>
+            <span class="navigation__icon3"></span>
+          </span>
+        </label>
+    </span>
+  </nav>
+  <img class="img__logo" src="img/toyota-logo.png" alt="">
+  <div id="side-menu" class="side-nav">
+      <a href="index.html">Explore</a>
+      <a href="#">About</a>
+      <a href="#">Services</a>
+      <a href="#">Contact</a>
+  </div>
+
+
+
+<div class="navCloseFunction" onclick="navCloseFunction(event)">
+
+
+
+  <div class="container-fluid choose-car-container">
+      <h5 class="choose-car-header">Build your Car</h5>
+      <p class="choose-car-desc">Select a car to customize and start your building process. Select from below to get started.</p>
+      <hr class="choose-car-hr">
+    <div class="row">
+      <div class="col-md-6 choose-car" onclick="camrySessionStorage()">
+        <a href="build-price.html" class="choose-car-a"><img src="img/camry/side/camry-side-red.jpg" class="choose-car-1 camry" alt="">
+          <div class="choose-car-model">Totota Camry</div>
+          <div class="choose-car-price">$23,495</div>
+          <div class="choose-car-mileage">29/41 est MPG</div>
+        </a>
+      </div>
+      <div class="col-md-6 choose-car" onclick="corollaSessionStorage()">
+        <a href="build-price.html" class="choose-car-a"><img src="img/corolla/side/corolla-side-blue.jpg" class="choose-car-1 corolla" alt="">
+          <div class="choose-car-model">Totota Corolla</div>
+          <div class="choose-car-price">$18,550</div>
+          <div class="choose-car-mileage">28/36 est MPG</div>
+        </a>
+      </div>
+      <div class="col-md-6 choose-car" onclick="t86SessionStorage()">
+        <a href="build-price.html" class="choose-car-a"><img src="img/t86/side/t86-side-red.jpg" class="choose-car-1 t86" alt="">
+          <div class="choose-car-model">Totota 86</div>
+          <div class="choose-car-price">$26,255</div>
+          <div class="choose-car-mileage">21/28 est MPG</div>
+        </a>
+      </div>
+      <div class="col-md-6 choose-car" onclick="yarisSessionStorage()">
+        <a href="build-price.html" class="choose-car-a"><img src="img/yaris/side/yaris-side-blue.jpg" class="choose-car-1 yaris" alt="">
+          <div class="choose-car-model">Totota Yaris</div>
+          <div class="choose-car-price">$15,635</div>
+          <div class="choose-car-mileage">30/36 est MPG</div>
+        </a>
+      </div>
+      <div class="col-md-6 choose-car" onclick="avalongSessionStorage()">
+        <a href="build-price.html" class="choose-car-a"><img src="img/avalon/side/avalon-side-white.jpg" class="choose-car-1 avalong" alt="">
+          <div class="choose-car-model">Totota Avalon</div>
+          <div class="choose-car-price">$33,500</div>
+          <div class="choose-car-mileage">21/30 est MPG</div>
+        </a>
+      </div>
+      
+
+    </div>
+  </div> <!--container-fluid end-->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<footer class="footer">
+
+</footer>
+
+
+</div> <!--navCloseFunction end-->
+
+
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+   <script src="js/main.js"></script>
+</body>
+</html>

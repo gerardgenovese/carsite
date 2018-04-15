@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Car Site</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+  <link href="https://fonts.googleapis.com/css?family=Gugi|Kanit" rel="stylesheet">
+  
+  <!-- <link rel="stylesheet" href="css/icon-font.css"> -->
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
+  <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
+
+</head>
+<body class="checkout">
+
+<!-- Navigation -->
+<nav class="navbar">
+  <span class="open-slide">
+      <input type="checkbox" class="navigation__checkbox hamburger" id="navi-toggle">
+
+      <label for="navi-toggle" class="navigation__button">
+        <span class="nav-all">
+          <span class="navigation__icon1"></span>
+          <span class="navigation__icon2"></span>
+          <span class="navigation__icon3"></span>
+        </span>
+      </label>
+  </span>
+</nav>
+<img class="img__logo" src="img/toyota-logo.png" alt="">
+<div id="side-menu" class="side-nav">
+    <a href="index.html">Home</a>
+    <a href="#">About</a>
+    <a href="#">Services</a>
+    <a href="#">Contact</a>
+</div>
+
+<div class="navCloseFunction" onclick="navCloseFunction(event)">
+
+<section id="checkout">
+  <div class="container-fluid checkout-container">
+    <div class="row">
+      <div class="col-md-5">
+        <div class="checkout-car">
+          
+            <img src="" class="checkout-carImg" alt="">
+        </div>
+      </div>
+      <div class="col-md-7">
+        <p class="checkout-header"> Your finalized 2018 Toyota <span class="checkout-model"></span></p>
+        
+        <table>
+          <tr class="checkout-options-mainRow">
+            <th>Price</th>
+            <th>Color</th>
+            <th>Engine Choice</th>
+            <th>Wheel Locks</th>
+            <th>Leather Mats</th>
+            <th>Cargo-Tote</th>
+            <th>Total</th>
+          </tr>
+          <tr class="checkout-options-info">
+            <td></td>
+            <td class="checkout-options-color">Car Color</td>
+            <td class="checkout-options-engine">Engine Choice</td>
+            <td class="checkout-options-wheels">Wheel Locks</td>
+            <td class="checkout-options-mats">Leather Mats</td>
+            <td class="checkout-options-cargo">Cargo-Tote</td>
+            <td></td>
+          
+          </tr>
+          <tr class="checkout-options-info">
+            <td >$<span class="checkout-options-cost"></span>
+            </td>
+            <td>N/A</td>
+            <td class="checkout-options-engine-cost">Engine Choice</td>
+            <td class="checkout-options-wheels-cost">Wheel Locks</td>
+            <td class="checkout-options-mats-cost">Leather Mats</td>
+            <td class="checkout-options-cargo-cost">Cargo-Tote</td>
+            <td>$<span class="checkout-options-total-cost"></span></td>
+          </tr>
+        </table>
+
+      </div>
+    </div>
+  </div>
+  
+  <div class="checkout-button-back">
+    <a href="build-price.html" class="z"><button class="btn-purchase"><i class="fas fa-long-arrow-alt-left"></i> Keep Shopping</button></a>
+  </div>
+  <div class="checkout-button-purchase">
+    <a href="" class="z"><button class="btn-purchase"> Purchase Car <i class="fas fa-long-arrow-alt-right"></i></button></a>
+  </div>
+
+
+
+</section>
+<footer class="footer">
+
+  </footer>
+  
+</div> <!--navCloseFunction end-->
+
+<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+
+   <script src="js/main.js"></script>
+</body>
+</html>

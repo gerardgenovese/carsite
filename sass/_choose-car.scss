@@ -1,0 +1,62 @@
+.choose-car {
+ margin: 4rem 0;
+ border: 2px solid transparent;
+ cursor: pointer;
+
+
+ &:hover {
+  border: 2px solid rgb(243, 15, 15);
+  }
+
+ &-header {
+  font-family: 'Kanit', sans-serif;
+  font-size: 1.8rem;
+  margin-left: 15%;
+  margin-top: 3rem;
+ }
+
+ &-desc {
+  font-family: 'Kanit', sans-serif;
+  font-size: .9rem;
+  margin-left: 15%;
+
+ }
+ &-hr {
+   margin: 0 15%;
+ }
+
+  &-a{
+    color: black;
+
+    &:hover{
+      text-decoration: none;
+      color: black;
+    }
+  }
+  
+
+  &-1 {
+  width: 75%;
+  display: block;
+  margin: 0 auto;
+  }
+
+
+
+  &-model {
+    text-align:center;
+    font-weight: bold;
+  }
+  &-price,
+  &-mileage {
+    text-align:center;
+    font-size: .7rem;
+  }
+
+}
+
+
+
+
+
+

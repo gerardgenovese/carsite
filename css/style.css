@@ -299,9 +299,36 @@ body {
   .car-build__main--right {
     position: absolute;
     top: 50%;
-    right: 15%;
+    right: 12%;
     z-index: 9;
-    width: 2rem; }
+    cursor: pointer;
+    background-color: #bdb8b8;
+    color: white;
+    border: none;
+    border-radius: 2rem;
+    padding: .5rem 2rem;
+    transition: .2s; }
+    .car-build__main--right:hover {
+      background-color: #5c5ca7; }
+    .car-build__main--right:focus {
+      outline: none; }
+
+.fa-arrow-circle-right {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 10; }
+
+.car-build__main--right:hover > .fa-arrow-circle-right {
+  animation: moveButton 2s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite; }
+
+@keyframes moveButton {
+  0% {
+    left: 0; }
+  100% {
+    left: 100%; } }
 
 .car-build__panel {
   display: flex;
@@ -973,6 +1000,39 @@ td {
   top: 87%;
   right: 1%; }
 
+.choose-car {
+  margin: 4rem 0;
+  border: 2px solid transparent;
+  cursor: pointer; }
+  .choose-car:hover {
+    border: 2px solid #f30f0f; }
+  .choose-car-header {
+    font-family: 'Kanit', sans-serif;
+    font-size: 1.8rem;
+    margin-left: 15%;
+    margin-top: 3rem; }
+  .choose-car-desc {
+    font-family: 'Kanit', sans-serif;
+    font-size: .9rem;
+    margin-left: 15%; }
+  .choose-car-hr {
+    margin: 0 15%; }
+  .choose-car-a {
+    color: black; }
+    .choose-car-a:hover {
+      text-decoration: none;
+      color: black; }
+  .choose-car-1 {
+    width: 75%;
+    display: block;
+    margin: 0 auto; }
+  .choose-car-model {
+    text-align: center;
+    font-weight: bold; }
+  .choose-car-price, .choose-car-mileage {
+    text-align: center;
+    font-size: .7rem; }
+
 /*explore vehicles*/
 .explore {
   display: grid;
@@ -1120,7 +1180,11 @@ td {
     width: 20%;
     height: 4rem;
     transition: .2s;
-    cursor: pointer; }
+    cursor: pointer;
+    color: #161515; }
+    .specs__options--icons:hover {
+      text-decoration: none;
+      color: #161515; }
 
 .specs__options--icons:hover > .icon-basic {
   transform: scale(1.5);
@@ -1142,5 +1206,3 @@ td {
   margin: 0;
   font-size: 1.1rem;
   font-weight: lighter; }
-
-/*-----Specs buttons-----*/

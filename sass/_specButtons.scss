@@ -2,7 +2,7 @@
   display: flex;
   justify-content: center;
   border-bottom: 1px solid rgba(219, 214, 214, 0.6);
-
+  
   &--icons {
     display: flex;
     justify-content: center;
@@ -12,10 +12,14 @@
     height: 4rem;
     transition: .2s;
     cursor: pointer;
+    color: rgb(22, 21, 21);
+
+    &:hover {
+      text-decoration: none;
+      color: rgb(22, 21, 21);
+    }
   }
 }
-
-
 
 .specs__options--icons:hover > .icon-basic{
   transform: scale(1.5);
@@ -28,9 +32,11 @@
   padding-right: 1rem;
   font-size: 3rem;
   color: red;
+  
 }
 .icon-car {
   border-right: 1px solid rgba(219, 214, 214, 0.6);
+  
 }
 .icon-search {
   border-right: 1px solid rgba(219, 214, 214, 0.6);
@@ -48,56 +54,3 @@
 
 
 
-
-
-/*-----Specs buttons-----*/
-// .specs__options {
-//   display: grid;
-//   grid-template-columns: repeat(4, 1fr);
-//   grid-gap: 1rem;
-//   margin: 2rem;
-// }
-
-// .spec__options--icons {
-//   margin: auto;
-//   border-bottom: .1rem solid rgba(102, 98, 98, 0.24);
-//   border-radius: 2rem;
-//   transition: all .2s;
-//   width: 18rem;
-// }
-
-// .spec__options--icons:hover {
-//   border-bottom: .1rem solid rgba(102, 98, 98, .5);
-//   border-radius: 2rem;
-//   transition: all .2s;
-//   transform: scale(1.1);
-//   cursor: pointer; 
-// }
-
-// .spec__options--icons:active {
-//   transform: translateY(.1rem);
-//   border-bottom: .1rem solid rgba(42, 6, 245, 0.5);
-// }
-
-// .icon {
-//   font-size: 2.5rem;
-//   display: inline-block;
-//   font-weight: bold; 
-// } 
-
-// .options-text {
-//   display: inline-block;
-//   font-size: 1rem;
-//   transform: translateY(rem);
-// }
-
-// .options-text {
-//   display: inline-block;
-//   transform: translate(.5rem) scale(1.1);
-//   font-family: helvetica;
-
-//   -moz-transform: translate(.5rem);
-//   -ms-transform: translate(.5rem);
-//   -o-transform: translate(.5rem);
-//   -webkit-transform: translate(.5rem);
-// }
