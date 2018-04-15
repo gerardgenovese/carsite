@@ -1,0 +1,30 @@
+.purchased {
+  &-header {
+    text-align:center;
+    margin-top: 5%;
+    font-family: 'Tahoma';
+    text-transform: uppercase;
+    font-size: 1.2rem;
+  }
+  &-toyota,
+  &-carTitle {
+    font-family: 'Kanit', sans-serif;
+    font-size: 2rem;
+  }
+}
+
+
+
+.purchased-carImg {
+  animation: purchased 3s forwards;
+  opacity: 0
+}
+
+@keyframes purchased {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

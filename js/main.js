@@ -1448,8 +1448,20 @@ function keepShopping() {
     }
   }
   carImgDisplay.src = sessionStorage.getItem('car angle');
-
-
-
 }
 
+function purchased() {
+  if (document.body.classList.contains('purchased')) {
+    document.querySelector('.purchased-carTitle').innerHTML = sessionStorage.getItem('car title');
+
+    let purchasedImgColor = sessionStorage.getItem('car alt');
+    let purchasedImgDisplay = document.querySelector('.purchased-carImg');
+    purchasedImgDisplay.src = sessionStorage.getItem('car img').replace(/white|black|gray|smoke|blue|red/gi, purchasedImgColor);
+
+
+    let audio = new Audio('carEngine.mp3');
+    audio.play();
+    
+  }
+}
+purchased();

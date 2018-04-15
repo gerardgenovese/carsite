@@ -990,14 +990,14 @@ td {
 .checkout-button-back {
   width: 50%;
   position: absolute;
-  top: 87%;
+  top: 77%;
   left: 1%; }
 
 .checkout-button-purchase {
   text-align: right;
   width: 50%;
   position: absolute;
-  top: 87%;
+  top: 77%;
   right: 1%; }
 
 .choose-car {
@@ -1069,8 +1069,17 @@ td {
     .explore-car__price, .explore-car__mileage {
       font-size: .7rem; }
 
+#footerBottom {
+  position: relative; }
+
 .footer {
+  position: absolute;
+  top: 100%;
+  margin-top: 2rem;
+  left: 0;
+  z-index: 200;
   height: 5rem;
+  width: 100%;
   background-color: blue; }
 
 .header-index__image {
@@ -1167,6 +1176,27 @@ td {
 
 .side-nav a:hover {
   color: #fff; }
+
+.purchased-header {
+  text-align: center;
+  margin-top: 5%;
+  font-family: 'Tahoma';
+  text-transform: uppercase;
+  font-size: 1.2rem; }
+
+.purchased-toyota, .purchased-carTitle {
+  font-family: 'Kanit', sans-serif;
+  font-size: 2rem; }
+
+.purchased-carImg {
+  animation: purchased 3s forwards;
+  opacity: 0; }
+
+@keyframes purchased {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 
 .specs__options {
   display: flex;

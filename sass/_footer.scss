@@ -1,4 +1,15 @@
+#footerBottom {
+  position: relative;
+}
+
+
 .footer {
+  position: absolute;
+  top: 100%;
+  margin-top: 2rem;
+  left: 0;
+  z-index: 200;
   height: 5rem;
+  width: 100%;
   background-color: blue;
 }
