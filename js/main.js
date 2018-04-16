@@ -1459,7 +1459,7 @@ function purchased() {
     purchasedImgDisplay.src = sessionStorage.getItem('car img').replace(/white|black|gray|smoke|blue|red/gi, purchasedImgColor);
 
 
-    let audio = new Audio('carEngine.mp3');
+    let audio = new Audio('sounds/carEngine.mp3');
     audio.play();
     
   }
