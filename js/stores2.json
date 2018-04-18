@@ -1,0 +1,97 @@
+{
+  "type": "FeatureCollection",
+  "features": [
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.852410,
+          40.874183
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "category": "toyota-map",
+        "hours": "9am - 9pm",
+        "description": "Our clients have high expectations for the cars they drive, and equally high expectations about the dealership professionals who serve them. Toyota vehicles are widely recognized to be among the best in quality, reliability, and value, just as Toyota dealers are well known for their award-winning commitment to customer satisfaction in both sales and service.",
+        "name": "City World Toyota",
+        "address": "3333 Boston Road, Bronx, NY 10469",
+        "phone": "(718) 655-7000"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.910360,
+          40.861684
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "category": "toyota-map",
+        "hours": "9am - 9pm",
+        "description": "Welcome to Fordham Toyota! We are an award-winning Toyota dealership possessing the largest combined inventory of new vehicles in the entire tri-state area. We also have the most extensive inventory of used and certified pre-owned vehicles in the tri-state area.",
+        "name": "Fordham Toyota",
+        "address": "236-240 W. Fordham Road, Bronx, NY 10468",
+        "phone": "(718) 367-0400"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.778056,
+          40.758371
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "category": "toyota-map",
+        "hours": "9am - 9pm",
+        "description": "Our aim is to set us apart from usual car dealers by offering services, conditions and prices which are not normally available to the retail/private purchaser of new or used motor vehicles. We intend to make the buying process easy and pleasant for our clients, by attending to the inquiry in a courteous and professional manner from start to finish. We attend to inquiries promptly and set appointments for prospective buyers at times suitable to them, including weekends and evenings. We take the hassle out of buying cars. Our aim is to ensure that our clients have trouble free motoring and are isolated from any unexpected costs in case of an unforeseen mechanical malfunction of the vehicle. Our client referrers are our main asset. We will protect their interest whenever we are involved with a client referred by them. We expect that our referrers can expand their business as a result of the services provided by us for the benefit of all who are associated with that business. We intend to build and expand our business by extending our referrers base and through the word of mouth advertising by satisfied customers. We believe that if we assist enough clients to get what they want, they will help us to get what we want.",
+        "name": "Star Toyota of Bayside",
+        "address": "205-11 Northern Blvd., Bayside, NY 11361",
+        "phone": "(718) 279-1800"
+      }
+    },
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.899724,
+          40.753600
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "category": "toyota-map",
+        "hours": "9am - 9pm",
+        "description": "Queensboro Toyota a family owned business since 1967, since then we strive to make all customers our number one priority. Originality of our products keeps us on top of major compeitiors, by our honesty, integrity and great products. We offer outstanding deals on almost all our Toyotas everyday, and always look for ways where we can better serve our customers. We are here for you! Stop by our showroom today, or give us a call. Looking forward to hearing from you soon!!",
+        "address": "62-10 Northern Boulevard, Woodside, NY 11377",
+        "name": "Queensboro Toyota",
+        "phone": "(718) 335-8600"
+      }
+    },
+   
+    {
+      "geometry": {
+        "type": "Point",
+        "coordinates": [
+          -73.778766,
+          40.914606
+        ]
+      },
+      "type": "Feature",
+      "properties": {
+        "category": "toyota-map",
+        "hours": "9am - 9pm",
+        "description": "Queensboro Toyota a family owned business since 1967, since then we strive to make all customers our number one priority. Originality of our products keeps us on top of major compeitiors, by our honesty, integrity and great products. We offer outstanding deals on almost all our Toyotas everyday, and always look for ways where we can better serve our customers. We are here for you! Stop by our showroom today, or give us a call. Looking forward to hearing from you soon!!",
+        "address": "47 Cedar Street, New Rochelle, NY 10801",
+        "name": "New Rochelle Toyota",
+        "phone": "(914) 576-8000"
+      }
+    }
+   
+  ]
+}

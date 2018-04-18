@@ -38,9 +38,9 @@
   border-right: 1px solid rgba(219, 214, 214, 0.6);
   
 }
-.icon-search {
-  border-right: 1px solid rgba(219, 214, 214, 0.6);
-}
+// .icon-search {
+//   border-right: 1px solid rgba(219, 214, 214, 0.6);
+// }
 
 
 .options-text {
@@ -52,5 +52,12 @@
 
 
 
-
+@media(max-width:600px) {
+  .specs__options--icons {
+    margin: 4rem;
+  }
+  .icon-car {
+    border:none
+  }
+}
 

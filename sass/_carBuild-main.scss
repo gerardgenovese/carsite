@@ -3,22 +3,37 @@
   height: 50%;
   width: 100%;
   background-color: transparent;
-
 }
 
-
+.car-contain {
+  position:relative;
+  width: 100%;
+  height: 100%;
+}
 .car-build__main {
-  margin-top: 3rem;
+  margin-top: 1rem;
+
+  &-car-image {
+    position: relative;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%);
+    height: 50%;
+    width: 50%;
+    transition: .2s;
+    z-index: 100;
+  }
 
   &-car-title {
     position: absolute;
-    top: 25%;
+    top: 5%;
     left: 5%;
     z-index: 1;
     font-size: 3rem;
     transition: .2s;
     font-family: 'Kanit', sans-serif;
     z-index: 101;
+
 
     &:before {
       content: 'toyota ';
@@ -28,32 +43,21 @@
   }
   &-car-price {
     position: absolute;
-    top: 25%;
+    top: 5%;
     right: 15%;
     z-index: 1;
     font-size: 1.5rem;
     font-family: 'Kanit', sans-serif;
     transition: .2s;
     z-index: 106;
-  }
-  &-car-starting {
-    position: absolute;
-    top: 26%;
-    right: 11%;
-    z-index: 100;
-    font-size: .6rem;
-    text-transform: uppercase;
-    font-style: italic;
-    transition: .2s;
 
+    &:after {
+      content:' starting';
+      font-size:.8rem;
+      font-style: italic;
+    }
   }
 
-  &--left {
-    position: absolute;
-    top: 50%;
-    left: 15%;
-
-  }
   &--right {
     position: absolute;
     top: 50%;
@@ -100,28 +104,77 @@
 }
 
 
+@media(max-width:1000px){
+  .car-build__main {
 
-// .one {
-//   opacity: 0;
-//   transition: opacity 1  2s ease-in;
-// }
+    &-car-title{
+      left: .5%;
+    }
+  }
+}
 
+@media(max-width:900px){
+  .car-build__main {
 
+    &-car-title {
+      font-size:2rem;
+      &:before{
+        font-size:1.5rem;
+      }
+    }
+    &-car-price {
+      right: 8%;
+    }
+  }
+}
 
+@media(max-width:600px){
+  .car-build__main {
+    &-car-title {
+      font-size:1.5rem;
+      &:before{
+        font-size:1rem;
+      }
+    }
+    &-car-price {
+      font-size: 1.2rem;
+      &:after{
+        font-size: .5rem;
+      }
+    }
+    &--right {
+      padding: .5rem 1rem;
+    }
+  }
+}
+@media(max-width:500px){
+  .car-build__main {
 
+    &-car-title {
+      font-size:1.2rem;
+      &:before{
+        font-size:.7rem;
+      }
+    }
+    &-car-price {
+      font-size: 1rem;
+    }
 
+  }
+}
+@media(max-width:500px){
+  .car-build__main {
+    &-car-title {
+      font-size:1rem;
 
+      &:before{
+        font-size:.6rem;
+      }
+    }
+    &-car-price {
+      font-size: .8rem;
+    }
 
-// .cargif img{
-//   position: relative;
-// width: 30%;
-// animation: moveCar 2s;
-// animation-fill-mode: forwards;
-// animation-iteration-count: infinite;
+  }
+}
 
-// }
-
-// @keyframes moveCar {
-//   0% {left: -5%;}
-//   100% {left: 120%;}
-// }

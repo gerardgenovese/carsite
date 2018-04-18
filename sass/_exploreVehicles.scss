@@ -1,9 +1,3 @@
-/*explore vehicles*/
-// .explore__heading {
-//   margin: 5rem 0;
-
-//   text-align: center;
-// }
 
 
 .explore {
@@ -58,82 +52,38 @@
     } 
   }
 
-
-  // &-car &-car__front {
-  //   display: none;
-  //   position: absolute;
-  //   top: 0;
-  //   left: 0;
-  //   z-index: 99;
-  // }
-  
-  
-  // &-car:hover &-car__front {
-  //   display: inline-block;
-  // }
-  
-  
-  // &-car__info {
-  //   display: inline-block;
-  //   max-width: 100%;
-  //   height: auto;
-  //   position: absolute;
-  //   top: 5rem;
-  //   left: 3rem;
-  // }
-  
-  // &-car__model {
-  //   display: inline-block;
-  //   margin-top: 1rem;
-  // }
-  // &-car__price {
-  //   font-size: .7rem;
-  // }
-  
-
-
-
-
 }
 
-// .explore-car {
-
-//   position: relative;
-
-// }
-// .explore-car__side {
-//   display: inline-block;
-//   max-width: 100%;
-
-// }
-// .explore-car .explore-car__front {
-//   display: none;
-//   position: absolute;
-//   top: 0;
-//   left: 0;
-//   z-index: 99;
-// }
 
 
-// .explore-car:hover .explore-car__front {
-//   display: inline-block;
-// }
+@media(max-width:968px) {
+  .explore {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: .5rem;
+    grid-auto-rows: 10rem;
+  }
+  .explore-car__model{
+    margin: 0;
+  }
+}
+@media(max-width:600px) {
+  .explore {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: .5rem;
+    grid-auto-rows: 10rem;
+  }
+  
+  .explore-car__side {
+    display: inline-block;
+    max-width: 100%;
+  }
+  .explore-car__front {
+    max-width: 100%;
+  }
+  .explore-car__front:hover {
+    max-width: 100%;
+  }
 
-
-// .explore-car__info {
-//   display: inline-block;
-//   max-width: 100%;
-//   height: auto;
-//   position: absolute;
-//   top: 5rem;
-//   left: 3rem;
-// }
-
-// .explore-car__model {
-//   display: inline-block;
-//   margin-top: 1rem;
-// }
-// .explore-car__price {
-//   font-size: .7rem;
-// }
-
+}

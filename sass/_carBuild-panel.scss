@@ -48,12 +48,32 @@
 
 }
 
-
-
 //Even out outer border widths
 .car-panel {
   border-width: 0 .5px 0 2px;
 }
 .tag-panel {
   border-width: 0 2px 0 .5px;
+}
+
+
+@media(max-width:800px) {
+
+  .car-build__panel {
+    padding: 0;
+ 
+  &-text {
+    font-size: .6rem;
+  }
+
+    &-buttons{
+      padding-top: 1rem;
+      height: 3rem;
+    }
+  }
+
+  .car-build__icon--i {
+    height: .7rem;
+    color: rgb(245, 238, 238);;
+  }
 }

@@ -17,13 +17,30 @@ document.querySelector('.hamburger').addEventListener('click', (e) => {
 
 //OPEN NAV MENU
 function openSlideMenu() {
+
+  if (mediaQuerySize.matches) {
+    document.getElementById('side-menu').style.height = '6.5rem';
+  } else {
+
+  
+
+    document.getElementById('side-menu').style.height = '3rem';
+
+  }
+
   document.getElementById('side-menu').style.height = '3rem';
   document.querySelector('.navigation__icon1').style.background = 'white';
   document.querySelector('.navigation__icon3').style.background = 'white';
   // document.getElementById('main').style.marginLeft = '250px';
   navCount = 0;
   console.log(navCount);
+
+
+
+
+
   menuIconOpen();
+  menuMediaQuery();
 };
 
 //CLOSE NAV MENU
@@ -69,6 +86,15 @@ function menuIconClosed() {
   iconBottom.style.transform = "rotate(0)";
   iconBottom.style.top = "100%";
   iconBottom.style.transition = 'all .2s';
+}
+
+
+
+
+let mediaQuerySize = window.matchMedia("(max-width: 4000px)")
+function menuMediaQuery() {
+  
+  mediaQuerySize.addListener(openSlideMenu)
 }
 
 //close menu and reset count on click outside menu to return hamburger to original state
@@ -194,7 +220,7 @@ function carSlideShow() {
     setTimeout(carSlideShow, 10000);    
   } 
 }
-carSlideShow();
+// carSlideShow();
   
 
 
@@ -1294,13 +1320,13 @@ window.onscroll = function() {
   if (scroll > 25) {
     //car img
     carImgDisplay.className = 'transition1';
-    //car img container
+    //car img container for fixed position
     document.querySelector('.car-contain').className = 'car-contain2';
     //white background for scrolling behind fixed top
     document.querySelector('.image-background').className = 'image-background2';
 
     //background to push panel elements down
-    document.querySelector('.car-build__main').className = 'buildMain';
+    document.querySelector('.car-build__main').className = 'car-build__main2';
 
     //vehicle cart
     document.querySelector('.car-build-vehicle_cart-select').className = 'vehicleCart';
@@ -1309,8 +1335,6 @@ window.onscroll = function() {
     //Car Title & Price
     carTitleDisplay.className = 'titleTransition';
     carPriceDisplay.className = 'priceTransition';
-    //car starting text
-    document.querySelector('.car-build__main-car-starting').className = 'car-starting';
 
     //right button for changing car angle
     document.getElementById('right-button').className = 'carButtonRotateRightHide';
@@ -1329,7 +1353,7 @@ window.onscroll = function() {
     document.querySelector('.image-background2').className = 'image-background';
 
     //background to push panel elements down
-    document.querySelector('.buildMain').className = 'car-build__main';
+    document.querySelector('.car-build__main2').className = 'car-build__main';
     
     //vehicle cart
     document.querySelector('.vehicleCart').className = 'car-build-vehicle_cart-select';
@@ -1339,8 +1363,6 @@ window.onscroll = function() {
     //Car Title & Price
     carTitleDisplay.className = 'car-build__main-car-title';
     carPriceDisplay.className = 'car-build__main-car-price';
-    //car starting text
-    document.querySelector('.car-starting').className = 'car-build__main-car-starting';
 
     //right button for changing car angle
     document.getElementById('right-button').className = 'car-build__main--right';

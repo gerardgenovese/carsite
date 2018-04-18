@@ -1,22 +1,25 @@
-.car-build-dropdown {
-  // position: relative;
-  width: 100%;
-  height: 1rem;
-  // margin: 5rem 0 1rem 0;
+#select-vehicle {
+  display:grid;
+  grid-template-columns: repeat(5,1fr);
+  grid-gap: .5rem;
+  grid-auto-rows: 10rem;
 }
 
-
+.car-build-dropdown {
+  width: 100%;
+  height: 1rem;
+}
 /*Select Vehicle text*/
 .car-build-select-vehicle__button {
   position: absolute;
-  top: 0;
+  top: 5%;
   left: 50%;
   transform: translateX(-50%);
   text-align: center;
   cursor: pointer; 
   height: 1rem;
   margin-bottom: 4rem;
-  z-index: 1;
+  z-index: 110;
 }
 
 .car-build-dropdown-checkbox {
@@ -58,7 +61,6 @@
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
   overflow-y: hidden;
-  /* padding-top: 1rem; */
   transition: 0.5s;
   display: flex;
   justify-content: center;
@@ -69,5 +71,55 @@
 
   & a {
     transition: 0.3s;
+  }
+}
+
+@media(max-width: 1200px) {
+  .car-build-dropdown__carImg {
+    width: 12rem;
+  }
+}
+@media(max-width: 1000px) {
+  #select-vehicle {
+    grid-template-columns: repeat(3,1fr);
+    grid-gap: .5rem;
+    grid-auto-rows: 7rem;
+  }
+}
+@media(max-width:900px){
+  .car-build-select-vehicle__button {
+    top: 4%;
+  }  
+}
+@media(max-width:700px){
+  .car-build-select-vehicle__button {
+    font-size:.8rem;
+    top: 3%;
+  }  
+}
+@media(max-width: 600px) {
+  #select-vehicle {
+    grid-template-columns: repeat(2,1fr);
+  }
+}
+@media(max-width:500px){
+  .car-build-dropdown-select-text {
+    font-size: .6rem;
+  }
+  .car-build-select-vehicle__button{
+    top:1.5%;
+  }
+}
+@media(max-width: 400px) {
+  .car-build-dropdown__carImg {
+    width: 10rem;
+  }
+  .car-build-select-vehicle__button{
+    top:1.5%;
+  }
+}
+@media(max-width: 300px) {
+  .car-build-dropdown__carImg {
+    width: 8rem;
   }
 }
