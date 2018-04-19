@@ -2,24 +2,22 @@
 /*position relative from car-build-select*/
 .car-build-vehicle_cart__button {
   position: absolute;
-  top:8%;
-  left: 11%;
+  top:20%;
+  left: 5%;
   z-index: 105;
-  text-align: center;
+  font-size:.5rem;
+  // text-align: center;
   cursor: pointer; 
-  display:none;
+
 }
 
 
 .car-build-vehicle_cart-select {
   font-weight: bold;
   font-family: 'arial';
-  font-size: .7rem;
+  // font-size: .7rem;
   transition: .2s;
-
-  &:hover {
-    color: red;
-  }
+  color: red;
 }
 
 /*Drop down menu*/
@@ -27,7 +25,7 @@
   height: 0;
   width: 22%;
   position: fixed;
-  top: 25%;
+  top: 28%;
   left: 4%;
   z-index: 105;
   overflow-x: hidden;
@@ -111,26 +109,16 @@
 
 
 
-
-
-@media(max-width:950px) {
+@media(max-width:1000px) {
   .car-build-vehicle_cart__button {
     position: absolute;
-    top: 15%;
-    left: 11%;
+    top: 25%;
+    left: 2%;
   }
-  .car-build-vehicle_cart-select-menu {
-    top: 12%;
-    width: 20%;
-
-  }
-  
-}
-@media(max-width:950px) {
 
   .car-build-vehicle_cart-select-menu {
-    top: 12%;
-    width: 25%;
+    top: 28%;
+    left: 2%;
   }
   .car-build-vehicle_cart-dropdown {
     &__carColor {
@@ -145,15 +133,101 @@
     &__mats,
     &__cargo,
     &__total {
-      font-size:.7rem;
+      font-size:.9rem;
+    }
+  }
+}
+@media(max-width:900px) {
+  .car-build-vehicle_cart__button {
+    position: absolute;
+    top: 15%;
+    left: 2%;
+  }
+}
+
+@media(max-width: 700px){
+  .car-build-vehicle_cart-select-menu {
+    width: 30%;
+  }
+  .car-build-vehicle_cart-dropdown {
+    &__carPrice,
+    &__engine,
+    &__alloy,
+    &__mats,
+    &__cargo,
+    &__total {
+      font-size:.6rem;
     }
   }
 }
 @media(max-width:600px) {
+  .car-build-vehicle_cart__button {
+    top: 20%;
+    left: 1%;
+    font-size: .5rem;
+  }
 
   .car-build-vehicle_cart-select-menu {
+    top:24%;
+    width: 40%;
+  }
+  .car-build-vehicle_cart-dropdown {
+    &__carColor {
+      height: .7rem;
+    }
+    &__carImg {
+      width: 8rem;
+    }
+    &__carPrice,
+    &__engine,
+    &__alloy,
+    &__mats,
+    &__cargo,
+    &__total {
+      font-size:.5rem;
+      margin-top:.5rem;
+    }
+  }
+}
+@media(max-width:500px) {
+  .car-build-vehicle_cart__button {
     top: 15%;
-    width: 30%;
+    left: 2%;
+    font-size: .4rem;
+  }
+
+  .car-build-vehicle_cart-select-menu {
+    top: 20%;
+    width: 40%;
+  }
+  .car-build-vehicle_cart-dropdown {
+    &__carColor {
+      height: .7rem;
+    }
+    &__carImg {
+      width: 8rem;
+    }
+    &__carPrice,
+    &__engine,
+    &__alloy,
+    &__mats,
+    &__cargo,
+    &__total {
+      font-size:.5rem;
+      margin-top:.5rem;
+    }
+  }
+}
+@media(max-width:400px) {
+  .car-build-vehicle_cart__button {
+    top: 15%;
+    left: 2%;
+    font-size: .4rem;
+  }
+
+  .car-build-vehicle_cart-select-menu {
+    top: 20%;
+    width: 40%;
   }
   .car-build-vehicle_cart-dropdown {
     &__carColor {

@@ -19,30 +19,41 @@
 <body class="build-price" onload="keepShopping()">
 <section id="footerBottom">
 <!-- Navigation -->
-  <nav class="navbar">
-    <span class="open-slide">
-        <input type="checkbox" class="navigation__checkbox hamburger" id="navi-toggle">
+<nav class="navbar">
+  <span class="open-slide">
+      <input type="checkbox" class="navigation__checkbox hamburger" id="navi-toggle">
 
-        <label for="navi-toggle" class="navigation__button">
-          <span class="nav-all">
-            <span class="navigation__icon1"></span>
-            <span class="navigation__icon2"></span>
-            <span class="navigation__icon3"></span>
-          </span>
-        </label>
-    </span>
-  </nav>
-  <img class="img__logo" src="img/toyota-logo.png" alt="">
-  <div id="side-menu" class="side-nav">
-      <a href="index.html">Explore</a>
-      <a href="build-choose.html">Build Car</a>
-      <!-- <a href="#">Services</a>
-      <a href="#">Contact</a> -->
-  </div>
+      <label for="navi-toggle" class="navigation__button">
+        <span class="nav-all">
+          <span class="navigation__icon1"></span>
+          <span class="navigation__icon2"></span>
+          <span class="navigation__icon3"></span>
+        </span>
+      </label>
+  </span>
+</nav>
+<img class="img__logo" src="img/toyota-logo.png" alt="">
+<div id="nav-menu" class="nav-nav">
+    <a href="index.html">Explore</a>
+    <a href="build-choose.html">Build Car</a>
+    <!-- <a href="#">Services</a>
+    <a href="#">Contact</a> -->
+</div>
 
 
 
 <div class="navCloseFunction" onclick="navCloseFunction(event)">
+
+
+
+ 
+
+
+
+
+
+
+
 
 <div id="mainDiv"> <!--For Positioning-->
 
@@ -58,11 +69,6 @@
       </label> 
     </span>
   </div>
-
-
-
-
-
   <!--*SELECT* VEHICLE DROPDOWN MENU-->
   <div id="select-vehicle" class="car-build-dropdown-select-menu">
     <a class="car-build-dropdown__carLink" href="#"><img src="img/camry/side/camry-side-red.jpg" class="car-build-dropdown__carImg" alt="" onclick="camrySelect()"; return false></a>
@@ -73,7 +79,7 @@
   </div>
 
   <!--==== Vehicle Cart Accessories Your Vehicle Button====-->
-  <div class="car-build-vehicle_cart">
+ <div class="car-build-vehicle_cart">
     <span class="vehicle_cart">
       <input type="checkbox" class="car-build-vehicle_cart__checkbox" id="car-build-vehicle_cart__toggle">
       <label for="car-build-vehicle_cart__toggle" class="car-build-vehicle_cart__button">
@@ -99,8 +105,7 @@
     <a href="checkout.html"><button id="cart-checkout">Check Out</button>
   </div></a>
 
-
-
+  
 
   <div class="vehicleCartFunction" onclick="vehicleCartFunction(event)"> 
 
@@ -172,37 +177,46 @@
 <!--CAR BUILD ENGINE SECTION-->
   <section id="car-build__engine">
     <div class="car-build__engine">
-      <label class="car-build__engine--info"> <h3 class="car-build__engine--header">2.5 4-Cyl. Super Thruster Engine</h3>
-        <p class="car-build__engine--trans">8-Speed Automatic</p>
-        <ul class="car-build__engine--specs">
-          <li class="car-build__engine--spec">Direct Shift 8 Speed Electronically Controlled Automatic Transmission</li>
-          <li class="car-build__engine--spec">203hp @6600rp,</li>
-          <li class="car-build__engine--spec">184 lb-ft @5000 rpm</li>
-          <li class="car-build__engine--spec"> VVt-i D4S self-cleaning injectors</li>
-        </ul>
-        <div class="car-build__engine--cost">
-          Cost: $0 (Standard)
-        </div>
-          <input type="radio" checked="checked" name="engine-price" value="0" id="engine-standard" onclick="Car.enginePrice(value)">
-          <span class="car-build__engine--checkmark"></span>
-        </label>
-        
-        <label class="car-build__engine--info">
-          <h3 class="car-build__engine--header">2.5 4-Cyl. Super Thruster Engine</h3>
-          <p class="car-build__engine--trans">8-Speed Manual</p>
-          <ul class="car-build__engine--specs">
-            <li class="car-build__engine--spec">Direct Shift 8 Speed Turbo</li>
-            <li class="car-build__engine--spec">203hp @6600rp,</li>
-            <li class="car-build__engine--spec">184 lb-ft @5000 rpm</li>
-            <li class="car-build__engine--spec"> VVt-i D4S self-cleaning injectors</li>
-          </ul>
-            
-          <div class="car-build__engine--cost"> 
-            Cost: $500.00 
+      <div class="container-fluid">
+        <div class="row">
+
+     
+          <div class="col-md-6 col-sm-12">
+            <label class="car-build__engine--info"> <h3 class="car-build__engine--header">2.5 4-Cyl. Super Thruster Engine</h3>
+              <p class="car-build__engine--trans">8-Speed Automatic</p>
+              <ul class="car-build__engine--specs">
+                <li class="car-build__engine--spec">Direct Shift 8 Speed Automatic Transmission</li>
+                <li class="car-build__engine--spec">203hp @6600rp,</li>
+                <li class="car-build__engine--spec">184 lb-ft @5000 rpm</li>
+                <li class="car-build__engine--spec"> VVt-i D4S self-cleaning injectors</li>
+              </ul>
+              <div class="car-build__engine--cost">
+                Cost: $0 (Standard)
+              </div>
+                <input type="radio" checked="checked" name="engine-price" value="0" id="engine-standard" onclick="Car.enginePrice(value)">
+                <span class="car-build__engine--checkmark"></span>
+              </label>
+            </div>
+              <div class=" col-md-6 col-sm-12">
+              <label class="car-build__engine--info">
+                <h3 class="car-build__engine--header">2.5 4-Cyl. Super Thruster Engine</h3>
+                <p class="car-build__engine--trans">8-Speed Manual</p>
+                <ul class="car-build__engine--specs">
+                  <li class="car-build__engine--spec">Direct Shift 8 Speed Turbo</li>
+                  <li class="car-build__engine--spec">203hp @6600rp,</li>
+                  <li class="car-build__engine--spec">184 lb-ft @5000 rpm</li>
+                  <li class="car-build__engine--spec"> VVt-i D4S self-cleaning injectors</li>
+                </ul>
+                  
+                <div class="car-build__engine--cost"> 
+                  Cost: $500.00 
+                </div>
+              <input type="radio" name="engine-price" id ="engine-manual" value="500" onclick="Car.enginePrice(value)">
+              <span class="car-build__engine--checkmark"></span>
+            </label>
           </div>
-        <input type="radio" name="engine-price" id ="engine-manual" value="500" onclick="Car.enginePrice(value)">
-        <span class="car-build__engine--checkmark"></span>
-      </label>
+        </div>
+      </div>
     </div>
   </section>
 
@@ -210,63 +224,69 @@
 <!--ACCESSORIES-->
 <section id="car-build__accessories">
   <div class="car-build__accessories">
-    <div class="car-build__accs">
-      <div class="car-build__accs--items"><img src="img/accessories/wheel-lock.jpg" class="accs-img" alt="">
-      </div>
-      <p class="car-build__accs--header">
-        Alloy Wheel Locks
-      </p>
-      <p class="car-build__accs--price">$75 <small>msrp</small>
-      </p>
-      <button class="car-build__accs--details" data-toggle="modal" data-target="#wheel-lock">
-        View Details
-      </button>
-      <div class="box1 car-build__accs--checkbox">
-        <label class="container car-build__accs--checkbox-label">
-          <input type="checkbox" id="addItem1" onclick="Car.accessoryPrice()">
-          <span class="checkmark" id="addRemove1">ADD</span>
-        </label>
-      </div>
-    </div>
-
-    <div class="car-build__accs">
-      <div class="car-build__accs--items"><img src="img/accessories/leather-mats.jpg" alt="">
-      </div>
-      <p class="car-build__accs--header">
-        Leather-Mats
-      </p>
-      <p class="car-build__accs--price">$75 <small>msrp</small>
-      </p>
-      <button class="car-build__accs--details" data-toggle="modal" data-target="#leather-mats">
-        View Details
-      </button>
-      <div class="box1 car-build__accs--checkbox">
-        <label class="container car-build__accs--checkbox-label">
-          <input type="checkbox" id="addItem2" onclick="Car.accessoryPrice()">
-          <span class="checkmark" id="addRemove2">ADD</span>
-        </label>
-      </div>
-    </div>  
-
-    <div class="car-build__accs">
-      <div class="car-build__accs--items"><img src="img/accessories/cargo-tote.jpg" alt="">
-      </div>
-      <p class="car-build__accs--header">
-        Cargo-Tote
-      </p>
-      <p class="car-build__accs--price">$75 <small>msrp</small>
-      </p>
-      <button class="car-build__accs--details" data-toggle="modal" data-target="#cargo-tote">
-        View Details
-      </button>
-      <div class="box1 car-build__accs--checkbox">
-        <label class="container car-build__accs--checkbox-label">
-          <input type="checkbox" id="addItem3" onclick="Car.accessoryPrice()">
-          <span class="checkmark" id="addRemove3">ADD</span>
-        </label>
+    <div class="container-fluid">
+      <div class="row">
+        <div class="col-md-4 col-sm-12 car-build__accs">
+          <div class="car-build__accs--items">
+            <img src="img/accessories/wheel-lock.jpg" class="car-build__accs--img" alt="">
+            <p class="car-build__accs--header">
+              Alloy Wheel Locks
+            </p>
+            <p class="car-build__accs--price">$75 <small>msrp</small>
+            </p>
+            <button class="car-build__accs--details" data-toggle="modal" data-target="#wheel-lock">
+              View Details
+            </button>
+            <div class="box1 car-build__accs--checkbox">
+              <label class="container car-build__accs--checkbox-label">
+                <input type="checkbox" id="addItem1" onclick="Car.accessoryPrice()">
+                <span class="checkmark" id="addRemove1">ADD</span>
+              </label>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 car-build__accs">
+          <div class="car-build__accs--items">
+            <img src="img/accessories/leather-mats.jpg" class="car-build__accs--img" alt="">
+            <p class="car-build__accs--header">
+              Leather-Mats
+            </p>
+            <p class="car-build__accs--price">$75 <small>msrp</small>
+            </p>
+            <button class="car-build__accs--details" data-toggle="modal" data-target="#leather-mats">
+              View Details
+            </button>
+            <div class="box1 car-build__accs--checkbox">
+              <label class="container car-build__accs--checkbox-label">
+                <input type="checkbox" id="addItem2" onclick="Car.accessoryPrice()">
+                <span class="checkmark" id="addRemove2">ADD</span>
+              </label>
+            </div>
+          </div>  
+        </div>
+        <div class="col-md-4 col-sm-12 car-build__accs">
+          <div class="car-build__accs--items">
+            <img src="img/accessories/cargo-tote.jpg" class="car-build__accs--img" alt="">
+            <p class="car-build__accs--header">
+              Cargo-Tote
+            </p>
+            <p class="car-build__accs--price">$75 <small>msrp</small>
+            </p>
+            <button class="car-build__accs--details" data-toggle="modal" data-target="#cargo-tote">
+              View Details
+            </button>
+            <div class="box1 car-build__accs--checkbox">
+              <label class="container car-build__accs--checkbox-label">
+                <input type="checkbox" id="addItem3" onclick="Car.accessoryPrice()">
+                <span class="checkmark" id="addRemove3">ADD</span>
+              </label>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>  
+  
 
 
   <!-- WHEEL LOCK MODAL -->

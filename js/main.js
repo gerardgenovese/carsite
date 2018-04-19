@@ -19,16 +19,16 @@ document.querySelector('.hamburger').addEventListener('click', (e) => {
 function openSlideMenu() {
 
   if (mediaQuerySize.matches) {
-    document.getElementById('side-menu').style.height = '6.5rem';
+    document.getElementById('nav-menu').style.height = '6.5rem';
   } else {
 
   
 
-    document.getElementById('side-menu').style.height = '3rem';
+    document.getElementById('nav-menu').style.height = '3rem';
 
   }
 
-  document.getElementById('side-menu').style.height = '3rem';
+  document.getElementById('nav-menu').style.height = '3rem';
   document.querySelector('.navigation__icon1').style.background = 'white';
   document.querySelector('.navigation__icon3').style.background = 'white';
   // document.getElementById('main').style.marginLeft = '250px';
@@ -45,7 +45,7 @@ function openSlideMenu() {
 
 //CLOSE NAV MENU
 function closeSlideMenu() {
-  document.getElementById('side-menu').style.height = '0';
+  document.getElementById('nav-menu').style.height = '0';
   document.querySelector('.navigation__icon1').style.background = '#333';
   document.querySelector('.navigation__icon3').style.background = '#333';
   // document.getElementById('main').style.marginLeft = '0';
@@ -130,7 +130,7 @@ function navCloseFunction(event) {
 
   if (event.currentTarget.className === 'navCloseFunction') {
     // console.log('navcloseworked');
-    document.getElementById('side-menu').style.height = '0';
+    document.getElementById('nav-menu').style.height = '0';
     document.querySelector('.navigation__icon1').style.background = '#333';
     document.querySelector('.navigation__icon3').style.background = '#333';
     
@@ -220,7 +220,7 @@ function carSlideShow() {
     setTimeout(carSlideShow, 10000);    
   } 
 }
-// carSlideShow();
+carSlideShow();
   
 
 
@@ -1172,7 +1172,7 @@ vehicleCartCountFunctionality();
 //OPEN MENU
 function openVehicleCart() {
   let cart = document.getElementById('vehicle_cart-menu');
-  cart.style.height = '25rem';
+  cart.style.height = '24rem';
   cart.style.fontFamily = 'Kanit';
   closeSelectVehiclesMenu();
   vehicleCartCount = 0;
@@ -1380,7 +1380,7 @@ window.onscroll = function() {
 
 function checkout() {
 
-  if (document.body.classList.contains('checkout')) {
+  if (document.body.classList.contains('checkout-page')) {
     //car color
     let carColor = document.querySelector('.checkout-options-color')
     carColor.innerHTML = sessionStorage.getItem('car alt');
@@ -1393,16 +1393,16 @@ function checkout() {
     document.querySelector('.checkout-carImg').src = getCarImg.replace(/white|black|gray|smoke|blue|red/gi, carColor.alt);
   
     //car cost 
-    document.querySelector('.checkout-options-cost').innerHTML = sessionStorage.getItem('car price');
+    document.querySelector('.checkout-options-car').innerHTML = sessionStorage.getItem('car price');
 
 
     //car engine
     let carEngine = document.querySelector('.checkout-options-engine');
     if (sessionStorage.getItem('engine') == '500') {
-      carEngine.innerHTML = 'Super Thrust 8 Speed Manual';
+      carEngine.innerHTML = '8 Speed Manual';
       document.querySelector('.checkout-options-engine-cost').innerHTML = '$500.00';
     } else {
-      carEngine.innerHTML = 'Super Thrust 8 Speed Automatic';
+      carEngine.innerHTML = 'Automatic';
       document.querySelector('.checkout-options-engine-cost').innerHTML = '$0';
     }
     //car alloy wheel lock

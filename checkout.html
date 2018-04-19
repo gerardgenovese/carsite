@@ -16,7 +16,7 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
 
 </head>
-<body class="checkout">
+<body class="checkout-page">
 <section id="footerBottom">
 
 <!-- Navigation -->
@@ -34,28 +34,87 @@
   </span>
 </nav>
 <img class="img__logo" src="img/toyota-logo.png" alt="">
-<div id="side-menu" class="side-nav">
+<div id="nav-menu" class="nav-nav">
     <a href="index.html">Explore</a>
     <a href="build-choose.html">Build Car</a>
-    <a href="#">Services</a>
-    <a href="#">Contact</a>
+    <!-- <a href="#">Services</a>
+    <a href="#">Contact</a> -->
 </div>
 
 <div class="navCloseFunction" onclick="navCloseFunction(event)">
 
-<section id="checkout">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-4">
+          <img src="" class="checkout-carImg" alt="">
+      </div>
+      <div class="col-md-8 checkout">
+        <p class="checkout-header"> Your finalized 2018 Toyota <span class="checkout-model"></span></p>
+        <div class="checkout-car"></div>
+        <div class="checkout-price">Price</div>
+        <div class="checkout-color">Color</div>
+        <div class="checkout-engine">Engine Choice</div>
+        <div class="checkout-wheels">Wheel Locks</div>
+        <div class="checkout-mats">Leather Mats</div>
+        <div class="checkout-cargo">Cargo-Tote</div>
+        <div class="checkout-total">Total</div>
+        <div class="checkout-options-color">Car Color</div>
+        <div class="checkout-options-engine">Engine Choice</div>
+        <div class="checkout-options-wheels">Wheel Locks</div>
+        <div class="checkout-options-mats">Leather Mats</div>
+        <div class="checkout-options-cargo">Cargo-Tote</div>
+        <div class="checkout-options-car"></div>
+        <div class="checkout-options-engine-cost">Engine Choice</div>
+        <div class="checkout-options-wheels-cost">Wheel Locks</div>
+        <div class="checkout-options-mats-cost">Leather Mats</div>
+        <div class="checkout-options-cargo-cost">Cargo-Tote</div>
+        <div class="checkout-options-total-cost"></div>
+      </div>
+    </div>
+  </div>
+
+
+  <!-- <section id="checkout">
+    <p class="checkout-header"> Your finalized 2018 Toyota <span class="checkout-model"></span></p>
+    <div class="checkout-car">
+    
+    </div>
+    <div class="checkout-price">Price</div>
+    <div class="checkout-color">Color</div>
+    <div class="checkout-engine">Engine Choice</div>
+    <div class="checkout-wheels">Wheel Locks</div>
+    <div class="checkout-mats">Leather Mats</div>
+    <div class="checkout-cargo">Cargo-Tote</div>
+    <div class="checkout-total">Total</div>
+    <div class="checkout-options-color">Car Color</div>
+    <div class="checkout-options-engine">Engine Choice</div>
+    <div class="checkout-options-wheels">Wheel Locks</div>
+    <div class="checkout-options-mats">Leather Mats</div>
+    <div class="checkout-options-cargo">Cargo-Tote</div>
+    <div class="checkout-options-car"></div>
+    <div class="checkout-options-engine-cost">Engine Choice</div>
+    <div class="checkout-options-wheels-cost">Wheel Locks</div>
+    <div class="checkout-options-mats-cost">Leather Mats</div>
+    <div class="checkout-options-cargo-cost">Cargo-Tote</div>
+    <div class="checkout-options-total-cost"></div>
+  </section> -->
+
+
+
+
+<!-- <section id="checkout">
   <div class="container-fluid checkout-container">
     <div class="row">
-      <div class="col-md-5">
+      <div class="col-md-5 col-sm-12">
         <div class="checkout-car">
           
             <img src="" class="checkout-carImg" alt="">
         </div>
       </div>
-      <div class="col-md-7">
+      <div class="col-md-7 col-sm-12 col-table">
         <p class="checkout-header"> Your finalized 2018 Toyota <span class="checkout-model"></span></p>
         
-        <table>
+        <table class="checkout-table">
           <tr class="checkout-options-mainRow">
             <th>Price</th>
             <th>Color</th>
@@ -73,7 +132,6 @@
             <td class="checkout-options-mats">Leather Mats</td>
             <td class="checkout-options-cargo">Cargo-Tote</td>
             <td></td>
-          
           </tr>
           <tr class="checkout-options-info">
             <td >$<span class="checkout-options-cost"></span>
@@ -86,7 +144,6 @@
             <td>$<span class="checkout-options-total-cost"></span></td>
           </tr>
         </table>
-
       </div>
     </div>
   </div>
@@ -97,7 +154,7 @@
   <div class="checkout-button-purchase">
     <a href="purchased.html" class="z"><button class="btn-purchase"> Purchase Car <i class="fas fa-long-arrow-alt-right"></i></button></a>
   </div>
-</section>
+</section> -->
 
 <footer class="footer">
 Copyright Toyota &copy;

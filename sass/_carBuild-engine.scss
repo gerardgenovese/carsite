@@ -16,7 +16,7 @@
 
   &--info {
     height: 20rem;
-    width: 35rem;
+    width: 100%;
     background-color: rgb(248, 248, 250);
     display: block;
     position: relative;
@@ -89,13 +89,47 @@
     border-radius: 50%;
     background: white;
   }
-
 }
 
 
 
 
+@media(max-width: 1000px){
+  .car-build__engine {
 
+    &--info {
+      height: 20rem;
+      padding: 1rem 2rem;
+      margin-bottom: .8rem;
+      border-radius: 0;
+
+    }
+    &--header {
+      font-size: 1.2rem;
+    }
+    &--specs {
+      font-size: .9rem;
+    }
+  }
+}
+@media(max-width: 500px){
+  .car-build__engine {
+
+    &--info {
+      height: 20rem;
+      padding: 1rem 2rem;
+      margin-bottom: .8rem;
+      border-radius: 0;
+      display:block;
+    }
+    &--header {
+      font-size: 1.2rem;
+    }
+    &--specs {
+      font-size: .9rem;
+    }
+  }
+}
 
 
 

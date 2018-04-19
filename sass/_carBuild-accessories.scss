@@ -2,19 +2,24 @@
   display: none;
 }
 .car-build__accessories {
-  display: flex;
-  justify-content: space-around;
   background-color: rgb(247, 243, 243);
-  margin-top: 3%;
 }
 .car-build__accs {
   background-color: rgb(255, 255, 255);
   margin: .5rem 0;
+  &--items {
+    max-width: 100%;
+    border-left: 1px solid rgb(233, 224, 224);
+    border-right: 1px solid rgb(233, 224, 224);
+    border-bottom: 1px solid rgb(233, 224, 224);
+  }
+  &--img {
+    width: 100%;
+  }
 
   &--header {
     font-size: 1.6rem;
     text-align: center;
-    margin-top: .5rem;
   }
  
   &--price {
@@ -100,48 +105,26 @@
 }
 
 
-// .car-build__accs--checkbox {
-//   width: 15rem;
-//   height: 10rem;
-//   position: relative;
-// }
-
-// .car-build__accs--checkbox-label {
-//   display: block;
-//   padding-left: 3.5rem;
-//   margin-bottom: 1.2rem;
-//   cursor: pointer;
-//   font-size: 1.2rem;
-//   -webkit-user-select: none;
-//   -moz-user-select: none;
-//   -ms-user-select: none;
-//   user-select: none;
-// }
-
-//   /* Hide the browser's default checkbox */
-//   .car-build__accs--checkbox-label input {
-//     position: absolute;
-//     opacity: 0;
-//     cursor: pointer;
-// }
-/* Create a custom checkbox */
-
-// /* On mouse-over, add a grey background color */
-// .car-build__accs--checkbox-label:hover input ~ .checkmark {
-//     background-color: #ccc;
-//     transform: scale(1.1);
-// }
-// /* When the checkbox is checked, add a blue background */
-// .car-build__accs--checkbox-label input:checked ~ .checkmark {
-//     background-color: #2196F3;
-//     transform: scale(1.1);
-// }
-
-
 .modal-open{
 //  overflow: scroll;
 overflow-y: scroll;
  overflow-x: hidden;
  margin: 0 !important;
  padding: 0 !important;
+
+}
+
+@media(max-width:768px){
+  .car-build__accs--items{
+    width: 50%;
+    display: block;
+    margin: 0 auto;
+  }
+}
+@media(max-width:500px){
+  .car-build__accs--items{
+    width: 75%;
+    display: block;
+    margin:0 auto;
+  }
 }

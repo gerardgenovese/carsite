@@ -17,9 +17,9 @@
   transform: translateX(-50%);
   text-align: center;
   cursor: pointer; 
-  height: 1rem;
-  margin-bottom: 4rem;
-  z-index: 110;
+  // height: 1rem;
+  // margin-bottom: 4rem;
+  z-index: 120;
 }
 
 .car-build-dropdown-checkbox {
@@ -48,6 +48,7 @@
 }
 .car-build-dropdown__carLink {
   height: 5rem;
+  margin-top: 5rem;
 }
 
 /*Drop down menu*/
@@ -55,15 +56,16 @@
   height: 0;
   width: 100%;
   position: fixed;
-  top: 10%;
+  top: 5.5%;
   left: 0;
-  z-index: 110;
+  z-index: 108;
   background-color: rgb(255, 255, 255);
   overflow-x: hidden;
   overflow-y: hidden;
   transition: 0.5s;
   display: flex;
   justify-content: center;
+  align-items: center;
 
   &:hover {
     color: rgb(236, 46, 20);
