@@ -1,0 +1,12 @@
+.map {
+  height: 75%; 
+  position: relative; 
+  z-index: 10;
+
+  &-dealership {
+    margin: 2rem 0;
+    font-size: 1.8rem;
+    font-family: 'Kanit', sans-serif;
+    text-align:center;
+  }
+}

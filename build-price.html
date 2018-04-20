@@ -17,7 +17,7 @@
 
 </head>
 <body class="build-price" onload="keepShopping()">
-<section id="footerBottom">
+
 <!-- Navigation -->
 <nav class="navbar">
   <span class="open-slide">
@@ -55,7 +55,8 @@
 
 
 
-<div id="mainDiv"> <!--For Positioning-->
+ <!--For Positioning-->
+ <div id="mainDiv">
 
   <!--====Select Vehicles LINK TEXT====-->
   <div class="car-build-dropdown">
@@ -79,7 +80,7 @@
   </div>
 
   <!--==== Vehicle Cart Accessories Your Vehicle Button====-->
- <div class="car-build-vehicle_cart">
+  <div class="car-build-vehicle_cart">
     <span class="vehicle_cart">
       <input type="checkbox" class="car-build-vehicle_cart__checkbox" id="car-build-vehicle_cart__toggle">
       <label for="car-build-vehicle_cart__toggle" class="car-build-vehicle_cart__button">
@@ -93,7 +94,6 @@
   <!--Vehicle Cart DROPDOWN MENU-->
   <div id="vehicle_cart-menu" class="car-build-vehicle_cart-select-menu">
     <p class="car-build-vehicle_cart-dropdown__carColor" id="vehicle_cart-color"></p>
-    
     <p class="car-build-vehicle_cart-dropdown__carModel" id="vehicle_cart-model"></p>
     <div class="menu-car-bg"><img src="" class="car-build-vehicle_cart-dropdown__carImg" alt="" id="vehicle_cart-car"></div>
     <p class="car-build-vehicle_cart-dropdown__carPrice" id="vehicle_cart-price"></p>
@@ -143,11 +143,15 @@
         <i class="fas fa-cogs car-build__icon--i"></i>
       <p class="car-build__panel-text">Engine Type</p>
     </div>
-    <div class="car-build__panel-buttons tag-panel" onclick="accessories()">
+    <div class="car-build__panel-buttons" onclick="accessories()">
         <i class="fas fa-tags car-build__icon--i"></i>
       <p class="car-build__panel-text">Accessories</p>
     </div>
-    <div class="car-build__panel-buttons" onclick="loanCalculator()"; return false>
+    <div class="car-build__panel-buttons" onclick="galleryPanel()">
+      <i class="fas fa-images car-build__icon--i"></i>
+    <p class="car-build__panel-text">Gallery</p>
+    </div>
+    <div class="car-build__panel-buttons  calc-panel" onclick="loanCalculator()"; return false>
       <i class="fas fa-calculator car-build__icon--i"></i>
     <p class="car-build__panel-text">Finance</p>
     </div>
@@ -179,8 +183,6 @@
     <div class="car-build__engine">
       <div class="container-fluid">
         <div class="row">
-
-     
           <div class="col-md-6 col-sm-12">
             <label class="car-build__engine--info"> <h3 class="car-build__engine--header">2.5 4-Cyl. Super Thruster Engine</h3>
               <p class="car-build__engine--trans">8-Speed Automatic</p>
@@ -345,6 +347,55 @@
 </section>
 
 
+<!--CAR BUILD ENGINE SECTION-->
+<!--Image Gallery-->
+<section id="gallery">
+<div class="gallery camry">
+  <figure class="gallery__item gallery__item--1"><img src="img/gallery/camry/gallery-camry-black.jpg" alt="Gallery image 1" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(1)"></figure>
+  
+  <figure class="gallery__item gallery__item--2"><img src="img/gallery/camry/gallery-camry-blue.jpg" alt="Gallery image 2" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(2)"></figure>
+  
+  <figure class="gallery__item gallery__item--3"><img src="img/gallery/camry/gallery-camry-gray.jpg" alt="Gallery image 3" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(3)"></figure>
+  
+  <figure class="gallery__item gallery__item--4"><img src="img/gallery/camry/gallery-camry-inside.jpg" alt="Gallery image 4" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(4)"></figure>
+  
+  <figure class="gallery__item gallery__item--5"><img src="img/gallery/camry/gallery-camry-inside2.jpg" alt="Gallery image 5" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(5)"></figure>
+  
+  <figure class="gallery__item gallery__item--6"><img src="img/gallery/camry/gallery-camry-white.jpg" alt="Gallery image 6" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(6)"></figure>   
+</div>
+</section>
+  
+<div id="galleryModel" class="galleryModel">
+  <span class="gallery-close cursor" onclick="closeGalleryModal()">&times;</span> 
+
+  <div class="gallery-modal-content">
+    <div class="gallery-slides">
+      <img src="img/gallery/camry/gallery-camry-black.jpg" alt="Camry Black">
+    </div>
+    <div class="gallery-slides">
+      <img src="img/gallery/camry/gallery-camry-blue.jpg" alt="Camry blue">
+    </div>
+    <div class="gallery-slides">
+      <img src="img/gallery/camry/gallery-camry-gray.jpg" alt="Camry gray">
+    </div>
+    <div class="gallery-slides">
+      <img src="img/gallery/camry/gallery-camry-inside.jpg" alt="Camry inside">
+    </div>
+    <div class="gallery-slides">
+      <img src="img/gallery/camry/gallery-camry-inside2.jpg" alt="Camry inside2">
+    </div>
+    <div class="gallery-slides">
+      <img src="img/gallery/camry/gallery-camry-white.jpg" alt="Camry white">
+    </div>
+
+    <div>
+      <a class="gallery-prev gallery-arrows" onclick="nextGallerySlide(-1)">&#10094;</a>
+      <a class="gallery-next gallery-arrows" onclick="nextGallerySlide(1)">&#10095;</a>
+    </div>
+  </div>
+</div>
+
+
 <!--LOAN CALCULATOR-->
 <section id="car-build__calculator">
   <div class="container">
@@ -418,16 +469,15 @@
   </div>
 </section>
 
-<!-- <div class="cargif">
-  <img src="img/17.gif" alt="">
-</div> -->
-<div>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consectetur fugiat iure cupiditate dolores quaerat excepturi nobis laborum quam eaque illo eos, amet dolore? Animi laborum consectetur nostrum assumenda nulla. Fuga deserunt alias corporis voluptatem, tempora odio aspernatur rem laudantium omnis voluptates possimus reiciendis suscipit nesciunt error. Soluta tempora itaque ad perferendis quaerat illo animi, id aliquam, fuga quibusdam repellendus. Placeat harum temporibus quam repudiandae iste! Labore officia nostrum nisi ipsa libero excepturi rem dicta iure expedita adipisci! Accusamus modi deleniti explicabo eius? Dolores quae optio assumenda blanditiis qui, ipsum enim quos, alias vero magnam officiis quisquam reiciendis. Iste, iusto. Ullam ab, fugit enim eligendi quia provident deserunt incidunt aperiam alias exercitationem soluta iure. Maxime nisi, ea nulla laudantium tenetur cum. Fugiat nostrum accusantium sunt, sequi dolor quisquam eum, unde non temporibus eveniet vel minus molestias at distinctio pariatur modi quo, ad repellat amet neque officia accusamus facilis ab. Alias, blanditiis. Ipsam molestiae, recusandae laudantium fugit libero iste, porro beatae nam non dolorum, sit ea laboriosam dolor deleniti! Voluptatum asperiores eum voluptatibus, deserunt quae velit maiores facere ipsam provident beatae vero placeat nostrum aspernatur nam ut quam, dignissimos vitae. Est, aspernatur consequatur. Ad commodi explicabo rerum obcaecati quibusdam, dicta officiis vel illo dolorum sequi quae iste ullam repellat sint aliquam voluptatum recusandae doloribus numquam earum ducimus aspernatur? Quod, odio minima. Beatae iusto in possimus animi? Est ipsam vel quidem corporis aperiam iusto officiis beatae magni vero eaque eligendi et veniam labore laboriosam reprehenderit ullam adipisci, alias dicta optio! Illo quos modi consectetur delectus animi deleniti similique fuga nobis odit neque! Ipsum magnam impedit, obcaecati nam quidem minus, aliquid fugit architecto voluptas nulla laborum sit, laboriosam iusto repudiandae nisi praesentium unde dolor voluptatum. Voluptatem vel maiores reiciendis animi porro unde aperiam obcaecati ab ex ut fuga, a possimus non saepe sequi amet officia quaerat dolor veniam cupiditate quae similique perspiciatis exercitationem! Debitis possimus ratione doloribus deleniti consequatur nobis alias odio dolor qui, quo accusamus dicta culpa cumque quos soluta, velit, vitae sunt enim omnis saepe quaerat odit distinctio placeat? Dignissimos, placeat nisi? Provident vel perspiciatis hic voluptatum illo enim sapiente nemo inventore tempora, in soluta quasi nulla quidem commodi, natus adipisci magni quo nam accusantium nisi dolorem deleniti, quod odit. Vitae totam veniam praesentium facilis illum fugiat voluptas voluptatum, ratione nostrum quo inventore suscipit quas aut commodi numquam impedit eius sunt qui quasi ducimus quod provident doloremque ipsam! Consequuntur voluptatem eveniet aliquid quas impedit magni natus expedita cumque molestias inventore, consequatur autem voluptas molestiae, nemo reiciendis alias atque neque id dolores porro ut totam, corporis dolore maxime? Ducimus eum corporis iste doloremque dignissimos fugit ea sapiente facilis, ad consequatur minima placeat id vel, et eaque sed quod molestias? Aliquid dicta, molestias accusamus eos excepturi nemo ratione, nesciunt veritatis praesentium, laboriosam facilis eius dolores corrupti ipsa eaque iusto! Dolorem maiores nulla maxime laborum, dolores eveniet fugit illo. Ipsum, nobis velit, labore soluta, facere dolor officiis itaque porro rerum neque consequuntur totam minima libero quaerat veritatis placeat tempore! Quis, aliquid explicabo? Delectus, necessitatibus esse! Lorem ipsum dolor sit amet consectetur adipisicing elit. Quis nemo perspiciatis temporibus autem cupiditate dignissimos reiciendis repellendus et ex non rerum eum quam, alias possimus ab incidunt quasi mollitia ad nisi molestias quia in. Cum corrupti quia non fugit placeat, esse labore asperiores aliquid, molestiae ab rerum, quasi harum quod tempora sit ipsam praesentium officia tenetur maiores? Explicabo, molestias. Aliquam, impedit? Id, totam nesciunt perferendis a enim voluptatem itaque, magni at exercitationem tenetur sed! Magnam asperiores voluptates quas obcaecati illum facilis perspiciatis similique, dolores laborum eius tempora dolor esse voluptas ab pariatur modi delectus nesciunt porro. Illum iure provident sequi!</div>
+
+ 
+
 
 <footer class="footer">
   <p class="copy"> Copyright Toyota &copy;</p>
 </footer>
 
-</div> <!--footerBottom End-->
+
 </div> <!--vehicleCartFunction end2-->
 </div> <!--navCloseFunction end-->
 

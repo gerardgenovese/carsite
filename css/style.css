@@ -23,9 +23,11 @@ body {
 
 .car-build__accs {
   background-color: white;
-  margin: .5rem 0; }
+  margin: .5rem 0;
+  width: 100%; }
   .car-build__accs--items {
-    max-width: 100%;
+    max-width: 75%;
+    margin: 0 auto;
     border-left: 1px solid #e9e0e0;
     border-right: 1px solid #e9e0e0;
     border-bottom: 1px solid #e9e0e0; }
@@ -183,7 +185,7 @@ body {
   background-color: #f7f3f3;
   position: relative;
   z-index: 0;
-  margin-top: 3%; }
+  margin-top: .5rem; }
 
 .car-build__engine {
   display: flex;
@@ -472,7 +474,7 @@ body {
 .car-panel {
   border-width: 0 .5px 0 2px; }
 
-.tag-panel {
+.calc-panel {
   border-width: 0 2px 0 .5px; }
 
 @media (max-width: 800px) {
@@ -505,7 +507,7 @@ body {
 .image-background2 {
   background-color: white;
   width: 100%;
-  height: 40%;
+  height: 35%;
   position: fixed;
   top: 0;
   z-index: 99; }
@@ -1266,10 +1268,15 @@ body {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
   grid-template-columns: repeat(7, 1fr); }
-  .checkout-header {
+  .checkout-all {
+    margin-top: 3rem; }
+  .checkout-model {
     grid-row: 1/2;
-    grid-column: 3/span 3;
+    grid-column: 1/-1;
+    text-align: center;
     font-size: 1.5rem; }
+    .checkout-model:before {
+      content: 'Your Finalized 2018 Totyota '; }
   .checkout-car {
     grid-row: 2/ -1;
     grid-column: 1/4;
@@ -1283,117 +1290,213 @@ body {
     justify-content: center;
     align-items: center;
     background-color: #ebe1e1;
+    text-align: center;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
   .checkout-color {
     grid-row: 2/3;
     grid-column: 2/3;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ebe1e1; }
+    background-color: #ebe1e1;
+    text-align: center; }
   .checkout-engine {
     grid-row: 2/3;
     grid-column: 3/4;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ebe1e1; }
+    background-color: #ebe1e1;
+    text-align: center; }
   .checkout-wheels {
     grid-row: 2/3;
     grid-column: 4/5;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ebe1e1; }
+    background-color: #ebe1e1;
+    text-align: center; }
   .checkout-mats {
     grid-row: 2/3;
     grid-column: 5/6;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ebe1e1; }
+    background-color: #ebe1e1;
+    text-align: center; }
   .checkout-cargo {
     grid-row: 2/3;
     grid-column: 6/7;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ebe1e1; }
+    background-color: #ebe1e1;
+    text-align: center; }
   .checkout-total {
     grid-row: 2/3;
     grid-column: 7/8;
     display: flex;
     justify-content: center;
     align-items: center;
-    background-color: #ebe1e1; }
+    background-color: #ebe1e1;
+    text-align: center; }
   .checkout-options-color {
     grid-row: 3/4;
     grid-column: 2/3;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
   .checkout-options-engine {
     grid-row: 3/4;
     grid-column: 3/4;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
   .checkout-options-wheels {
     grid-row: 3/4;
     grid-column: 4/5;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
   .checkout-options-mats {
     grid-row: 3/4;
     grid-column: 5/6;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
   .checkout-options-cargo {
     grid-row: 3/4;
     grid-column: 6/7;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
   .checkout-options-car {
     grid-row: 4/5;
     grid-column: 1/2;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
+    .checkout-options-car:before {
+      content: '$'; }
   .checkout-options-engine-cost {
     grid-row: 4/5;
     grid-column: 3/4;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
   .checkout-options-wheels-cost {
     grid-row: 4/5;
     grid-column: 4/5;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
   .checkout-options-mats-cost {
     grid-row: 4/5;
     grid-column: 5/6;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
   .checkout-options-cargo-cost {
     grid-row: 4/5;
     grid-column: 6/7;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
   .checkout-options-total-cost {
     grid-row: 4/5;
     grid-column: 7/8;
+    font-weight: bold;
     display: flex;
     justify-content: center;
-    align-items: center; }
+    align-items: center;
+    text-align: center; }
+    .checkout-options-total-cost:before {
+      content: '$'; }
+
+.btn-purchase {
+  font-size: 1.1rem;
+  font-family: 'Kanit', sans-serif;
+  padding: 1rem 1rem;
+  background-color: #fc0606;
+  box-shadow: 0 5px 5px gray;
+  box-shadow: 0 -5px -5px gray;
+  color: #f3ecec;
+  border: none;
+  transition: .2s;
+  cursor: pointer;
+  width: 50%; }
+
+.btn-purchase:hover {
+  box-shadow: 0 5px 5px gray;
+  transform: scale(1.1);
+  background-color: #a70707; }
+
+.btn-purchase:active {
+  box-shadow: 0 2px 2px gray;
+  transform: scale(1); }
+
+.btn-purchase:focus {
+  outline: 0; }
+
+.checkout-button-back {
+  width: 50%;
+  position: absolute;
+  top: 77%;
+  left: 1%; }
+
+.checkout-button-purchase {
+  text-align: right;
+  width: 50%;
+  position: absolute;
+  top: 77%;
+  right: 1%; }
+
+@media (max-width: 768px) {
+  .checkout {
+    margin-bottom: 20rem; }
+    .checkout-carImg {
+      width: 50%;
+      display: block;
+      margin: 0 auto; }
+  .btn-purchase {
+    font-size: .9rem; } }
+
+@media (max-width: 600px) {
+  .btn-purchase {
+    font-size: .8rem;
+    width: 60%; } }
+
+@media (max-width: 500px) {
+  .checkout-all {
+    font-size: .8rem; }
+  .checkout-model {
+    font-size: 1.2rem; }
+  .btn-purchase {
+    font-size: .5rem;
+    width: 60%; }
+  .checkout-button-back {
+    top: 67%; }
+  .checkout-button-purchase {
+    top: 67%; } }
+
+@media (max-width: 400px) {
+  .checkout-all {
+    font-size: .7rem; }
+  .checkout-model {
+    font-size: 1rem; } }
 
 .choose-car {
   margin: 4rem 0;
@@ -1486,10 +1589,21 @@ body {
   .explore-car__front:hover {
     max-width: 100%; } }
 
-#footerBottom {
-  position: relative; }
-
 .footer {
+  position: relative;
+  top: 100%;
+  margin-top: 4rem;
+  left: 0;
+  z-index: 200;
+  height: 5rem;
+  width: 100%;
+  background-color: #9b0b0b;
+  color: #f7f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
+
+.footer-checkout {
   position: absolute;
   top: 100%;
   margin-top: 4rem;
@@ -1502,6 +1616,101 @@ body {
   display: flex;
   align-items: center;
   justify-content: center; }
+
+#gallery {
+  display: none; }
+
+.gallery {
+  background-color: #e2d8d8;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-template-rows: repeat(10, 5vw); }
+  .gallery__item--1 {
+    grid-row: 4 / span 8;
+    grid-column: 1 / span 5;
+    z-index: 2; }
+  .gallery__item--2 {
+    grid-row: 1  / span 4;
+    grid-column: 1 / span 4;
+    z-index: 3; }
+  .gallery__item--3 {
+    grid-row: 1  / span 5;
+    grid-column: 4 / span 6;
+    z-index: 3; }
+  .gallery__item--4 {
+    grid-row: 5  / span 7;
+    grid-column: 5 / span 4;
+    z-index: 3; }
+  .gallery__item--5 {
+    grid-row: 1  / span 6;
+    grid-column: 8 / span 6;
+    z-index: 2; }
+  .gallery__item--6 {
+    grid-row: 5 / span 7;
+    grid-column: 8 / span 5;
+    z-index: 2; }
+  .gallery__img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    cursor: pointer; }
+
+/*-----------------MODAL----------------*/
+.galleryModel {
+  display: none;
+  position: fixed;
+  left: 0;
+  top: 0;
+  z-index: 200;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.8); }
+
+.gallery-slides img {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 60%; }
+
+.gallery-close {
+  color: white;
+  font-size: 4rem;
+  display: flex;
+  justify-content: flex-end;
+  margin-right: 2rem;
+  cursor: pointer;
+  user-select: none;
+  -webkit-user-select: none; }
+
+.gallery-arrows {
+  color: white !important;
+  font-weight: bold;
+  font-size: 3rem;
+  transition: all 1s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+  cursor: pointer;
+  padding: 2rem; }
+
+.gallery-prev {
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  transform: translateY(-50%); }
+
+.gallery-next {
+  position: absolute;
+  top: 50%;
+  right: 10%;
+  transform: translateY(-50%); }
+
+.gallery-prev:hover,
+.gallery-next:hover {
+  background-color: rgba(0, 0, 0, 0.8); }
 
 .header-index__image {
   width: 100%; }
@@ -1633,6 +1842,9 @@ body {
 .purchased-toyota, .purchased-carTitle {
   font-family: 'Kanit', sans-serif;
   font-size: 2rem; }
+
+.purchased-carImg {
+  width: 75%; }
 
 .purchased-carImg {
   animation: purchased 3s forwards;

@@ -429,7 +429,7 @@ function changeColor() {
   document.getElementById("car-build__colors").style.display = "block";
 	document.getElementById("car-build__engine").style.display = "none";
 	document.getElementById("car-build__calculator").style.display = "none";
-
+  document.getElementById("gallery").style.display = "none";
   document.getElementById("car-build__accessories").style.display = "none";
 }
 
@@ -438,6 +438,25 @@ function changeEngine() {
   document.getElementById("car-build__colors").style.display = "none";
   document.getElementById("car-build__engine").style.display = "block";
   document.getElementById("car-build__calculator").style.display = "none";
+  document.getElementById("gallery").style.display = "none";
+  document.getElementById("car-build__accessories").style.display = "none";
+}
+
+//Accessories
+function accessories() {
+	document.getElementById("car-build__colors").style.display = "none";
+  document.getElementById("car-build__engine").style.display = "none";
+  document.getElementById("car-build__calculator").style.display = "none";
+  document.getElementById("gallery").style.display = "none";
+  document.getElementById("car-build__accessories").style.display = "block";
+}
+
+//Accessories
+function galleryPanel() {
+	document.getElementById("car-build__colors").style.display = "none";
+  document.getElementById("car-build__engine").style.display = "none";
+  document.getElementById("car-build__calculator").style.display = "none";
+  document.getElementById("gallery").style.display = "block";
   document.getElementById("car-build__accessories").style.display = "none";
 }
 
@@ -446,16 +465,11 @@ function loanCalculator() {
 	document.getElementById("car-build__colors").style.display = "none";
   document.getElementById("car-build__engine").style.display = "none";
   document.getElementById("car-build__calculator").style.display = "block";
+  document.getElementById("gallery").style.display = "none";
   document.getElementById("car-build__accessories").style.display = "none";
 }
 
-//FINANCE BUTTON TO USE LOAN CALCULATOR
-function accessories() {
-	document.getElementById("car-build__colors").style.display = "none";
-  document.getElementById("car-build__engine").style.display = "none";
-  document.getElementById("car-build__calculator").style.display = "none";
-  document.getElementById("car-build__accessories").style.display = "block";
-}
+
 
 //ALLOW DIV ELEMENT TO MAINTAIN BUTTON HOVER COLOR
 function hover() {
@@ -1097,54 +1111,8 @@ function removeVehicleCartOptions() {
 
 ////////////////////////////////////////////////////////////////////////////////////////////
 
- ////-- VEHICLE CART DROP DOWN MENU---////////
-
-//  //OPEN & CLOSE UP/DOWN SELECT VEHICLE BUTTON
-//  let vehicleCart = 1;
-//  document.getElementById('car-build-vehicle_cart__toggle').addEventListener('click', (e) => {
-
-//    let isEven = choiceCountNum => choiceCountNum % 2 === 0 ? true : false;
-//    if (isEven(vehicleCart) === false) {
-//        openVehicleCart();
-//    } else if (isEven(vehicleCart) === true) {
-//        closeVehicleCart();
-//    }
-//    e.preventDefault();
-//  });
  
-//  //OPEN MENU
-//  function openVehicleCart() {
-//    document.getElementById('vehicle_cart-vehicle').style.height = '25rem';
-//    vehicleCart = 0;
-//    // document.getElementById('main').style.marginLeft = '250px';
-//  };
- 
-//  //CLOSE MENU
-//  function closeVehicleCart() {
-//    document.getElementById('vehicle_cart-vehicle').style.height = '0';
-//    vehicleCart = 1;
-//    // document.getElementById('main').style.marginLeft = '0';
-//  };
-
-//  //Allow click outside of select vehicle car menu to close
-// document.addEventListener('mouseup', function(e){
-//   let vehicleCart = document.getElementById('vehicle_cart-vehicle');
-//   let nav = document.querySelector('.navbar');
-
-//   if (e.target !== vehicleCart) {
-//     vehicleCart.style.height = '0';
-//     vehicleCart = 1;
-//   }
-//   e.preventDefault(); 
-// });
-
-
-
-
-
-
-
-
+//vehicle cart functionality
 
 
 let vehicleCartCount = 1;
@@ -1172,7 +1140,7 @@ vehicleCartCountFunctionality();
 //OPEN MENU
 function openVehicleCart() {
   let cart = document.getElementById('vehicle_cart-menu');
-  cart.style.height = '24rem';
+  cart.style.height = '25rem';
   cart.style.fontFamily = 'Kanit';
   closeSelectVehiclesMenu();
   vehicleCartCount = 0;
@@ -1383,7 +1351,7 @@ function checkout() {
   if (document.body.classList.contains('checkout-page')) {
     //car color
     let carColor = document.querySelector('.checkout-options-color')
-    carColor.innerHTML = sessionStorage.getItem('car alt');
+    carColor.innerHTML = sessionStorage.getItem('car alt').toUpperCase();
     carColor.alt = sessionStorage.getItem('car alt');
     
     //Propogate car model
@@ -1487,3 +1455,60 @@ function purchased() {
   }
 }
 purchased();
+
+
+
+
+
+
+
+
+
+
+//Gallery Modal
+function openGalleryModal() {
+  document.getElementById('galleryModel').style.display="block";
+}
+
+function closeGalleryModal() {
+  document.getElementById('galleryModel').style.display="none";
+}
+
+let galleryIndex = 1;
+showGallerySlides(galleryIndex);
+
+function nextGallerySlide(n) {
+  showGallerySlides(galleryIndex += n);
+}
+
+function currentGallerySlide(n) {
+  showGallerySlides(galleryIndex = n);
+}
+
+function showGallerySlides(n) {
+let i;
+let gallerySlides = document.getElementsByClassName("gallery-slides");
+
+if (n > gallerySlides.length) {galleryIndex = 1}
+if (n < 1) {galleryIndex = gallerySlides.length}
+for (i = 0; i < gallerySlides.length; i++) {
+    gallerySlides[i].style.display = "none";
+}
+
+gallerySlides[galleryIndex-1].style.display = "block";
+}
+
+//Listen for click outside the element
+let galleryModel = document.getElementById('galleryModel');
+window.addEventListener('click', clickOutside);
+
+function clickOutside(e) { 
+  if(e.target == galleryModel) {    
+      galleryModel.style.display = 'none'
+  } 
+}
+
+
+
+
+

@@ -1,9 +1,26 @@
-#footerBottom {
-  position: relative;
-}
+// #footerBottom {
+//   position: relative;
+//   height: 100%;
+// }
 
 
 .footer {
+  position: relative;
+  top: 100%;
+  margin-top: 4rem;
+  left: 0;
+  z-index: 200;
+  height: 5rem;
+  width: 100%;
+  background-color: rgb(155, 11, 11);
+  color:rgb(247, 241, 241);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+}
+
+//for checkout page
+.footer-checkout {
   position: absolute;
   top: 100%;
   margin-top: 4rem;

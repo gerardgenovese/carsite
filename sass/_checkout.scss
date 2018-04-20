@@ -153,29 +153,41 @@
 //     top: 70%;
 //   }
 // }
+
+
+
+
 @mixin flexCenterColor {
   display:flex;
   justify-content:center;
   align-items: center;
   background-color: rgb(235, 225, 225);
+  text-align:center
 }
 @mixin flexCenter {
   display:flex;
   justify-content:center;
   align-items: center;
+  text-align:center;
 }
-
 
 .checkout {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
-  // justify-items:center;
-
   grid-template-columns: repeat(7, 1fr);
-  &-header {
+
+  &-all{
+    margin-top: 3rem;
+  }
+
+  &-model {
     grid-row: 1/2;
-    grid-column: 3/span 3;
+    grid-column: 1/-1;
+    text-align:center;
     font-size: 1.5rem;
+    &:before {
+      content: 'Your Finalized 2018 Totyota '
+    }
   }
   &-car{
     grid-row: 2/ -1;
@@ -250,6 +262,10 @@
     grid-row: 4/5;
     grid-column: 1/2;
     @include flexCenter;
+
+    &:before {
+      content: '$';
+    }
   }
   &-options-engine-cost {
     grid-row: 4/5;
@@ -274,11 +290,106 @@
   &-options-total-cost {
     grid-row: 4/5;
     grid-column: 7/8;
+    font-weight: bold;
     @include flexCenter;
-  }
 
+    &:before {
+      content: '$';
+    }
+  }
+}
+
+.btn-purchase {
+  font-size: 1.1rem;
+  font-family:'Kanit', sans-serif;
+  padding: 1rem 1rem;
+  background-color: rgb(252, 6, 6);
+  box-shadow: 0 5px 5px gray;
+  box-shadow: 0 -5px -5px gray;
+  color: rgb(243, 236, 236);
+  border: none;
+  transition: .2s;
+  cursor: pointer;
+  width: 50%;
+}
+
+.btn-purchase:hover {
+  box-shadow: 0 5px 5px gray;
+  transform: scale(1.1);
+  background-color: rgb(167, 7, 7); 
+}
+
+.btn-purchase:active{
+  box-shadow: 0 2px 2px gray;
+  transform: scale(1);
+}
+.btn-purchase:focus {
+  outline: 0;
+}
+
+.checkout-button-back {
+  width: 50%;
+  position: absolute;
+  top: 77%;
+  left: 1%;
+}
+
+.checkout-button-purchase {
+  text-align:right;
+  width: 50%;
+  position: absolute;
+  top: 77%;
+  right: 1%;
 }
 
 
+@media(max-width: 768px) {
+  .checkout {
+    margin-bottom: 20rem;
 
-
+    &-carImg {
+      width: 50%;
+      display:block;
+      margin: 0 auto;
+    }
+  }
+  .btn-purchase {
+    font-size: .9rem;
+  }
+}
+@media(max-width: 600px) {
+  .btn-purchase {
+    font-size: .8rem;
+    width: 60%;
+  }
+}
+@media(max-width: 500px) {
+  .checkout {
+    &-all{
+      font-size: .8rem;
+    }
+    &-model {
+      font-size: 1.2rem;
+    }
+  }
+  .btn-purchase {
+    font-size: .5rem;
+    width: 60%;
+  }
+  .checkout-button-back {
+    top: 67%;
+  } 
+  .checkout-button-purchase {
+    top: 67%;
+  }
+}
+@media(max-width: 400px) {
+  .checkout {
+    &-all{
+      font-size: .7rem;
+    }
+    &-model {
+      font-size: 1rem;
+    }
+  }
+}

@@ -7,8 +7,10 @@
 .car-build__accs {
   background-color: rgb(255, 255, 255);
   margin: .5rem 0;
+  width: 100%;
   &--items {
-    max-width: 100%;
+    max-width: 75%;
+    margin: 0 auto;
     border-left: 1px solid rgb(233, 224, 224);
     border-right: 1px solid rgb(233, 224, 224);
     border-bottom: 1px solid rgb(233, 224, 224);
