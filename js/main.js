@@ -398,6 +398,11 @@ function whenLoaded() {
   
     let carAlt = sessionStorage.getItem('car alt');
       carImgDisplay.alt = carAlt;
+
+    //remove all values in calculator
+    document.getElementById('amount').value = '';
+    document.getElementById('interest').value = '';
+    document.getElementById('years').value = '';
   }
 };
 whenLoaded();
@@ -429,7 +434,7 @@ function changeColor() {
   document.getElementById("car-build__colors").style.display = "block";
 	document.getElementById("car-build__engine").style.display = "none";
 	document.getElementById("car-build__calculator").style.display = "none";
-  document.getElementById("gallery").style.display = "none";
+  document.querySelector('.gallery-placeholder').style.display = 'none';
   document.getElementById("car-build__accessories").style.display = "none";
 }
 
@@ -438,7 +443,7 @@ function changeEngine() {
   document.getElementById("car-build__colors").style.display = "none";
   document.getElementById("car-build__engine").style.display = "block";
   document.getElementById("car-build__calculator").style.display = "none";
-  document.getElementById("gallery").style.display = "none";
+  document.querySelector('.gallery-placeholder').style.display = 'none';
   document.getElementById("car-build__accessories").style.display = "none";
 }
 
@@ -447,7 +452,7 @@ function accessories() {
 	document.getElementById("car-build__colors").style.display = "none";
   document.getElementById("car-build__engine").style.display = "none";
   document.getElementById("car-build__calculator").style.display = "none";
-  document.getElementById("gallery").style.display = "none";
+  document.querySelector('.gallery-placeholder').style.display = 'none';
   document.getElementById("car-build__accessories").style.display = "block";
 }
 
@@ -456,16 +461,116 @@ function galleryPanel() {
 	document.getElementById("car-build__colors").style.display = "none";
   document.getElementById("car-build__engine").style.display = "none";
   document.getElementById("car-build__calculator").style.display = "none";
-  document.getElementById("gallery").style.display = "block";
   document.getElementById("car-build__accessories").style.display = "none";
+
+document.querySelector('.gallery-placeholder').style.display = 'block';
+
+  galleryPanelGetCar();
 }
+
+
+function galleryPanelGetCar(){
+  let gallery = document.querySelector('.gallery-placeholder');
+
+ 
+
+  if (carTitleDisplay.textContent == 'Camry') {
+  gallery.innerHTML = `<section id="gallery-camry" class="img-gallery">
+  <div class="gallery gallery-camry">
+    <figure class="gallery__item gallery__item--1"><img src="img/gallery/camry/gallery-camry-black.jpg" alt="Gallery image 1" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(1)"></figure>
+    
+    <figure class="gallery__item gallery__item--2"><img src="img/gallery/camry/gallery-camry-blue.jpg" alt="Gallery image 2" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(2)"></figure>
+    
+    <figure class="gallery__item gallery__item--3"><img src="img/gallery/camry/gallery-camry-gray.jpg" alt="Gallery image 3" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(3)"></figure>
+    
+    <figure class="gallery__item gallery__item--4"><img src="img/gallery/camry/gallery-camry-inside.jpg" alt="Gallery image 4" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(4)"></figure>
+    
+    <figure class="gallery__item gallery__item--5"><img src="img/gallery/camry/gallery-camry-inside2.jpg" alt="Gallery image 5" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(5)"></figure>
+    
+    <figure class="gallery__item gallery__item--6"><img src="img/gallery/camry/gallery-camry-white.jpg" alt="Gallery image 6" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(6)"></figure>   
+  </div>
+  </section>`;
+  }
+  else if (carTitleDisplay.textContent == 'Corolla') {
+gallery.innerHTML = `<section id="gallery-corolla" class="img-gallery">
+<div class="gallery gallery-corolla">
+  <figure class="gallery__item gallery__item--1"><img src="img/gallery/corolla/gallery-corolla-black.jpg" alt="Gallery image 1" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(1)"></figure>
+  
+  <figure class="gallery__item gallery__item--2"><img src="img/gallery/corolla/gallery-corolla-blue.jpg" alt="Gallery image 2" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(2)"></figure>
+  
+  <figure class="gallery__item gallery__item--3"><img src="img/gallery/corolla/gallery-corolla-gray.jpg" alt="Gallery image 3" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(3)"></figure>
+  
+  <figure class="gallery__item gallery__item--4"><img src="img/gallery/corolla/gallery-corolla-inside.jpg" alt="Gallery image 4" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(4)"></figure>
+  
+  <figure class="gallery__item gallery__item--5"><img src="img/gallery/corolla/gallery-corolla-inside2.jpg" alt="Gallery image 5" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(5)"></figure>
+  
+  <figure class="gallery__item gallery__item--6"><img src="img/gallery/corolla/gallery-corolla-white.jpg" alt="Gallery image 6" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(6)"></figure>   
+</div>
+</section>`
+}
+else if (carTitleDisplay.textContent == '86') {
+  gallery.innerHTML = `<section id="gallery-t86" class="img-gallery">
+  <div class="gallery gallery-t86">
+    <figure class="gallery__item gallery__item--1"><img src="img/gallery/t86/gallery-t86-black.jpg" alt="Gallery image 1" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(1)"></figure>
+    
+    <figure class="gallery__item gallery__item--2"><img src="img/gallery/t86/gallery-t86-blue.jpg" alt="Gallery image 2" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(2)"></figure>
+    
+    <figure class="gallery__item gallery__item--3"><img src="img/gallery/t86/gallery-t86-gray.jpg" alt="Gallery image 3" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(3)"></figure>
+    
+    <figure class="gallery__item gallery__item--4"><img src="img/gallery/t86/gallery-t86-inside.jpg" alt="Gallery image 4" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(4)"></figure>
+    
+    <figure class="gallery__item gallery__item--5"><img src="img/gallery/t86/gallery-t86-inside2.jpg" alt="Gallery image 5" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(5)"></figure>
+    
+    <figure class="gallery__item gallery__item--6"><img src="img/gallery/t86/gallery-t86-white.jpg" alt="Gallery image 6" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(6)"></figure>   
+  </div>
+  </section>`
+  }
+  else if (carTitleDisplay.textContent == 'Yaris') {
+    gallery.innerHTML = `<section id="gallery-yaris" class="img-gallery">
+    <div class="gallery gallery-yaris">
+      <figure class="gallery__item gallery__item--1"><img src="img/gallery/yaris/gallery-yaris-black.jpg" alt="Gallery image 1" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(1)"></figure>
+      
+      <figure class="gallery__item gallery__item--2"><img src="img/gallery/yaris/gallery-yaris-blue.jpg" alt="Gallery image 2" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(2)"></figure>
+      
+      <figure class="gallery__item gallery__item--3"><img src="img/gallery/yaris/gallery-yaris-gray.jpg" alt="Gallery image 3" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(3)"></figure>
+      
+      <figure class="gallery__item gallery__item--4"><img src="img/gallery/yaris/gallery-yaris-inside.jpg" alt="Gallery image 4" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(4)"></figure>
+      
+      <figure class="gallery__item gallery__item--5"><img src="img/gallery/yaris/gallery-yaris-inside2.jpg" alt="Gallery image 5" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(5)"></figure>
+      
+      <figure class="gallery__item gallery__item--6"><img src="img/gallery/yaris/gallery-yaris-white.jpg" alt="Gallery image 6" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(6)"></figure>   
+    </div>
+    </section>`
+    }
+    else if (carTitleDisplay.textContent == 'Avalon') {
+      gallery.innerHTML = `<section id="gallery-avalon" class="img-gallery">
+      <div class="gallery gallery-avalon">
+        <figure class="gallery__item gallery__item--1"><img src="img/gallery/avalon/gallery-avalon-black.jpg" alt="Gallery image 1" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(1)"></figure>
+        
+        <figure class="gallery__item gallery__item--2"><img src="img/gallery/avalon/gallery-avalon-blue.jpg" alt="Gallery image 2" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(2)"></figure>
+        
+        <figure class="gallery__item gallery__item--3"><img src="img/gallery/avalon/gallery-avalon-gray.jpg" alt="Gallery image 3" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(3)"></figure>
+        
+        <figure class="gallery__item gallery__item--4"><img src="img/gallery/avalon/gallery-avalon-inside.jpg" alt="Gallery image 4" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(4)"></figure>
+        
+        <figure class="gallery__item gallery__item--5"><img src="img/gallery/avalon/gallery-avalon-inside2.jpg" alt="Gallery image 5" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(5)"></figure>
+        
+        <figure class="gallery__item gallery__item--6"><img src="img/gallery/avalon/gallery-avalon-white.jpg" alt="Gallery image 6" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(6)"></figure>   
+      </div>
+      </section>`
+      }
+ else {
+   return false;
+ }
+}
+
 
 //FINANCE BUTTON TO USE LOAN CALCULATOR
 function loanCalculator() {
 	document.getElementById("car-build__colors").style.display = "none";
   document.getElementById("car-build__engine").style.display = "none";
   document.getElementById("car-build__calculator").style.display = "block";
-  document.getElementById("gallery").style.display = "none";
+  document.querySelector('.gallery-placeholder').style.display = 'none';
   document.getElementById("car-build__accessories").style.display = "none";
 }
 
@@ -1010,7 +1115,7 @@ selectVehicleFunctionality();
  
 //OPEN MENU
 function openSelectVehiclesMenu() {
-  document.getElementById('select-vehicle').style.height = '25rem';
+  document.getElementById('select-vehicle').style.height = '100%';
   closeVehicleCart();
   selectVehicleCount = 0;
 };
@@ -1037,7 +1142,7 @@ document.addEventListener('mouseup', function(e){
 
 
 
-//Select car and propagate all fields accordingly. Reset car options(engine, accs);
+//Select Vehicle button: propagate all fields accordingly. Reset car options(engine, accs);
 //--car--SessionStorage() Line 138 whenLoaded() Line195
 function camrySelect() {
   retrieveVehicleCartOptions();
@@ -1047,6 +1152,8 @@ function camrySelect() {
   selectVehicleCount = 1;
 
   removeVehicleCartOptions()  //1063
+  galleryPanelGetCar();
+
 }
 
 function corollaSelect() {
@@ -1057,6 +1164,7 @@ function corollaSelect() {
   selectVehicleCount = 1;
 
   removeVehicleCartOptions()
+  galleryPanelGetCar();
 }
 
 function t86Select() {
@@ -1067,6 +1175,7 @@ function t86Select() {
   selectVehicleCount = 1;
 
   removeVehicleCartOptions()
+  galleryPanelGetCar();
 }
 
 function yarisSelect() {
@@ -1077,6 +1186,7 @@ function yarisSelect() {
   selectVehicleCount = 1;
 
   removeVehicleCartOptions()
+  galleryPanelGetCar();
 }
 
 function avalonSelect() {
@@ -1087,6 +1197,7 @@ function avalonSelect() {
   selectVehicleCount = 1;
 
   removeVehicleCartOptions()
+  galleryPanelGetCar();
 }
 ///////////////////////////////////////////////////////////////////////////////////////////
 
@@ -1165,35 +1276,6 @@ function vehicleCartFunction(event) {
     // console.log(event.target.className);
   }
 }
-
-
-
-// Allow click outside of select vehicle car menu to close
-// document.addEventListener('mouseup', function(e){
-  // let vehicleCart = document.getElementById('vehicle_cart-vehicle');
-  // let nav = document.querySelector('.navbar');
-  // let panel = document.querySelectorAll('.car-build__panel-buttons');
-  // let text = document.querySelectorAll('.car-build__panel-text');
-  // let icon = document.querySelectorAll('.car-build__icon--i');
-
-
-  // let t = e.target;
-
-  // if (t === vehicleCart || t === nav || t === carImgDisplay || t === panel[0] || t === panel[1] || t === panel[2] || t === panel[3] || t === text[0] || t === text[1] || t === text[2] || t === text[3] || t === icon[0] || t === icon[1] || t === icon[2] || t === icon[3]) {
-  //   vehicleCart.style.height = '0';
-  //   vehicleCartCount = 1;
-  // }
-
-
-
-//   e.preventDefault(); 
-// });
-
-
-
-
-
-
 
 
 
@@ -1309,6 +1391,9 @@ window.onscroll = function() {
 
     //panel
     document.querySelector('.car-build__panel').className = 'panel';
+
+    //select vehicle button
+    document.querySelector('.car-build-dropdown-select-text').style.display = 'none';
   }
 
   else if (scroll < 55) {
@@ -1337,6 +1422,9 @@ window.onscroll = function() {
 
     //panel
     document.querySelector('.panel').className = 'car-build__panel';
+
+     //select vehicle button
+     document.querySelector('.car-build-dropdown-select-text').style.display = 'block';
   }
 }
 
@@ -1467,11 +1555,30 @@ purchased();
 
 //Gallery Modal
 function openGalleryModal() {
-  document.getElementById('galleryModel').style.display="block";
+  if (carTitleDisplay.textContent == 'Camry') {
+    document.getElementById('galleryModel').style.display="block";
+  }
+  else if (carTitleDisplay.textContent == 'Corolla') {
+    document.getElementById('galleryModel2').style.display='block';
+  }
+  else if (carTitleDisplay.textContent == '86') {
+    document.getElementById('galleryModel3').style.display='block';
+  }
+  else if (carTitleDisplay.textContent == 'Yaris') {
+    document.getElementById('galleryModel4').style.display='block';
+  }
+  else if (carTitleDisplay.textContent == 'Avalon') {
+    document.getElementById('galleryModel5').style.display='block';
+  }
+
 }
 
 function closeGalleryModal() {
   document.getElementById('galleryModel').style.display="none";
+  document.getElementById('galleryModel2').style.display="none";
+  document.getElementById('galleryModel3').style.display="none";
+  document.getElementById('galleryModel4').style.display="none";
+  document.getElementById('galleryModel5').style.display="none";
 }
 
 let galleryIndex = 1;
@@ -1487,7 +1594,24 @@ function currentGallerySlide(n) {
 
 function showGallerySlides(n) {
 let i;
-let gallerySlides = document.getElementsByClassName("gallery-slides");
+let gallerySlides;
+
+if (carTitleDisplay.textContent == 'Camry') {
+  gallerySlides = document.getElementsByClassName("gallery-slides");
+}
+else if (carTitleDisplay.textContent == 'Corolla') {
+  gallerySlides = document.getElementsByClassName("gallery-slides2");
+}
+else if (carTitleDisplay.textContent == '86') {
+  gallerySlides = document.getElementsByClassName("gallery-slides3");
+}
+else if (carTitleDisplay.textContent == 'Yaris') {
+  gallerySlides = document.getElementsByClassName("gallery-slides4");
+}
+else if (carTitleDisplay.textContent == 'Avalon') {
+  gallerySlides = document.getElementsByClassName("gallery-slides5");
+}
+
 
 if (n > gallerySlides.length) {galleryIndex = 1}
 if (n < 1) {galleryIndex = gallerySlides.length}
@@ -1500,15 +1624,21 @@ gallerySlides[galleryIndex-1].style.display = "block";
 
 //Listen for click outside the element
 let galleryModel = document.getElementById('galleryModel');
+let galleryModel2 = document.getElementById('galleryModel2');
+let galleryModel3 = document.getElementById('galleryModel3');
+let galleryModel4 = document.getElementById('galleryModel4');
+let galleryModel5 = document.getElementById('galleryModel5');
 window.addEventListener('click', clickOutside);
 
 function clickOutside(e) { 
-  if(e.target == galleryModel) {    
-      galleryModel.style.display = 'none'
+  if(e.target == galleryModel || e.target == galleryModel2 || e.target == galleryModel3 || e.target == galleryModel4 || e.target == galleryModel5) {    
+      galleryModel.style.display = 'none';
+      galleryModel2.style.display = 'none';
+      galleryModel3.style.display = 'none';
+      galleryModel4.style.display = 'none';
+      galleryModel5.style.display = 'none';
   } 
 }
-
-
 
 
 

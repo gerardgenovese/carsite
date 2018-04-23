@@ -3,10 +3,11 @@
 }
 .car-build__accessories {
   background-color: rgb(247, 243, 243);
+  margin-top: 3rem;
 }
 .car-build__accs {
   background-color: rgb(255, 255, 255);
-  margin: .5rem 0;
+  // margin: .5rem 0;
   width: 100%;
   &--items {
     max-width: 75%;

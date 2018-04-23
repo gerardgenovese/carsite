@@ -17,12 +17,12 @@
 
 </head>
 <body class="build-price" onload="keepShopping()">
-
+<div id="everthing">
+  
 <!-- Navigation -->
 <nav class="navbar">
   <span class="open-slide">
       <input type="checkbox" class="navigation__checkbox hamburger" id="navi-toggle">
-
       <label for="navi-toggle" class="navigation__button">
         <span class="nav-all">
           <span class="navigation__icon1"></span>
@@ -36,26 +36,13 @@
 <div id="nav-menu" class="nav-nav">
     <a href="index.html">Explore</a>
     <a href="build-choose.html">Build Car</a>
-    <!-- <a href="#">Services</a>
-    <a href="#">Contact</a> -->
 </div>
 
 
 
 <div class="navCloseFunction" onclick="navCloseFunction(event)">
 
-
-
- 
-
-
-
-
-
-
-
-
- <!--For Positioning-->
+ <!--For Positioning seems to only be car view change button-->
  <div id="mainDiv">
 
   <!--====Select Vehicles LINK TEXT====-->
@@ -105,7 +92,7 @@
     <a href="checkout.html"><button id="cart-checkout">Check Out</button>
   </div></a>
 
-  
+
 
   <div class="vehicleCartFunction" onclick="vehicleCartFunction(event)"> 
 
@@ -125,8 +112,9 @@
     </div>
     <button class="car-build__main--right" id="right-button"><i class="fas fa-arrow-circle-right"></i></button>
   </div>
-</div> <!--mainDiv end-->
 
+ <!--mainDiv end-->
+</div>
 
 </div> <!--vehicleCart End1-->
 
@@ -147,7 +135,7 @@
         <i class="fas fa-tags car-build__icon--i"></i>
       <p class="car-build__panel-text">Accessories</p>
     </div>
-    <div class="car-build__panel-buttons" onclick="galleryPanel()">
+    <div class="car-build__panel-buttons panel-gallery" onclick="galleryPanel()">
       <i class="fas fa-images car-build__icon--i"></i>
     <p class="car-build__panel-text">Gallery</p>
     </div>
@@ -165,14 +153,17 @@
 
 <!--CAR BUILD COLORS SECTION-->
   <section id="car-build__colors">
-    <div class="car-build__colors">
+    <div class="car-build__colors mt-3">
       <button class="btn btn-button car" id="white" onclick="changeWhite(event)"></button>
       <button class="btn btn-button car" id="black" onclick="changeBlack(event)"></button>
       <button class="btn btn-button car" id="gray" onclick="changeGray(event)"></button>
-      <button class="btn btn-button car" id="smoke" onclick="changeSmoke(event)"></button>
-      <button class="btn btn-button car" id="blue" onclick="changeBlue(event)"></button>
-      <button class="btn btn-button car" id="red" onclick="changeRed(event)"></button>
     </div>
+    <div class="car-build__colors">
+    <button class="btn btn-button car" id="smoke" onclick="changeSmoke(event)"></button>
+    <button class="btn btn-button car" id="blue" onclick="changeBlue(event)"></button>
+    <button class="btn btn-button car" id="red" onclick="changeRed(event)"></button>
+    </div>
+
   </section>
 
 
@@ -346,25 +337,11 @@
   </div>
 </section>
 
+<div class="gallery-placeholder"></div>
 
-<!--CAR BUILD ENGINE SECTION-->
-<!--Image Gallery-->
-<section id="gallery">
-<div class="gallery camry">
-  <figure class="gallery__item gallery__item--1"><img src="img/gallery/camry/gallery-camry-black.jpg" alt="Gallery image 1" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(1)"></figure>
-  
-  <figure class="gallery__item gallery__item--2"><img src="img/gallery/camry/gallery-camry-blue.jpg" alt="Gallery image 2" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(2)"></figure>
-  
-  <figure class="gallery__item gallery__item--3"><img src="img/gallery/camry/gallery-camry-gray.jpg" alt="Gallery image 3" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(3)"></figure>
-  
-  <figure class="gallery__item gallery__item--4"><img src="img/gallery/camry/gallery-camry-inside.jpg" alt="Gallery image 4" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(4)"></figure>
-  
-  <figure class="gallery__item gallery__item--5"><img src="img/gallery/camry/gallery-camry-inside2.jpg" alt="Gallery image 5" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(5)"></figure>
-  
-  <figure class="gallery__item gallery__item--6"><img src="img/gallery/camry/gallery-camry-white.jpg" alt="Gallery image 6" class="gallery__img" onclick="openGalleryModal();currentGallerySlide(6)"></figure>   
-</div>
-</section>
-  
+<!--CAR BUILD GALLERY MODEL SECTION-->
+
+  <!--CAMRY-->
 <div id="galleryModel" class="galleryModel">
   <span class="gallery-close cursor" onclick="closeGalleryModal()">&times;</span> 
 
@@ -386,6 +363,134 @@
     </div>
     <div class="gallery-slides">
       <img src="img/gallery/camry/gallery-camry-white.jpg" alt="Camry white">
+    </div>
+
+    <div>
+      <a class="gallery-prev gallery-arrows" onclick="nextGallerySlide(-1)">&#10094;</a>
+      <a class="gallery-next gallery-arrows" onclick="nextGallerySlide(1)">&#10095;</a>
+    </div>
+  </div>
+</div>
+
+
+
+  <!--COROLLA-->
+<div id="galleryModel2" class="galleryModel">
+  <span class="gallery-close cursor" onclick="closeGalleryModal()">&times;</span> 
+
+  <div class="gallery-modal-content">
+    <div class="gallery-slides2">
+      <img src="img/gallery/corolla/gallery-corolla-black.jpg" alt="corolla Black">
+    </div>
+    <div class="gallery-slides2">
+      <img src="img/gallery/corolla/gallery-corolla-blue.jpg" alt="corolla blue">
+    </div>
+    <div class="gallery-slides2">
+      <img src="img/gallery/corolla/gallery-corolla-gray.jpg" alt="corolla gray">
+    </div>
+    <div class="gallery-slides2">
+      <img src="img/gallery/corolla/gallery-corolla-inside.jpg" alt="corolla inside">
+    </div>
+    <div class="gallery-slides2">
+      <img src="img/gallery/corolla/gallery-corolla-inside2.jpg" alt="corolla inside2">
+    </div>
+    <div class="gallery-slides2">
+      <img src="img/gallery/corolla/gallery-corolla-white.jpg" alt="corolla white">
+    </div>
+
+    <div>
+      <a class="gallery-prev gallery-arrows" onclick="nextGallerySlide(-1)">&#10094;</a>
+      <a class="gallery-next gallery-arrows" onclick="nextGallerySlide(1)">&#10095;</a>
+    </div>
+  </div>
+</div>
+
+
+  <!--86-->
+<div id="galleryModel3" class="galleryModel">
+  <span class="gallery-close cursor" onclick="closeGalleryModal()">&times;</span> 
+
+  <div class="gallery-modal-content">
+    <div class="gallery-slides3">
+      <img src="img/gallery/t86/gallery-t86-black.jpg" alt="t86 Black">
+    </div>
+    <div class="gallery-slides3">
+      <img src="img/gallery/t86/gallery-t86-blue.jpg" alt="t86 blue">
+    </div>
+    <div class="gallery-slides3">
+      <img src="img/gallery/t86/gallery-t86-gray.jpg" alt="t86 gray">
+    </div>
+    <div class="gallery-slides3">
+      <img src="img/gallery/t86/gallery-t86-inside.jpg" alt="t86 inside">
+    </div>
+    <div class="gallery-slides3">
+      <img src="img/gallery/t86/gallery-t86-inside2.jpg" alt="t86 inside3">
+    </div>
+    <div class="gallery-slides3">
+      <img src="img/gallery/t86/gallery-t86-white.jpg" alt="t86 white">
+    </div>
+
+    <div>
+      <a class="gallery-prev gallery-arrows" onclick="nextGallerySlide(-1)">&#10094;</a>
+      <a class="gallery-next gallery-arrows" onclick="nextGallerySlide(1)">&#10095;</a>
+    </div>
+  </div>
+</div>
+
+
+  <!--Yaris-->
+<div id="galleryModel4" class="galleryModel">
+  <span class="gallery-close cursor" onclick="closeGalleryModal()">&times;</span> 
+
+  <div class="gallery-modal-content">
+    <div class="gallery-slides4">
+      <img src="img/gallery/yaris/gallery-yaris-black.jpg" alt="yaris Black">
+    </div>
+    <div class="gallery-slides4">
+      <img src="img/gallery/yaris/gallery-yaris-blue.jpg" alt="yaris blue">
+    </div>
+    <div class="gallery-slides4">
+      <img src="img/gallery/yaris/gallery-yaris-gray.jpg" alt="yaris gray">
+    </div>
+    <div class="gallery-slides4">
+      <img src="img/gallery/yaris/gallery-yaris-inside.jpg" alt="yaris inside">
+    </div>
+    <div class="gallery-slides4">
+      <img src="img/gallery/yaris/gallery-yaris-inside2.jpg" alt="yaris inside4">
+    </div>
+    <div class="gallery-slides4">
+      <img src="img/gallery/yaris/gallery-yaris-white.jpg" alt="yaris white">
+    </div>
+
+    <div>
+      <a class="gallery-prev gallery-arrows" onclick="nextGallerySlide(-1)">&#10094;</a>
+      <a class="gallery-next gallery-arrows" onclick="nextGallerySlide(1)">&#10095;</a>
+    </div>
+  </div>
+</div>
+
+  <!--Avalon-->
+<div id="galleryModel5" class="galleryModel">
+  <span class="gallery-close cursor" onclick="closeGalleryModal()">&times;</span> 
+
+  <div class="gallery-modal-content">
+    <div class="gallery-slides5">
+      <img src="img/gallery/avalon/gallery-avalon-black.jpg" alt="avalon Black">
+    </div>
+    <div class="gallery-slides5">
+      <img src="img/gallery/avalon/gallery-avalon-blue.jpg" alt="avalon blue">
+    </div>
+    <div class="gallery-slides5">
+      <img src="img/gallery/avalon/gallery-avalon-gray.jpg" alt="avalon gray">
+    </div>
+    <div class="gallery-slides5">
+      <img src="img/gallery/avalon/gallery-avalon-inside.jpg" alt="avalon inside">
+    </div>
+    <div class="gallery-slides5">
+      <img src="img/gallery/avalon/gallery-avalon-inside2.jpg" alt="avalon inside5">
+    </div>
+    <div class="gallery-slides5">
+      <img src="img/gallery/avalon/gallery-avalon-white.jpg" alt="avalon white">
     </div>
 
     <div>
@@ -470,12 +575,8 @@
 </section>
 
 
- 
+ <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto explicabo dolorum laboriosam dolor temporibus totam eaque rem, ratione odio labore consequatur quas nisi laborum dicta maiores vitae debitis vero repudiandae incidunt? Harum accusamus animi ut consequatur delectus deserunt ab soluta officia possimus ratione asperiores nesciunt totam repudiandae, officiis molestias sequi illum perferendis odit autem! Cum fugiat sunt dignissimos fugit magnam, neque nisi. Nostrum dolorem nisi quas mollitia harum reiciendis quam veritatis, dolores dolore amet optio. Architecto, tempore! Sit quibusdam dolorum provident vero quaerat ipsum est nam et soluta dolor illo repudiandae tenetur, vel nobis tempore libero molestiae. Quasi, dolor quos.</div>
 
-
-<footer class="footer">
-  <p class="copy"> Copyright Toyota &copy;</p>
-</footer>
 
 
 </div> <!--vehicleCartFunction end2-->
@@ -483,6 +584,13 @@
 
 
 
+<footer class="footer-test">
+  <p class="copy"> Copyright Toyota &copy;</p>
+</footer>
+
+
+
+</div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>

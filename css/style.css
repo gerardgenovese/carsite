@@ -6,24 +6,24 @@
   box-sizing: inherit; }
 
 html {
-  height: 100%; }
+  min-height: 100% !important; }
 
 body {
   font-family: sans-serif;
   /* padding: 0 3rem; */
   box-sizing: border-box;
   overflow-x: hidden;
-  height: 100%; }
+  height: 100vh !important; }
 
 #car-build__accessories {
   display: none; }
 
 .car-build__accessories {
-  background-color: #f7f3f3; }
+  background-color: #f7f3f3;
+  margin-top: 3rem; }
 
 .car-build__accs {
   background-color: white;
-  margin: .5rem 0;
   width: 100%; }
   .car-build__accs--items {
     max-width: 75%;
@@ -121,7 +121,7 @@ body {
   background-color: rgba(235, 235, 243, 0.836);
   padding: 2% 0;
   border: none;
-  margin: 3% 0; }
+  align-items: center; }
 
 .car {
   border: 1px solid transparent;
@@ -190,7 +190,7 @@ body {
 .car-build__engine {
   display: flex;
   justify-content: space-around;
-  padding: 2rem 0;
+  padding: 2.2rem 0;
   position: relative;
   z-index: 0;
   /* Hide the default radio button */
@@ -315,7 +315,6 @@ body {
 #mainDiv {
   position: relative;
   height: 50%;
-  width: 100%;
   background-color: transparent; }
 
 .car-contain {
@@ -514,7 +513,7 @@ body {
 
 .car-build__main2 {
   width: 100%;
-  height: 35vh;
+  height: 30vh;
   position: relative;
   margin-top: 5rem;
   background-color: transparent;
@@ -654,7 +653,7 @@ body {
   .panel {
     top: 18%; }
   .car-build__main2 {
-    height: 20vh; }
+    height: 10vh; }
   .image-background2 {
     height: 20%; }
   .vehicleCart {
@@ -1036,6 +1035,7 @@ body {
   grid-template-rows: 1fr, 1fr; }
 
 .sliderbg {
+  margin-top: .3rem;
   width: 100%;
   height: 80vh;
   grid-column: 1/-1;
@@ -1589,9 +1589,12 @@ body {
   .explore-car__front:hover {
     max-width: 100%; } }
 
+.everything {
+  position: relative; }
+
 .footer {
   position: relative;
-  top: 100%;
+  bottom: 0;
   margin-top: 4rem;
   left: 0;
   z-index: 200;
@@ -1617,14 +1620,24 @@ body {
   align-items: center;
   justify-content: center; }
 
-#gallery {
-  display: none; }
+.footer-test {
+  position: relative;
+  top: 100%;
+  left: 0;
+  z-index: 200;
+  height: 5rem;
+  width: 100%;
+  background-color: #9b0b0b;
+  color: #f7f1f1;
+  display: flex;
+  align-items: center;
+  justify-content: center; }
 
 .gallery {
-  background-color: #e2d8d8;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  grid-template-rows: repeat(10, 5vw); }
+  grid-template-rows: repeat(10, 5vw);
+  margin-top: 2rem; }
   .gallery__item--1 {
     grid-row: 4 / span 8;
     grid-column: 1 / span 5;
@@ -1657,7 +1670,11 @@ body {
     cursor: pointer; }
 
 /*-----------------MODAL----------------*/
-.galleryModel {
+.galleryModel,
+.galleryModel2,
+.galleryModel3,
+.galleryModel4,
+.galleryModel5 {
   display: none;
   position: fixed;
   left: 0;
@@ -1668,7 +1685,11 @@ body {
   overflow: auto;
   background-color: rgba(0, 0, 0, 0.8); }
 
-.gallery-slides img {
+.gallery-slides img,
+.gallery-slides2 img,
+.gallery-slides3 img,
+.gallery-slides4 img,
+.gallery-slides5 img {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1711,6 +1732,37 @@ body {
 .gallery-prev:hover,
 .gallery-next:hover {
   background-color: rgba(0, 0, 0, 0.8); }
+
+@media (max-width: 768px) {
+  .gallery-slides img,
+  .gallery-slides2 img,
+  .gallery-slides3 img,
+  .gallery-slides4 img,
+  .gallery-slides5 img {
+    width: 75%; }
+  .gallery-arrows {
+    padding: 1rem; }
+  .gallery-prev {
+    left: 5%; }
+  .gallery-next {
+    right: 5%; } }
+
+@media (max-width: 500px) {
+  .gallery-slides img,
+  .gallery-slides2 img,
+  .gallery-slides3 img,
+  .gallery-slides4 img,
+  .gallery-slides5 img {
+    width: 85%; }
+  .gallery-arrows {
+    padding: 0 .3rem; }
+  .gallery-prev {
+    left: 1%; }
+  .gallery-next {
+    right: 1%; }
+  .gallery-prev:hover,
+  .gallery-next:hover {
+    background-color: rgba(0, 0, 0, 0.8); } }
 
 .header-index__image {
   width: 100%; }
