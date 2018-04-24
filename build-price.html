@@ -15,9 +15,11 @@
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/solid.js" integrity="sha384-+Ga2s7YBbhOD6nie0DzrZpJes+b2K1xkpKxTFFcx59QmVPaSA8c7pycsNaFwUK6l" crossorigin="anonymous"></script>
   <script defer src="https://use.fontawesome.com/releases/v5.0.8/js/fontawesome.js" integrity="sha384-7ox8Q2yzO/uWircfojVuCQOZl+ZZBg2D2J5nkpLqzH1HY0C1dHlTKIbpRz/LG23c" crossorigin="anonymous"></script>
 
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.10/css/all.css" integrity="sha384-+d0P83n9kaQMCwj8F4RJB66tzIwOKmrdb46+porD/OvrJ+37WqIM7UoBtwHO6Nlg" crossorigin="anonymous">
+
 </head>
 <body class="build-price" onload="keepShopping()">
-<div id="everthing">
+
   
 <!-- Navigation -->
 <nav class="navbar">
@@ -116,8 +118,8 @@
  <!--mainDiv end-->
 </div>
 
-</div> <!--vehicleCart End1-->
-
+<!--vehicleCart End1-->
+</div> 
 
 <div class="vehicleCartFunction" onclick="vehicleCartFunction(event)"> 
 
@@ -149,21 +151,18 @@
 
 
 
-
-
 <!--CAR BUILD COLORS SECTION-->
   <section id="car-build__colors">
     <div class="car-build__colors mt-3">
-      <button class="btn btn-button car" id="white" onclick="changeWhite(event)"></button>
-      <button class="btn btn-button car" id="black" onclick="changeBlack(event)"></button>
-      <button class="btn btn-button car" id="gray" onclick="changeGray(event)"></button>
+      <button class="btn btn-button car-colors" id="white" onclick="changeWhite(event)"></button>
+      <button class="btn btn-button car-colors" id="black" onclick="changeBlack(event)"></button>
+      <button class="btn btn-button car-colors" id="gray" onclick="changeGray(event)"></button>
     </div>
-    <div class="car-build__colors">
-    <button class="btn btn-button car" id="smoke" onclick="changeSmoke(event)"></button>
-    <button class="btn btn-button car" id="blue" onclick="changeBlue(event)"></button>
-    <button class="btn btn-button car" id="red" onclick="changeRed(event)"></button>
+    <div class="car-build__colors colors-bottom">
+    <button class="btn btn-button car-colors" id="smoke" onclick="changeSmoke(event)"></button>
+    <button class="btn btn-button car-colors" id="blue" onclick="changeBlue(event)"></button>
+    <button class="btn btn-button car-colors" id="red" onclick="changeRed(event)"></button>
     </div>
-
   </section>
 
 
@@ -279,9 +278,8 @@
       </div>
     </div>
   </div>  
+
   
-
-
   <!-- WHEEL LOCK MODAL -->
   <div class="modal" id="wheel-lock">
     <div class="modal-dialog">
@@ -575,20 +573,28 @@
 </section>
 
 
- <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto explicabo dolorum laboriosam dolor temporibus totam eaque rem, ratione odio labore consequatur quas nisi laborum dicta maiores vitae debitis vero repudiandae incidunt? Harum accusamus animi ut consequatur delectus deserunt ab soluta officia possimus ratione asperiores nesciunt totam repudiandae, officiis molestias sequi illum perferendis odit autem! Cum fugiat sunt dignissimos fugit magnam, neque nisi. Nostrum dolorem nisi quas mollitia harum reiciendis quam veritatis, dolores dolore amet optio. Architecto, tempore! Sit quibusdam dolorum provident vero quaerat ipsum est nam et soluta dolor illo repudiandae tenetur, vel nobis tempore libero molestiae. Quasi, dolor quos.</div>
+ <!-- <div>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Architecto explicabo dolorum laboriosam dolor temporibus totam eaque rem, ratione odio labore consequatur quas nisi laborum dicta maiores vitae debitis vero repudiandae incidunt? Harum accusamus animi ut consequatur delectus deserunt ab soluta officia possimus ratione asperiores nesciunt totam repudiandae, officiis molestias sequi illum perferendis odit autem! Cum fugiat sunt dignissimos fugit magnam, neque nisi. Nostrum dolorem nisi quas mollitia harum reiciendis quam veritatis, dolores dolore amet optio. Architecto, tempore! Sit quibusdam dolorum provident vero quaerat ipsum est nam et soluta dolor illo repudiandae tenetur, vel nobis tempore libero molestiae. Quasi, dolor quos.</div> -->
 
+
+
+
+
+
+
+<footer class="footer">
+  <p class="copy"> Copyright Toyota &copy;</p>
+  <div class="social">
+    <i class="fab fa-facebook-f footer-social"></i>
+    <i class="fab fa-instagram footer-social"></i>
+    <i class="fab fa-youtube footer-social"></i>
+    <i class="fab fa-twitter footer-social"></i>
+  </div>
+</footer>
+ 
 
 
 </div> <!--vehicleCartFunction end2-->
 </div> <!--navCloseFunction end-->
-
-
-
-<footer class="footer-test">
-  <p class="copy"> Copyright Toyota &copy;</p>
-</footer>
-
-
 
 </div>
 <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>

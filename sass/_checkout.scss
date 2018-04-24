@@ -1,161 +1,3 @@
-// #checkout {
-//   width: 100vw !important;
-//   height: 100vh !important;
-// }
-
-
-// .checkout-container {
-//   padding-top: 5rem;
-// }
-
-// .checkout {
-
-//   &-header {
-//     font-size: 1.3rem;
-//     font-weight: bold;
-//     margin-left: 5rem;
-//     font-family: 'Kanit', sans-serif;
-//     border-bottom: 2px solid rgba(0, 0, 0, 0.205);
-//     width: 75%;
-//     text-align:center;
-//   }
-//   &-carImg {
-//     width: 100%;
-//   }
-
-//   &-options {
-
-//     &-info {
-//       font-size: .9rem;
-//     }
-
-//     &-table {
-//       font-family: Verdana;
-//       font-size: 1rem;
-//       width: 100%;
-//       border-bottom: transparent;
-//       padding: 0;
-//       text-transform: uppercase;
-//     }
-//     &-mainRow {
-//       background-color: rgba(245, 239, 239, 0.445);
-//     }
-
-//     &-total-cost {
-//       font-weight: bold;
-//     }
-//   }
-// }
-
-// th,
-// td {
-//   text-align:center;
-//   padding: .2rem 1rem;
-  
-// }
-
-// .btn-purchase {
-//   font-size: 1.1rem;
-//   font-family:'Kanit', sans-serif;
-//   padding: 1rem 1rem;
-//   background-color: rgb(252, 6, 6);
-//   box-shadow: 0 5px 5px gray;
-//   box-shadow: 0 -5px -5px gray;
-//   color: rgb(243, 236, 236);
-//   border: none;
-//   transition: .2s;
-//   cursor: pointer;
-//   width: 50%;
-// }
-
-// .btn-purchase:hover {
-//   box-shadow: 0 5px 5px gray;
-//   transform: scale(1.1);
-//   background-color: rgb(167, 7, 7); 
-// }
-
-// .btn-purchase:active{
-//   box-shadow: 0 2px 2px gray;
-//   transform: scale(1);
-// }
-// .btn-purchase:focus {
-//   outline: 0;
-// }
-
-
-
-// .checkout-button-back {
-//   width: 50%;
-//   position: absolute;
-//   top: 77%;
-//   left: 1%;
-// }
-
-// .checkout-button-purchase {
-//   text-align:right;
-//   width: 50%;
-//   position: absolute;
-//   top: 77%;
-//   right: 1%;
-// }
-
-
-
-
-// @media(max-width:768px){
-
-//   .checkout {
-//     &-table {
-//       // display:block;
-//       // margin: 0 auto;
-//     }
-//     &-container {
-//       padding-top: 0;
-//     }
-
-//     &-header {
-//       width:75%;
-//       display:block;
-//       margin: 0 auto;
-//       margin-bottom: 1rem;
-//     }
-//     &-carImg {
-//       width: 75%;
-//       display:block;
-//       margin: 0 auto;
-//     }
-//     tr{
-//       text-align:center;
-//     }
-//   } 
-//   .btn-purchase {
-//     font-size: .7rem;
-//     width: 60%;
-//   } 
-// }
-// @media(max-width:600px){
-//   .checkout {
-
-//     &-header {
-//       font-size: 1.1rem;
-//       text-align:center;
-//     }
-//   }
-//   th,
-//   td {
-//     font-size: .8rem;
-//   }
-  
-//   .checkout-button-back {
-//     top: 70%;
-//   } 
-//   .checkout-button-purchase {
-//     top: 70%;
-//   }
-// }
-
-
-
 
 @mixin flexCenterColor {
   display:flex;
@@ -391,5 +233,19 @@
     &-model {
       font-size: 1rem;
     }
+  }
+}
+
+
+
+//iPad
+@media only screen 
+and (min-device-width : 768px) 
+and (max-device-width : 1024px)  { 
+
+  &-carImg {
+    width: 100%;
+    display:block;
+    margin: 0 auto;
   }
 }

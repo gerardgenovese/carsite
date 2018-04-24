@@ -1,21 +1,24 @@
-.everything {
-  position: relative;
-}
+
 .footer {
   position: relative;
   bottom: 0;
   margin-top: 4rem;
   left: 0;
-  z-index: 200;
-  height: 5rem;
+  z-index: 104;
+  height: 15rem;
   width: 100%;
-  background-color: rgb(155, 11, 11);
-  color:rgb(247, 241, 241);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  background-color: rgb(243, 236, 236);
+  color:rgb(61, 60, 60);
+  padding-top:2rem;
+  text-align:center;
 }
-
+.social {
+  margin: 1rem;
+}
+.footer-social{
+  padding: 2rem;
+  font-size:2rem;
+}
 
 //for checkout page
 .footer-checkout {
@@ -23,26 +26,18 @@
   top: 100%;
   margin-top: 4rem;
   left: 0;
-  z-index: 200;
-  height: 5rem;
+  z-index: 104;
+  height: 15rem;
   width: 100%;
-  background-color: rgb(155, 11, 11);
-  color:rgb(247, 241, 241);
-  display:flex;
-  align-items:center;
-  justify-content:center;
-}
-.footer-test {
-  position: relative;
-  top: 100%;
-  left: 0;
-  z-index: 200;
-  height: 5rem;
-  width: 100%;
-  background-color: rgb(155, 11, 11);
-  color:rgb(247, 241, 241);
-  display:flex;
-  align-items:center;
-  justify-content:center;
+  background-color: rgb(243, 236, 236);
+  color:rgb(61, 60, 60);
+  padding-top:2rem;
+  text-align:center;
 }
 
+
+@media(max-width:500px){
+  .footer-social{
+    padding: 1rem;
+  }
+}

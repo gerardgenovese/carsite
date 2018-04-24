@@ -8,7 +8,7 @@
 
 html {
     // font-size: 62.5%;
-   min-height: 100% !important;
+  //  min-height: 100% !important;
 }
 
 body {
@@ -16,7 +16,7 @@ body {
     /* padding: 0 3rem; */
     box-sizing: border-box;
     overflow-x: hidden;
-    height: 100vh !important;
+    // height: 100vh !important;
 }
 
 // .build-price {
@@ -34,3 +34,6 @@ body {
 //   height: 0 !important;
 //   border: 5px solid black;
 // }
+i {
+color: none;
+}
