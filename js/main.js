@@ -18,17 +18,17 @@ document.querySelector('.hamburger').addEventListener('click', (e) => {
 //OPEN NAV MENU
 function openSlideMenu() {
 
-  if (mediaQuerySize.matches) {
-    document.getElementById('nav-menu').style.height = '6.5rem';
-  } else {
+  // if (mediaQuerySize.matches) {
+  //   document.getElementById('nav-menu').style.height = '0';
+  // } else {
 
   
 
-    document.getElementById('nav-menu').style.height = '3rem';
+  //   document.getElementById('nav-menu').style.height = '0';
 
-  }
+  // }
 
-  document.getElementById('nav-menu').style.height = '3rem';
+  document.getElementById('nav-menu').style.height = '2.5rem';
   document.querySelector('.navigation__icon1').style.background = 'white';
   document.querySelector('.navigation__icon3').style.background = 'white';
   // document.getElementById('main').style.marginLeft = '250px';
@@ -40,7 +40,7 @@ function openSlideMenu() {
 
 
   menuIconOpen();
-  menuMediaQuery();
+  // menuMediaQuery();
 };
 
 //CLOSE NAV MENU
@@ -69,13 +69,31 @@ function menuIconOpen() {
   iconBottom.style.transform = "rotate(-45deg)";
   iconBottom.style.top = ".5rem";
   iconBottom.style.transition = 'all .2s';
+
+//media query at 450px for hamburger centered
+  function myFunction(x) {
+    if (x.matches) { // If media query matches
+      let iconTop = document.querySelector('.navigation__icon1');
+      let iconBottom = document.querySelector('.navigation__icon3')
+
+      iconTop.style.top = ".7rem";
+      iconBottom.style.top = ".7rem";
+    } else {
+       return false;
+    }
+  }
+  
+  var x = window.matchMedia("(max-width: 700px)")
+  myFunction(x) // Call listener function at run time
+  x.addListener(myFunction) // Attach listener function on state changes
+
 }
 
 //UI flip hamburger back 
 function menuIconClosed() {
   let iconTop = document.querySelector('.navigation__icon1');
   iconTop.style.transform = "rotate(0)";
-  iconTop.style.top = "0";
+  iconTop.style.top = "10%";
   iconTop.style.transition = 'all .2s';
 
   let iconMiddle = document.querySelector('.navigation__icon2');
@@ -86,16 +104,31 @@ function menuIconClosed() {
   iconBottom.style.transform = "rotate(0)";
   iconBottom.style.top = "100%";
   iconBottom.style.transition = 'all .2s';
-}
 
 
 
 
-let mediaQuerySize = window.matchMedia("(max-width: 4000px)")
-function menuMediaQuery() {
   
-  mediaQuerySize.addListener(openSlideMenu)
 }
+
+
+
+
+// let mediaQuerySize = window.matchMedia("(max-width: 450px)")
+// function menuMediaQuery() {
+  
+//   mediaQuerySize.addListener(openSlideMenu)
+// }
+
+
+
+
+
+
+
+
+
+
 
 //close menu and reset count on click outside menu to return hamburger to original state
 

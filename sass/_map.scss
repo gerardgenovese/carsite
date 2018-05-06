@@ -1,3 +1,7 @@
+.parent {
+  position:relative;
+}
+
 .map {
   height: 75%; 
   position: relative; 
@@ -9,4 +13,66 @@
     font-family: 'Kanit', sans-serif;
     text-align:center;
   }
+  &-example{
+    text-align:center;
+    color: rgba(170, 163, 163, 0.664);
+  }
 }
+
+
+
+@media(max-width: 700px) {
+  .toyotaImage {
+    display:none;
+  }
+
+  .toyota-body{
+    display:block !important;
+    margin: 0 auto !important;
+    padding: 5rem;
+  }
+}
+
+@media(max-width: 550px) {
+  .toyotaImage {
+    display:none;
+  }
+
+
+  .toyota-body{
+    position: relative;
+    display:flex !important;
+    flex-direction: column;
+    text-align:center;
+    padding: 0 10rem;
+    // background-color: transparent;
+  }
+}
+@media(max-width: 400px) {
+  // .toyotaImage {
+  //   display:none;
+  // }
+
+  .toyota-body{
+    position: relative;
+    display:flex !important;
+    flex-direction: column;
+    text-align:center;
+
+
+  }
+}
+
+.gm-style-iw{
+  margin: 0 !important;
+  padding: 0 !important;
+  
+}
+
+// div:nth-child(100) {
+//   display:none !important;
+// }
+
+// .gm-style:nth-child(5) {
+//   display:none !important;
+// }

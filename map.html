@@ -25,7 +25,10 @@
   <link href="https://fonts.googleapis.com/css?family=Gugi|Kanit" rel="stylesheet">
   
   <link rel="stylesheet" type="text/css" href="css/style.css">
-
+  <style>
+    .map {height: 100%;}
+    html, body {height: 100%; margin: 0; padding: 0;}
+  </style>
 
 </head>
 <body>
@@ -45,22 +48,23 @@
   </nav>
   <img class="img__logo" src="img/toyota-logo.png" alt="">
   <div id="nav-menu" class="nav-nav">
-      <a href="index.html">Explore</a>
-      <a href="build-choose.html">Build Car</a>
-
+    <a href="index.html">Explore</a>
+    <a href="build-choose.html">Build Car</a>
   </div>
   
 
   <div class="map-dealership">Find a Dealership near you</div>   
+  <!-- <h5 class="map-example">*Hard Coded Example. This is not making a locations API request from Toyota*</h5> -->
   <div class="map"></div>
 
-
+<div class="test">sdf</div>
 
 
 
 
   <script src="js/map.js"></script>
   <script src="js/main.js"></script>
+
   
   <script async defer
   src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAgGM-6T6s5uLyFe2Of7Hz2UhjwW29HVkA&callback=initMap">
