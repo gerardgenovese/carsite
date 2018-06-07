@@ -304,23 +304,29 @@ class Car {
     if (accessory1 === true) {
       sessionStorage.setItem('alloy wheels', 75);
       accessoryTotal1 = 75;
+      document.getElementById('addRemove1').innerHTML = 'Added';
     } else if (accessory1 === false) {
       sessionStorage.setItem('alloy wheels', 0);
       accessoryTotal1 = 0;
+      document.getElementById('addRemove1').innerHTML = 'Add';
     }
     if (accessory2 === true) {
       sessionStorage.setItem('leather mats', 75);
+      document.getElementById('addRemove2').innerHTML = 'Added';
       accessoryTotal2 = 75;
     } else if (accessory2 === false) {
       sessionStorage.setItem('leather mats', 0);
       accessoryTotal2 = 0;
+      document.getElementById('addRemove2').innerHTML = 'Add';
     }
     if (accessory3 === true) {
       sessionStorage.setItem('cargo tote', 75);
+      document.getElementById('addRemove3').innerHTML = 'Added';
       accessoryTotal3 = 75;
     } else if (accessory3 === false) {
       sessionStorage.setItem('cargo tote', 0);
       accessoryTotal3 = 0;
+      document.getElementById('addRemove3').innerHTML = 'Add';
     }
     totalCarPrice();
   }
